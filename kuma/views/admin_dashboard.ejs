@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include necessary meta tags, CSS, and JavaScript files -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+    
+    
+    <!-- Include any custom CSS -->
+    <style>
+        /* Add custom styles here */
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+
+
+
+        .navbar {
+    display: static;
+    background-color: #b14024d2;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin-right: 10px;
+    
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the form horizontally */
+    flex-grow: 1; /* Allow the form to grow and take up the remaining space */
+}
+
+.form-control {
+    margin-right: 10px;
+}
+
+/* Optional: Adjust spacing */
+ 
+
+
+
+.order-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f9f9f9;
+            width: calc(25% - 20px); /* Adjust card width for four cards horizontally */
+            float: left; /* Align cards horizontally */
+        }
+        .customer-details {
+            margin-bottom: 10px;
+        }
+        .items-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .white-button {
+    color: white;
+}
+
+.navbar {
+            background-color: #922f11; /* Navbar background color */
+            padding: 5px 10px; /* Adjust navbar padding */
+        }
+
+        .navbar-brand {
+            color: #ffffff; /* Navbar brand color */
+            font-weight: bold;
+            font-size: 1.5rem; /* Adjust navbar brand font size */
+        }
+
+        .nav-link {
+            color: #ffffff; /* Navbar link color */
+            padding: 5px 10px; /* Adjust navbar link padding */
+            font-size: 1rem; /* Adjust navbar link font size */
+        }
+
+        .nav-link:hover {
+            color: #ffffff; /* Navbar link color on hover */
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <ul class="nav">
+
+            <a class="navbar-brand" href="#">Admin_dashboard</a>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/formB">Upload events
+              
+            
+       
+                <i class="fas fa-upload"></i> 
+            </a> <!-- Icon for editing -->
+            
+
+ 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/link2">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/link3">Link 3</a>
+          </li>
+        </ul>
+
+
+        <div class="ml-auto">
+            <a href="/register">Register/</a>
+            <a href="/login">Login</a>
+        </div>
+      </nav>
+      
+
+
+ 
+
+
+    
+    <main role="main" class="container mt-5">
+        <!-- Product Management Section -->
+        <section id="product-management">
+            <h2>Product Management</h2>
+            <!-- Search bar -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search products" aria-label="Search products" aria-describedby="basic-addon2" id="searchInput">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="searchButton">Search</button>
+                </div>
+            </div>
+
+            <!-- Category selection -->
+            <div class="form-group">
+                <label for="categorySelect">Select category:</label>
+                <select class="form-control" id="categorySelect">
+                    <option value="">All categories</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category %>"><%= category %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div class="text-center mt-4">
+                <a href="/view/form" class="btn btn-success">Add New Product</a>
+            </div>   <br>
+            <!-- Display list of products with options to edit or delete -->
+            <div class="row" id="productList">
+                <% products.forEach(product => { %>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="<%= product.imageUrl %>" class="card-img-top product-image" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= product.productName %></h5>
+                                <img src="<%= product.imageUrl %>" class="card-img-top" alt="<%= product.productName %>">
+                                <p class="card-text">Description: <%= product.description %></p>
+                                <p class="card-text">Price: $<%= product.price %></p>
+                                <!-- Add buttons to edit or delete product -->
+                                <button class="btn btn-primary mr-2">Edit</button>
+                                <button class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+
+           
+            
+        </section>
+
+
+
+
+
+
+
+
+
+        <h1>Admin Dashboard</h1>
+
+        <% if (orders.length > 0) { %>
+            <% orders.forEach((order, index) => { %>
+                <div class="order-card">
+                    <div class="customer-details">
+                        <h2>Customer Details:</h2>
+                        <p>Name: <%= order.name %></p>
+                        <p>Phone: <%= order.phone %></p>
+                        <p>Email: <%= order.email %></p>
+                    </div>
+                    <h3>Order Items:</h3>
+                    <ul class="items-list">
+                        <% order.cartItems.forEach(item => { %>
+                            <li class="item">
+                                <h4>Product ID: <%= item.productId %></h4>
+                                <p>Product Name: <%= item.productName %></p>
+                                <p>Price: <%= item.price %></p>
+                                <p>Quantity: <%= item.quantity %></p>
+                            </li>
+                        <% }) %>
+                    </ul>
+                    <h4>Total Price: <%= order.totalPrice %></h4>
+                </div>
+                <% if ((index + 1) % 4 === 0) { %>
+                    <div style="clear:both;"></div> <!-- Clear float after every fourth card -->
+                <% } %>
+            <% }) %>
+        <% } else { %>
+            <p>No orders found.</p>
+        <% } %>
+    
+
+
+
+
+
+<!-- admin_dashboard.ejs -->
+  
+  <!-- admin_dashboard.ejs -->
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+        <!-- User Management Section -->
+     
+    </main>
+    </main>
+
+    <!-- Include Bootstrap JS and any custom JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include any custom JavaScript -->
+    <script>
+        // Add any custom JavaScript here
+        $(document).ready(function () {
+            // Search functionality
+            $('#searchButton').click(function () {
+                const searchQuery = $('#searchInput').val();
+                const category = $('#categorySelect').val();
+                window.location.href = `/view/admin_dashboard?search=${searchQuery}&category=${category}`;
+            });
+
+            // Category selection
+            $('#categorySelect').change(function () {
+                const category = $(this).val();
+                window.location.href = `/view/admin_dashboard?category=${category}`;
+            });
+        });
+
+
+
+        
+  // Add event listener to delete buttons
+  document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      const orderId = this.getAttribute('data-order-id');
+      const confirmation = confirm('Are you sure you want to delete this order?');
+      if (confirmation) {
+        // Submit form for deletion
+        document.getElementById(`deleteForm-${orderId}`).submit();
+      }
+    });
+  });
+</script>
+
+    </script>
+</body>
+</html>

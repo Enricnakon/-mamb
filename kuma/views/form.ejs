@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sell Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/1920x1080/?selling');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .thumbnail {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+
+
+
+        .navbar {
+    display: static;
+    background-color: #b14024d2;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the form horizontally */
+    flex-grow: 1; /* Allow the form to grow and take up the remaining space */
+}
+
+.form-control {
+    margin-right: 10px;
+}
+.navbar {
+            background-color: #922f11; /* Navbar background color */
+            padding: 5px 10px; /* Adjust navbar padding */
+        }
+
+        .navbar-brand {
+            color: #ffffff; /* Navbar brand color */
+            font-weight: bold;
+            font-size: 1.5rem; /* Adjust navbar brand font size */
+        }
+
+        .nav-link {
+            color: #ffffff; /* Navbar link color */
+            padding: 5px 10px; /* Adjust navbar link padding */
+            font-size: 1rem; /* Adjust navbar link font size */
+        }
+
+        .nav-link:hover {
+            color: #ffffff; /* Navbar link color on hover */
+        }
+/* Optional: Adjust spacing */
+ 
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        
+      
+
+ 
+ 
+    
+
+
+        <div class="ml-auto">
+            <!-- Change the text to "User" -->
+            <a href="/userProducts">Go to User Page</a>
+
+        </div>
+
+
+        
+        <!-- Navigation Links with Larger Icons -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+           
+                </li>
+                <li class="nav-item">
+                    
+                </li>
+                <li class="nav-item">
+                
+                </li>
+
+                
+            </ul>
+        </div>
+         
+        <!-- Search Form -->
+        
+    
+        <!-- Register and Login Links -->
+        <div class="ml-auto">
+            
+            <a href="/login">Logout</a>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-tags"></i> Sell Your Product</h3>
+                    </div>
+                    <div class="card-body">
+                        <form enctype="multipart/form-data" method="post" action="/addProduct">
+                            <div class="form-group">
+                                <label for="productName">Product Name:</label>
+                                <input type="text" class="form-control" name="productName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" name="description" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price:</label>
+                                <input type="number" class="form-control" name="price" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category:</label>
+                                <select class="form-control" name="category" required>
+                                    <option value="phones"><i class="fas fa-mobile-alt"></i> Phones</option>
+                                    <option value="computers"><i class="fas fa-laptop"></i> Computers</option>
+                                    <option value="house"><i class="fas fa-home"></i> Houses</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="productImages">Product Images (up to 3 images):</label>
+                                <input type="file" class="form-control-file" id="productImages" name="productImages" required accept="image/*" multiple onchange="previewImages(event)">
+                                <div id="imagePreview" class="mt-2"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload Product</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+  function previewImages(event) {
+    var preview = document.getElementById('imagePreview');
+    preview.innerHTML = ''; // Clear previous previews
+    var files = event.target.files;
+
+    if (files.length !== 3) {
+        alert("Please upload exactly 3 images.");
+        event.target.value = ''; // Clear the file input
+        return;
+    }
+
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            var imageContainer = document.createElement('div');
+            imageContainer.className = 'image-container'; // Add a class for styling
+            var image = document.createElement('img');
+            image.className = 'thumbnail mr-2 mb-2';
+            image.src = e.target.result;
+            imageContainer.appendChild(image);
+            preview.appendChild(imageContainer);
+        };
+
+        reader.readAsDataURL(file);
+    }
+}
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
+</body>
+</html>

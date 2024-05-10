@@ -1,0 +1,21 @@
+<!-- user.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+</head>
+<body>
+  <h1>Welcome to your dashboard</h1>
+  <h2>Your Products:</h2>
+  <ul>
+    <% products.forEach(product => { %>
+      <li><%= product.productName %></li>
+      <!-- Include any other product details you want to display -->
+    <% }); %>
+  </ul>
+  <!-- Link to the form for creating a new product -->
+  <a href="/form">Create a New Product</a>
+</body>
+</html>

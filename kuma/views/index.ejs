@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linked List Image Transition</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="container">
+    <div id="imageContainer">
+      <img id="image" src="" alt="">
+    </div>
+    <div id="textContainer">
+      <p id="text"></p>
+    </div>
+    <button id="actionButton" onclick="nextItem()">Next</button>
+  </div>
+
+  <div id="formContainer">
+    <h2>Add New Item</h2>
+    <form id="addItemForm" action="/addItem" method="post">
+      <label for="imageURL">Image URL:</label>
+      <input type="text" id="imageURL" name="imageURL" required><br>
+      <label for="paragraph">Paragraph:</label>
+      <textarea id="paragraph" name="paragraph" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

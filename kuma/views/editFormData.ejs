@@ -1,0 +1,80 @@
+<!-- editFormData.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Form Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+
+  <style>    .navbar {
+    background-color: #922f11; /* Navbar background color */
+    padding: 5px 10px; /* Adjust navbar padding */
+}
+
+.navbar-brand {
+    color: #ffffff; /* Navbar brand color */
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust navbar brand font size */
+}
+
+.nav-link {
+    color: #ffffff; /* Navbar link color */
+    padding: 5px 10px; /* Adjust navbar link padding */
+    font-size: 1rem; /* Adjust navbar link font size */
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Navbar link color on hover */
+}</style>
+<body>
+    <nav class="navbar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/viewFormData">
+                <i class="fas fa-eye"></i> 
+           
+            
+       
+                <i class="fas fa-edit"></i> Edit
+            </a> <!-- Icon for editing -->
+            
+
+ 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/link2">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/link3">Link 3</a>
+          </li>
+        </ul>
+      </nav>
+      
+
+<div class="container">
+    <h2>Edit Form Data</h2>
+    <form action="/form/edit/<%= formData._id %>" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" class="form-control" value="<%= formData.description %>">
+        </div>
+        <div class="form-group">
+            <label for="currentImage">Current Image:</label><br>
+            <img src="/images/<%= formData.image %>" alt="Current Image" style="max-width: 200px;">
+        </div>
+        <div class="form-group">
+            <label for="newImage">New Image:</label>
+            <input type="file" id="newImage" name="newImage" class="form-control-file">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+</body>
+</html>
