@@ -1,3 +1,5 @@
+/* Original CSS styles for the custom header */
+
 .custom-header {
   display: flex;
   align-items: center;
@@ -29,38 +31,16 @@
   margin: 0;
   font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
   color: #333;
-  margin-left: -7rem; /* Adjust space between site title and feature buttons */
-  margin-left: -1170px; 
-  
 }
 
 .custom-header .tagline {
   margin: 0;
-  font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
+  font-size: 1.2rem; /* Adjust font size for better readability on smaller screens */
   color: #791010;
-  position: absolute;
-  left: -5rem; /* Adjust the distance from the left edge */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  font-weight: 0.2;
-  font-family: Arial, sans-serif;
-
-  position: absolute; 
-  left: -990px; 
-
-
 }
 
 .custom-header .title-section {
   position: relative; /* Set relative positioning for the title section */
-}
-
-@keyframes blink-animation {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 0.4; }
-}
-
-.blink {
-  animation: blink-animation 2s infinite;
 }
 
 .custom-header .feature-buttons {
@@ -140,10 +120,31 @@ select::-ms-expand {
   border-right: 1px solid #ccc; /* Define the line */
 }
 
+/* Media Queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .custom-header {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
 
+  .custom-header .site-title {
+    font-size: 1.2rem; /* Adjust font size for better readability on smaller screens */
+  }
 
+  .custom-header .tagline {
+    font-size: 1rem; /* Adjust font size for better readability on smaller screens */
+  }
 
+  .header1 {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
 
+  .header1 .feature,
+  .custom-header .feature-buttons button,
+  .custom-header .feature-buttons a {
+    padding: 0.3rem 0.7rem; /* Adjust padding for better spacing on smaller screens */
+    font-size: 0.9rem; /* Adjust font size for better readability on smaller screens */
+  }
+}
 
 
 
@@ -168,132 +169,7 @@ select::-ms-expand {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Original CSS styles for the dropdown menu */
 
 .menu-button {
   cursor: pointer;
@@ -327,6 +203,21 @@ select::-ms-expand {
 
 .show {
   display: block;
+}
+
+/* Media Queries for responsive design */
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    position: static; /* Change position to static for smaller screens */
+    box-shadow: none; /* Remove box shadow */
+    min-width: auto; /* Set minimum width to auto */
+    width: 100%; /* Make dropdown full width */
+  }
+
+  .dropdown-content a {
+    padding: 10px; /* Adjust padding for smaller screens */
+    border-bottom: 1px solid #ccc; /* Add border bottom for separation */
+  }
 }
 
 .navbar {
@@ -400,15 +291,13 @@ select::-ms-expand {
 @media only screen and (max-width: 768px) {
   .search-bar input[type="text"] {
     width: 70%; /* Adjusted for smaller screens */
+    padding: 12px; /* Adjusted padding for smaller screens */
   }
 
   .search-bar button {
-    padding: 15px; /* Adjusted for smaller screens */
+    padding: 12px; /* Adjusted for smaller screens */
   }
 }
-
-   
-
 
 
 
