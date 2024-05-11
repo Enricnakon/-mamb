@@ -637,63 +637,44 @@ app.get('/views/admin_dashboard', async (req, res) => {
     }
   });
   
- 
-  
-  
-  app.get('/orderform/:productId', (req, res) => {
-    const productId = req.params.productId;
-    // Render the order form page with the productId value
-    res.render('orderform', { productId });
-  });
-  
-  
-  // Set up multer for file uploads
-   load = multer({ storage });
-  
-  // Serve static files
-  app.use(express.static('public'));
-  
-  // Handle form submissions to add products
-  app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
-    try {
-      console.log('Session data:', req.session);
-      
-      // Ensure user is authenticated
-      if (!req.session.userId) {
-        return res.status(401).send('Unauthorized');
-      }
-      
-      const { productName, description, price, category } = req.body;
-      const productImages = req.files.map(file => file.filename);
-  
-      if (productImages.length !== 3) {
-        return res.status(400).send('Please upload exactly 3 images.');
-      }
-  
-      // Retrieve the user ID from the session
-      const userId = req.session.userId;
-  
-      const newProduct = new Product({
-        productName,
-        description,
-        price,
-        category,
-        productImages,
-        createdBy: userId, // Set createdBy field to the authenticated user's ID from session
-      });
-  
-      await newProduct.save(); // Save the new product to the database
-      res.redirect(`/category/${category}`);
-    } catch (error) {
-      console.error('Error processing form data:', error);
-      res.status(500).send('Internal Server Error');
+ // Handle form submissions to add products
+app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
+  try {
+    console.log('Session data:', req.session);
+    
+    // Ensure user is authenticated
+    if (!req.session.userId) {
+      return res.status(401).send('Unauthorized');
     }
-  });
-  
+    
+    const { productName, description, price, category } = req.body;
+    const productImages = req.files.map(file => file.filename);
 
+    if (productImages.length !== 3) {
+      return res.status(400).send('Please upload exactly 3 images.');
+    }
 
+    // Retrieve the user ID from the session
+    const userId = req.session.userId;
 
+    const newProduct = new Product({
+      productName,
+      description,
+      price,
+      category,
+      productImages,
+      createdBy: userId, // Set createdBy field to the authenticated user's ID from session
+    });
 
+    await newProduct.save(); // Save the new product to the database
+
+    // Redirect to the /form page
+    res.redirect('/form');
+  } catch (error) {
+    console.error('Error processing form data:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
 
 

@@ -237,6 +237,51 @@
     }
 }
 
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('addProductForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = new FormData(this);
+
+        fetch('/addProduct', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Check if the product was added successfully
+            if (data.success) {
+                // Redirect to the /form page
+                window.location.href = '/form';
+            } else {
+                // Handle errors if product addition failed
+                console.error('Error adding product:', data.error);
+                // Optionally, display error message to the user
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Optionally, display error message to the user
+        });
+    });
+});
+
+
+
+
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

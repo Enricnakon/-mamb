@@ -47,7 +47,7 @@ color: #571805;
 .advertisement-card {
   max-width: 400px; /* Adjust width as needed */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  background-color: rgba(116, 53, 53, 0.5); /* Semi-transparent white background */
   border-radius: 5px;
   text-align: center;
 }

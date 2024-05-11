@@ -12,8 +12,32 @@
   <style>
 
 
+.modal {
+  position: fixed; /* or absolute */
+  top: 50%; /* adjust as needed */
+  left: 50%; /* adjust as needed */
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 9999; /* adjust as needed */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 
 
+/* Additional styles for form elements, buttons, etc. */
 
 
   </style>
@@ -160,7 +184,8 @@
       <div class="advertisement-card">
           <h2>Coming Soon!</h2>
           <p>Discover our latest collection of cosmetics arriving this month.</p>
-          <a href="#" class="btn btn-primary">Learn More</a>
+    
+<!--  put call of action here    stle are in sty.css -->
       </div>
   </div>
 </div>
@@ -169,10 +194,7 @@
 
 
 
-
-
-
-
+<!-- Login Modal -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -180,13 +202,16 @@
     <form id="loginForm">
       <input type="text" name="identifier" placeholder="Username or Email">
       <input type="password" name="password" placeholder="Password">
-      
       <button type="submit">Login</button>
     </form>
     <p>Don't have an account? <a href="#" id="registerButton">Register</a></p>
     <p><a href="#" id="forgotPasswordLink">Forgot password?</a></p>
   </div>
 </div>
+
+<!-- Other Modals (register, forgot password, logout) -->
+
+
   <div id="registerModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>

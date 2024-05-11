@@ -110,6 +110,7 @@
 }
 .menu-icon {
   font-size: 2em; /* Adjust the font size as needed */
+ color: #333;
 }
 
 /* Dropdown Content Styling */
@@ -139,7 +140,7 @@
 
 .navbar {
   display: flex;
-  background-color: #b14024d2;
+  background-color: #922f11; /* Navbar background color */
   padding: 15px 30px;
   justify-content: space-between;
   align-items: center;
@@ -467,6 +468,7 @@ select::-ms-expand {
 .category-products {
   margin-left: 300px;
   /* Your styles here */
+
 }
 
 .card-container {
@@ -474,11 +476,13 @@ select::-ms-expand {
   flex-wrap: wrap;
   justify-content: flex-start;
 
+
 }
 .card {
   position: relative;
   overflow: hidden;
   margin-right: -100px;
+
 }
 
 .card .overlay {
@@ -493,6 +497,7 @@ select::-ms-expand {
   align-items: center;
   flex-direction: column;
   transition: background-color 0.3s ease;
+
 
 }
 
@@ -513,10 +518,12 @@ select::-ms-expand {
   margin: 10px;
   height: 400px; /* Set a fixed height */
   
+
+  
  
  
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(116, 53, 53, 0.219); /* Semi-transparent white background */
+  box-shadow: 0 4px 8px rgba(122, 82, 82, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -752,12 +759,30 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
 
 
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
 
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
 
-
-
-
-
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 
 
 
