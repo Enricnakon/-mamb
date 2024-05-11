@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 1rem 2rem; /* Adjust padding for better spacing on smaller screens */
   background-color: #f0f0f0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -27,20 +27,27 @@
 
 .custom-header .site-title {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
   color: #333;
-  margin-left: -1040px; /* Adjust space between site title and feature buttons */
+  margin-left: -7rem; /* Adjust space between site title and feature buttons */
+  margin-left: -1170px; 
+  
 }
 
 .custom-header .tagline {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
   color: #791010;
   position: absolute;
-  left: -860px; /* Adjust the distance from the left edge */
+  left: -5rem; /* Adjust the distance from the left edge */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   font-weight: 0.2;
   font-family: Arial, sans-serif;
+
+  position: absolute; 
+  left: -990px; 
+
+
 }
 
 .custom-header .title-section {
@@ -63,14 +70,14 @@
 
 .custom-header .feature-buttons button,
 .custom-header .feature-buttons a {
-  margin-left: 10px;
-  padding: 8px 20px;
+  margin-left: 1rem; /* Adjust margin for better spacing on smaller screens */
+  padding: 0.5rem 1rem; /* Adjust padding for better spacing on smaller screens */
 }
 
 /* Header Styles */
 .header1 {
   background-color: rgba(247, 247, 247, 0.959);
-  padding: 10px 20px;
+  padding: 1rem 2rem; /* Adjust padding for better spacing on smaller screens */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +91,7 @@
 }
 
 .header1 .feature {
-  margin-right: 20px;
+  margin-right: 1rem; /* Adjust margin for better spacing on smaller screens */
   display: inline-block; /* Set to display inline-block */
 }
 
@@ -92,8 +99,8 @@
 .social-icon {
   color: black; /* Set the color to black */
   border-right: 2px solid #ccc; /* Add vertical line separator */
-  padding-right: 10px; /* Add some space between icons and separator */
-  padding: 0 10px; /* Add space between icons and separators */
+  padding-right: 0.5rem; /* Add some space between icons and separator */
+  padding: 0 0.5rem; /* Add space between icons and separators */
 }
 
 /* Remove border from last icon */
@@ -127,25 +134,11 @@ select::-ms-expand {
   content: '';
   position: absolute;
   top: 50%;
-  right: -10px; /* Adjust the distance from the right */
+  right: -0.625rem; /* Adjust the distance from the right */
   transform: translateY(-50%);
-  height: 20px; /* Adjust the height of the line */
+  height: 1.25rem; /* Adjust the height of the line */
   border-right: 1px solid #ccc; /* Define the line */
 }
-
-/* Logo Styles */
- 
-
-/* Feature Button Styles */
-
-
-
-
-
-
-
-
-
 
 
 
@@ -303,11 +296,12 @@ select::-ms-expand {
 
 
 .menu-button {
-  cursor: pointer; /* Change cursor to pointer to indicate clickable element */
+  cursor: pointer;
 }
+
 .menu-icon {
-  font-size: 2em; /* Adjust the font size as needed */
- color: #333;
+  font-size: 2em;
+  color: #333;
 }
 
 /* Dropdown Content Styling */
@@ -316,7 +310,7 @@ select::-ms-expand {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
@@ -337,7 +331,7 @@ select::-ms-expand {
 
 .navbar {
   display: flex;
-  background-color: #922f11; /* Navbar background color */
+  background-color: #922f11;
   padding: 15px 30px;
   justify-content: space-between;
   align-items: center;
@@ -356,11 +350,11 @@ select::-ms-expand {
   color: #fff;
   margin-right: 20px;
   font-size: 1.2em;
-  transition: color 0.3s ease; /* Smooth transition on hover */
+  transition: color 0.3s ease;
 }
 
 .menu-links a:hover {
-  color: #ddd; /* Change color on hover */
+  color: #ddd;
 }
 
 /* Search Bar Styling */
@@ -370,7 +364,7 @@ select::-ms-expand {
 }
 
 .search-bar input[type="text"] {
-  width: 300px; /* Adjust width as needed */
+  width: 100%; /* Adjusted to full width */
   padding: 15px;
   border: none;
   border-radius: 30px;
@@ -402,21 +396,16 @@ select::-ms-expand {
   background-color: #b14024;
 }
 
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .search-bar input[type="text"] {
+    width: 70%; /* Adjusted for smaller screens */
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .search-bar button {
+    padding: 15px; /* Adjusted for smaller screens */
+  }
+}
 
 
 

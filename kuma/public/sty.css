@@ -1,10 +1,10 @@
 .container {
-  max-width: 1500px;
-  margin: 0 auto; /* Set margin to 0 to remove space */
+  max-width: 100%; /* Set max-width to 90% */
+  margin: 0 auto; /* Center the container */
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 50px);
 }
 
 .image-container {
@@ -39,11 +39,11 @@
   align-items: center;
   z-index: 5; /* Set a high z-index value */
   padding: 20px; /* Add padding for spacing */
-  color: #571805; 
+  color: #571805;
 }
 
 .advertisement-card {
-  max-width: 400px; /* Adjust width as needed */
+  max-width: 90%; /* Adjust width as needed */
   padding: 20px;
   background-color: rgba(116, 53, 53, 0.5); /* Semi-transparent white background */
   border-radius: 5px;
@@ -59,7 +59,7 @@
   margin-bottom: 15px;
   font-size: 1.1rem;
   color: rgb(253, 253, 253);
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .advertisement-card .btn {
@@ -88,12 +88,12 @@
 
 @keyframes fadeInAnimation {
   from {
-      opacity: 0.1;
-      transform: translateY(-20px);
+    opacity: 0.1;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -118,7 +118,6 @@
 
 .image-container.active .call-to-action {
   opacity: 1;
-  bottom: -200px;
 }
 
 /* Media Queries */
@@ -126,7 +125,9 @@
   .advertisement-container {
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Adjusted for better responsiveness */
-    max-width: 350px; /* Adjusted for better responsiveness */
+    max-width: 90%; /* Adjusted for better responsiveness */
+  }
+  .call-to-action {
+    bottom: -200px; /* Adjusted for mobile devices */
   }
 }
