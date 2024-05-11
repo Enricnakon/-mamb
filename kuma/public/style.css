@@ -407,8 +407,23 @@ select::-ms-expand {
   }
 }
 
+   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -421,13 +436,19 @@ select::-ms-expand {
   background-color: rgba(0,0,0,0.6);
 }
 
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 90%;
+  }
+}
+
 .modal-content {
   background-color: #fefefe;
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  width: 40%;
+   width: 40%;
 }
 
 .close {
@@ -487,44 +508,57 @@ a:hover {
   display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Category */
 .category h6 {
   /* Your styles here */
   font-size: 20px;
   margin-left: 300px;
 }
+
 .category-products {
   margin-left: 300px;
   /* Your styles here */
-
 }
 
+@media screen and (max-width: 768px) {
+  .category h6,
+  .category-products {
+    margin-left: 0;
+  }
+}
+
+/* Card Container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-
-
 }
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    justify-content: center;
+  }
+}
+
+/* Card */
 .card {
   position: relative;
   overflow: hidden;
   margin-right: -100px;
+  width: 220px;
+  margin: 10px;
+  height: 400px; /* Set a fixed height */
+  background-color: rgba(116, 53, 53, 0.219); /* Semi-transparent white background */
+  box-shadow: 0 4px 8px rgba(122, 82, 82, 0.1);
+  transition: transform 0.3s ease;
+}
 
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+    margin: 10px auto;
+    height: auto;
+  }
 }
 
 .card .overlay {
@@ -539,50 +573,38 @@ a:hover {
   align-items: center;
   flex-direction: column;
   transition: background-color 0.3s ease;
-
-
 }
 
 .card:hover .overlay {
   display: flex;
 }
 
-.card:hover .overlay .btn {
-  display: block;
-}
-
 .overlay .btn {
   display: none;
   margin: 5px;
 }
-.card {
-  width: 220px;
-  margin: 10px;
-  height: 400px; /* Set a fixed height */
-  
 
-  
- 
- 
-  background-color: rgba(116, 53, 53, 0.219); /* Semi-transparent white background */
-  box-shadow: 0 4px 8px rgba(122, 82, 82, 0.1);
-  transition: transform 0.3s ease;
+.card:hover .overlay .btn {
+  display: block;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card img {
+  width: 250px; /* Set a fixed width */
+  height: 350px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+  border-radius: 5px;
 }
 
 .card .card-header {
   font-size: 18px;
   font-weight: bold;
   margin: 10px;
-
 }
 
 .card p {
   font-size: 14px;
-  margin: 0 10px 10px;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
 
 .card-container .btn {
@@ -602,30 +624,8 @@ a:hover {
   background-color: #dd444459;
   color: #fcfcfc;
 }
-.card img {
-  width: 250px; /* Set a fixed width */
-  height: 350px; /* Set a fixed height */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
-  border-radius: 5px;
-}
-
-
-.card .card-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px;
-  
-}
-
-.card p {
-  font-size: 14px;
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
 
 /* Navigation Buttons */
-/* Navigation Buttons */
-
 .btn {
   /* Your styles here */
   font-size: 16px;
@@ -633,18 +633,6 @@ a:hover {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 300px;
-}
-
-.btn-primary {
-  /* Your styles here */
-  background-color: #3498db;
-  border: none;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  /* Your styles here */
-  background-color: #2980b9;
 }
 
 .prev-btn,
@@ -656,11 +644,8 @@ a:hover {
   border: none;
   border-radius: 25px;
   padding: 12px 24px;
-  
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-
-
 }
 
 .prev-btn:hover,
@@ -668,26 +653,14 @@ a:hover {
   /* Your styles here */
   background-color: #2980b9;
   transform: scale(1.05);
-
 }
- 
 
+@media screen and (max-width: 768px) {
+  .btn {
+    margin-left: 0;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Button Styles */
 /* Button Styles */
 .add-to-cart-btn,
 .view-btn {
@@ -713,17 +686,19 @@ a:hover {
   border-color: #ffffff; /* Change border color on hover */
 }
 
-/* Adjust button appearance when pressed */
 .add-to-cart-btn:active,
 .view-btn:active {
+  /* Adjust button appearance when pressed */
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
-
+@media screen and (max-width: 768px) {
+  .add-to-cart-btn,
+  .view-btn {
+    margin-right: 0;
+  }
+}
 
 
 
