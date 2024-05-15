@@ -92,7 +92,7 @@
 
 /* Adjust font size for better readability on smaller screens */
 .header1 span {
-  font-size: 0.5rem; /* Reduced font size */
+  font-size: 1.0rem; /* Reduced font size */
 }
 
 .header1 .feature {
