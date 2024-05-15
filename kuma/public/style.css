@@ -202,7 +202,6 @@ select::-ms-expand {
 
 
 
-
 /* Original CSS styles for the dropdown menu */
 
 .menu-button {
@@ -251,6 +250,10 @@ select::-ms-expand {
   .dropdown-content a {
     padding: 10px; /* Adjust padding for smaller screens */
     border-bottom: 1px solid #ccc; /* Add border bottom for separation */
+  }
+
+  .logo {
+    display: none; /* Hide the logo on smaller screens */
   }
 }
 
@@ -332,12 +335,6 @@ select::-ms-expand {
     padding: 12px; /* Adjusted for smaller screens */
   }
 }
-
-
-
-
-
-
 
 
 
