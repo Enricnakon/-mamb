@@ -19,7 +19,7 @@ $(document).ready(function () {
                     '</div>'
                 );
                 $('#dataContainer').append(imageContainer);
-                if (index === 0) {
+                if (index === 1) {
                     imageContainer.addClass('active'); // Show first image initially
                 }
             });
