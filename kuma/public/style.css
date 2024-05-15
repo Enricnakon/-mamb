@@ -71,6 +71,11 @@
   text-decoration: #b14024d2;
 }
 
+@media only screen and (max-width: 767px) {
+  .right-section {
+    display: none; /* Hide the right section for mobile screens */
+  }
+}
 .header1 .middle-section {
   display: flex;
   align-items: center;
