@@ -75,15 +75,8 @@
   display: flex;
   align-items: center;
 }
-
-/* CSS for desktop screens */
-@media only screen and (min-width: 768px) {
-  .header1 .right-section {
-    display: block; /* Display the right section for desktop screens */
-  }
  
-/* CSS for mobile screens */
- 
+  /* Adjust padding for better spacing on smaller screens */
   .header1 {
     padding: 1rem; 
   }
@@ -92,8 +85,7 @@
   .header1 span {
     font-size: 0.9rem;
   }
-}
-
+ 
 .header1 .feature {
   margin-right: 1rem; /* Adjust margin for better spacing on smaller screens */
   display: inline-block; /* Set to display inline-block */
