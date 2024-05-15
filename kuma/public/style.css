@@ -17,16 +17,21 @@
   max-width: 100px;
 }
 
-.custom-header .header-content {
-  display: flex;
-  align-items: center;
-}
 
+
+@media only screen and (max-width: 767px) {
+  .custom-header .header-content {
+    display: none;
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 767px) {
 .custom-header .title-section {
   display: flex;
   align-items: center;
 }
-
+}
 .custom-header .site-title {
   margin: 0;
   font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
