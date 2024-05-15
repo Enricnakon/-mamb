@@ -205,6 +205,7 @@ select::-ms-expand {
 .menu-icon {
   font-size: 2em;
   color: #333;
+  margin-right: 20px; /* Add margin to separate from other elements */
 }
 
 /* Dropdown Content Styling */
@@ -317,6 +318,20 @@ select::-ms-expand {
 
 .search-bar button:hover {
   background-color: #b14024;
+}
+
+/* User Actions Styling */
+.user-actions {
+  margin-left: 20px; /* Add margin to separate from other elements */
+}
+
+.user-actions i {
+  margin-right: 10px; /* Add margin to separate icon from text */
+}
+
+.user-actions .sign {
+  color: #fff;
+  font-size: 1.2em;
 }
 
 /* Media Queries */
