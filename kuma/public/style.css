@@ -61,12 +61,12 @@
 /* Header Styles */
 .header1 {
   background-color: rgba(247, 247, 247, 0.959);
-  padding: 1rem; 
+  padding: 0.5rem 1rem; /* Reduced padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: rgba(31, 5, 5, 0.5);
-  text-decoration: #b14024d2;
+  text-decoration: none;
   flex-wrap: nowrap; /* Prevent wrapping */
 }
 
@@ -80,28 +80,29 @@
   display: flex;
   align-items: center;
 }
- 
-/* Adjust padding for better spacing on smaller screens */
-.header1 {
-  padding: 1rem; 
-}
-  
+
 /* Adjust font size for better readability on smaller screens */
 .header1 span {
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Reduced font size */
 }
- 
+
 .header1 .feature {
-  margin-right: 1rem; /* Adjust margin for better spacing on smaller screens */
-  display: inline-block; /* Set to display inline-block */
+  margin-right: 0.5rem; /* Reduced margin */
+  display: inline-block;
+  font-size: 0.8rem; /* Reduced font size */
 }
 
 /* CSS for social media icons */
 .social-icon {
-  color: black; /* Set the color to black */
-  border-right: 2px solid #ccc; /* Add vertical line separator */
-  padding-right: 0.5rem; /* Add some space between icons and separator */
-  padding: 0 0.5rem; /* Add space between icons and separators */
+  color: black;
+  border-right: 1px solid #ccc; /* Reduced border width */
+  padding: 0 0.25rem; /* Reduced padding */
+  font-size: 0.8rem; /* Reduced font size */
+}
+
+/* Optional: Add hover effect */
+.social-icon:hover {
+  color: #333;
 }
 
 /* Remove border from last icon */
@@ -109,16 +110,12 @@
   border-right: none;
 }
 
-/* Optional: Add hover effect */
-.social-icon:hover {
-  color: #333; /* Set the hover color */
-}
-
 /* Remove background, border, and selection styles for select elements */
 select {
   background-color: transparent;
   border: none;
   outline: none;
+  font-size: 0.8rem; /* Reduced font size */
 }
 
 /* Remove the default arrow in select elements */
@@ -135,10 +132,10 @@ select::-ms-expand {
   content: '';
   position: absolute;
   top: 50%;
-  right: -0.625rem; /* Adjust the distance from the right */
+  right: -0.3125rem; /* Adjusted distance from the right */
   transform: translateY(-50%);
-  height: 1.25rem; /* Adjust the height of the line */
-  border-right: 1px solid #ccc; /* Define the line */
+  height: 1rem; /* Adjusted height */
+  border-right: 1px solid #ccc;
 }
 
 
