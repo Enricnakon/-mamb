@@ -1,34 +1,4 @@
-.container {
-  max-width: 100%; /* Set max-width to 90% */
-  margin: 0 auto; /* Center the container */
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: calc(100vh - 50px);
-}
-
-.image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease;
-  z-index: -1; /* Move images behind other content */
-}
-
-.image-container.active {
-  opacity: 1;
-  z-index: 0; /* Bring active image to the front */
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+ 
 .advertisement-container {
   position: absolute;
   top: 0;
