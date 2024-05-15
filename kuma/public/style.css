@@ -196,12 +196,6 @@ select::-ms-expand {
 
 
 
-
-
-
-
-
-
 /* Original CSS styles for the dropdown menu */
 
 .menu-button {
@@ -219,7 +213,6 @@ select::-ms-expand {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
- 
   z-index: 100;
 }
 
@@ -241,19 +234,19 @@ select::-ms-expand {
 /* Media Queries for responsive design */
 @media screen and (max-width: 768px) {
   .dropdown-content {
- 
-    box-shadow: none; /* Remove box shadow */
-    min-width: auto; /* Set minimum width to auto */
-    
+    position: static;
+    box-shadow: none;
+    min-width: auto;
+    width: 100%;
   }
 
   .dropdown-content a {
-    padding: 10px; /* Adjust padding for smaller screens */
-    border-bottom: 1px solid #ccc; /* Add border bottom for separation */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
   }
 
   .logo {
-    display: none; /* Hide the logo on smaller screens */
+    display: none;
   }
 }
 
@@ -270,15 +263,16 @@ select::-ms-expand {
   color: #fff;
   font-weight: bold;
   font-size: 2em;
+  margin-right: 20px; /* Add margin to separate from other elements */
 }
 
 /* Menu Links Styling */
 .menu-links a {
   text-decoration: none;
   color: #fff;
-  margin-right: 20px;
   font-size: 1.2em;
   transition: color 0.3s ease;
+  margin-right: 20px; /* Add margin to separate links */
 }
 
 .menu-links a:hover {
@@ -289,10 +283,11 @@ select::-ms-expand {
 .search-bar {
   display: flex;
   align-items: center;
+  margin-right: 20px; /* Add margin to separate from other elements */
 }
 
 .search-bar input[type="text"] {
-  width: 100%; /* Adjusted to full width */
+  width: 100%;
   padding: 15px;
   border: none;
   border-radius: 30px;
@@ -327,31 +322,26 @@ select::-ms-expand {
 /* Media Queries */
 @media only screen and (max-width: 768px) {
   .search-bar input[type="text"] {
-    width: 70%; /* Adjusted for smaller screens */
-    padding: 12px; /* Adjusted padding for smaller screens */
+    width: 70%;
+    padding: 12px;
   }
 
   .search-bar button {
-    padding: 12px; /* Adjusted for smaller screens */
+    padding: 12px;
   }
 }
-
-
- 
 
 @media only screen and (max-width: 767px) {
   .logo1 {
-    display: none; /* Hide the right section for mobile screens */
+    display: none;
   }
 }
-
 
 @media only screen and (max-width: 767px) {
   .sign {
-    display: none; /* Hide the right section for mobile screens */
+    display: none;
   }
 }
-
 
 
 /* Modal */
