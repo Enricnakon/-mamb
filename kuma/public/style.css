@@ -205,7 +205,7 @@ select::-ms-expand {
 .menu-icon {
   font-size: 2em;
   color: #333;
-  margin-right: 20px; /* Add margin to separate from other elements */
+  margin-right: 40px; /* Add margin to separate from other elements */
 }
 
 /* Dropdown Content Styling */
@@ -293,7 +293,7 @@ select::-ms-expand {
   border: none;
   border-radius: 30px;
   background-color: #f4f4f4;
-  font-size: 1.1em;
+  font-size: 1.0em;
   color: #333;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
