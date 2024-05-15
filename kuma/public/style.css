@@ -83,13 +83,13 @@
 
 /* Adjust font size for better readability on smaller screens */
 .header1 span {
-  font-size: 0.8rem; /* Reduced font size */
+  font-size: 0.5rem; /* Reduced font size */
 }
 
 .header1 .feature {
-  margin-right: 0.5rem; /* Reduced margin */
+  margin-right: 0.10rem; /* Reduced margin */
   display: inline-block;
-  font-size: 0.8rem; /* Reduced font size */
+  font-size: 0.5rem; /* Reduced font size */
 }
 
 /* CSS for social media icons */
@@ -115,7 +115,7 @@ select {
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 0.8rem; /* Reduced font size */
+  font-size: 0.5rem; /* Reduced font size */
 }
 
 /* Remove the default arrow in select elements */
