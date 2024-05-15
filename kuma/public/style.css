@@ -241,10 +241,10 @@ select::-ms-expand {
 /* Media Queries for responsive design */
 @media screen and (max-width: 768px) {
   .dropdown-content {
-    position: static; /* Change position to static for smaller screens */
+ 
     box-shadow: none; /* Remove box shadow */
     min-width: auto; /* Set minimum width to auto */
-    width: 100%; /* Make dropdown full width */
+    
   }
 
   .dropdown-content a {
@@ -337,7 +337,13 @@ select::-ms-expand {
 }
 
 
+ 
 
+@media only screen and (max-width: 767px) {
+  .logo {
+    display: none; /* Hide the right section for mobile screens */
+  }
+}
 
 
 
