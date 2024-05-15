@@ -31,10 +31,17 @@ $(document).ready(function () {
             setInterval(function () {
                 // Hide current image and its description
                 images.eq(currentIndex).removeClass('active').find('.image-description p').removeClass('fade-in');
-                currentIndex = (currentIndex + 1) % images.length; // Increment index or loop back to 0
-                
+
+                // Increment index or loop back to 0 if currentIndex is at the last index
+                currentIndex = (currentIndex + 1) % images.length;
+
                 // Show next image and its description
                 images.eq(currentIndex).addClass('active').find('.image-description p').addClass('fade-in');
+                
+                // If currentIndex is back to 0 (first image), immediately show it
+                if (currentIndex === 0) {
+                    images.eq(0).addClass('active').find('.image-description p').addClass('fade-in');
+                }
             }, 5000);
         },
         error: function (xhr, status, error) {

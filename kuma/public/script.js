@@ -161,14 +161,14 @@ closeButtons.forEach(function(button) {
 
 
 
-const images = document.querySelectorAll('.image-container');
+const images = document.querySelectorAll('.image-container2');
   let currentIndex = 0;
 
   setInterval(() => {
     images[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex = (currentIndex + 2) % images.length;
     images[currentIndex].classList.add('active');
-  }, 5000); // Change image every 5 seconds
+  }, 6000); // Change image every 5 seconds
 
 
 
@@ -596,16 +596,16 @@ function addToCart(productId, productName, price) {
         <p>Category: ${product.category}</p>
       `;
       // Populate images in the image container
-      const imageContainer = document.getElementById('imageContainer');
-      imageContainer.innerHTML = '';
+      const imageContainer1 = document.getElementById('imageContainer1');
+      imageContainer1.innerHTML = '';
       product.productImages.forEach((image, index) => {
         const img = document.createElement('img');
         img.src = `/images/${image}`;
         img.alt = product.productName;
         img.onclick = () => swapImages(index);
-        img.style.width = index === 0 ? '200px' : '50px';
-        img.style.height = index === 0 ? '300px' : '50px';
-        imageContainer.appendChild(img);
+        img.style.width = index === 0 ? '800px' : '50px';
+        img.style.height = index === 0 ? '590px' : '50px';
+        imageContainer1.appendChild(img);
       });
       // Display the modal
       document.getElementById('productModal').style.display = 'block';
@@ -613,7 +613,7 @@ function addToCart(productId, productName, price) {
 
     // Function to swap big and small images
     function swapImages(index) {
-      const images = document.getElementById('imageContainer').getElementsByTagName('img');
+      const images = document.getElementById('imageContainer1').getElementsByTagName('img');
       const tempSrc = images[0].src;
       images[0].src = images[index].src;
       images[index].src = tempSrc;
