@@ -692,6 +692,13 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
 
 
+/* Adjust image sizes based on screen size */
+@media screen and (max-width: 768px) {
+  .image-container img {
+      width: 100px; /* Adjust width for smaller screens */
+      height: 100px; /* Adjust height for smaller screens */
+  }
+}
 
 /* Modal Styling */
 .modal {
