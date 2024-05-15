@@ -309,9 +309,9 @@ select::-ms-expand {
   border: none;
   background-color: #b14024d2;
   color: #fff;
-  padding: 15px 30px;
+  padding: 10px 25px;
   border-radius: 30px;
-  font-size: 1.0em;
+  font-size: 0.7em;
   cursor: pointer;
   transition: background-color 0.3s;
 }
