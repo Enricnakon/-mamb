@@ -60,7 +60,6 @@
 
 
 
-
 /* Header Styles */
 .header1 {
   background-color: rgba(247, 247, 247, 0.959);
@@ -79,14 +78,14 @@
 
 /* CSS for desktop screens */
 @media only screen and (min-width: 768px) {
-  .right-section {
+  .header1 .right-section {
     display: block; /* Display the right section for desktop screens */
   }
 }
 
 /* CSS for mobile screens */
 @media only screen and (max-width: 767px) {
-  .right-section {
+  .header1 .right-section {
     display: none; /* Hide the right section for mobile screens */
   }
   /* Adjust padding for better spacing on smaller screens */
@@ -149,8 +148,6 @@ select::-ms-expand {
   height: 1.25rem; /* Adjust the height of the line */
   border-right: 1px solid #ccc; /* Define the line */
 }
-
-
 
 
 
