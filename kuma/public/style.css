@@ -237,8 +237,8 @@ select::-ms-expand {
   .dropdown-content {
     position: static;
     box-shadow: none;
-    min-width: auto;
-    width: 100%;
+ 
+    
   }
 
   .dropdown-content a {
