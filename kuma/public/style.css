@@ -81,14 +81,9 @@
   .header1 .right-section {
     display: block; /* Display the right section for desktop screens */
   }
-}
-
+ 
 /* CSS for mobile screens */
-@media only screen and (max-width: 767px) {
-  .header1 .right-section {
-    display: none; /* Hide the right section for mobile screens */
-  }
-  /* Adjust padding for better spacing on smaller screens */
+ 
   .header1 {
     padding: 1rem; 
   }
