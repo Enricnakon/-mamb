@@ -90,14 +90,12 @@
   }
 }
 
-/* Show the right section on larger screens */
+/*/* Show the right section on larger screens */
 @media only screen and (min-width: 768px) {
   .right-section {
     display: block;
-    visibility: visible;
   }
 }
-
 
 
 
