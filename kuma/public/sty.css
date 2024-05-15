@@ -149,10 +149,10 @@
 /* Media query for phone screens */
 @media screen and (max-width: 768px) {
   .advertisement-container {
-    left: 50%; /* Center the container horizontally */
+    left: 20%; /* Center the container horizontally */
     transform: translateX(-50%);
-    top: 20px; /* Adjust top position for smaller screens */
-    padding: 10px; /* Adjust padding for smaller screens */
+    top: 10px; /* Adjust top position for smaller screens */
+    padding: 5px; /* Adjust padding for smaller screens */
     align-items: flex-start; /* Align items at the top */
   }
 }
