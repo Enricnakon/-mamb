@@ -289,11 +289,11 @@ select::-ms-expand {
 
 .search-bar input[type="text"] {
   width: 100%;
-  padding: 15px;
+  padding: 25px;
   border: none;
   border-radius: 30px;
   background-color: #f4f4f4;
-  font-size: 1.0em;
+  font-size: 1.1em;
   color: #333;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -311,7 +311,7 @@ select::-ms-expand {
   color: #fff;
   padding: 15px 30px;
   border-radius: 30px;
-  font-size: 1.1em;
+  font-size: 0.5em;
   cursor: pointer;
   transition: background-color 0.3s;
 }
