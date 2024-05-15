@@ -83,11 +83,14 @@
 }
 
 /* Hide the right section for mobile screens */
+/* Hide the right section for mobile screens */
 @media only screen and (max-width: 767px) {
   .right-section {
-    display: none;
+    visibility: hidden;
   }
 }
+
+
 
 .header1 .left-section {
   display: flex;
