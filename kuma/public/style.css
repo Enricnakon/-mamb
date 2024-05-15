@@ -83,6 +83,7 @@
 
 
 /* CSS for desktop screens */
+/* CSS for desktop screens */
 @media only screen and (min-width: 768px) {
   .right-section {
     display: block; /* Display the right section for desktop screens */
@@ -95,7 +96,6 @@
     display: none; /* Hide the right section for mobile screens */
   }
 }
-
 
 
 .header1 .feature {
