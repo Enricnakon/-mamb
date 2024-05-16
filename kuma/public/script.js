@@ -390,7 +390,7 @@ function displayLatestProducts(category, products) {
   container.empty(); // Clear previous content
 
   let activeIndex = 0; // Index of the first active card
-  const cardsPerPage = 8; // Number of cards to display per page
+  const cardsPerPage = 4; // Number of cards to display per page
 
   function updateCards() {
     container.empty(); // Clear previous content
@@ -594,7 +594,7 @@ function addToCart(productId, productName, price) {
         <p>Product ID: ${product.productId}</p>
         <p>Description: ${product.description}</p>
         <p>Price: ${product.price}</p>
-        <p>Category: ${product.category}</p>
+       
       `;
       // Populate images in the image container
       const imageContainer = document.getElementById('imageContainer');

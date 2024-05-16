@@ -594,33 +594,39 @@ select::-ms-expand {
 
 
 
-
-
-
-
-
-
+/* Category Styles */
+@media (max-width: 768px) {
+  .category h6,
+  .category-products {
+    margin-left: 20%; /* Adjust margin for smaller screens */
+  }
+}
 
 .category h6 {
-  /* Your styles here */
-  font-size: 20px;
-  margin-left: 300px;
-}
-.category-products {
-  margin-left: 300px;
-  /* Your styles here */
+  font-size: 1.25em; /* 20px converted to em */
 }
 
+/* Card Styles */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-
 }
+
 .card {
+  width: 20%; /* Adjust width for four cards per row */
+  margin: 1em; /* Adjust margin for spacing */
+  height: 25em; /* Set a fixed height */
+  background-color: #fff;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
-  margin-right: -100px;
+  margin-right: 1.5em; /* Adjust right margin for spacing */
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card .overlay {
@@ -635,7 +641,6 @@ select::-ms-expand {
   align-items: center;
   flex-direction: column;
   transition: background-color 0.3s ease;
-
 }
 
 .card:hover .overlay {
@@ -648,219 +653,136 @@ select::-ms-expand {
 
 .overlay .btn {
   display: none;
-  margin: 5px;
-}
-.card {
-  width: 220px;
-  margin: 10px;
-  height: 400px; /* Set a fixed height */
-  
- 
- 
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  margin: 0.25em;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card .card-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px;
-
-}
-
-.card p {
-  font-size: 14px;
-  margin: 0 10px 10px;
-}
-
-.card-container .btn {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  background-color: #dae0e7;
-  color: #000000;
-  border: none;
-  border-radius: 0 0 12px 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.card-container .btn:hover {
-  background-color: #dd444459;
-  color: #fcfcfc;
-}
 .card img {
-  width: 250px; /* Set a fixed width */
-  height: 350px; /* Set a fixed height */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+  width: 100%; /* Set image width to fill container */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 5px;
 }
 
-
 .card .card-header {
-  font-size: 18px;
+  font-size: 1.125em; /* 18px converted to em */
   font-weight: bold;
-  margin: 10px;
-  
+  margin: 0.625em; /* 10px converted to em */
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 0.875em; /* 14px converted to em */
   line-height: 1.4;
-  margin-bottom: 10px;
+  margin-bottom: 0.625em; /* 10px converted to em */
 }
 
-/* Navigation Buttons */
-/* Navigation Buttons */
-
-.btn {
-  /* Your styles here */
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 300px;
+/* Button Styles */
+@media (max-width: 768px) {
+  .btn {
+    margin-left: 20%; /* Adjust margin for smaller screens */
+  }
 }
 
-.btn-primary {
-  /* Your styles here */
-  background-color: #3498db;
-  border: none;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  /* Your styles here */
-  background-color: #2980b9;
-}
-
+.btn-primary,
 .prev-btn,
-.next-btn {
-  /* Your styles here */
-  font-weight: bold;
-  color: #fff;
-  background-color: #3498db;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 24px;
-  
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-
-
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  /* Your styles here */
-  background-color: #2980b9;
-  transform: scale(1.05);
-
-}
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Button Styles */
-/* Button Styles */
+.next-btn,
 .add-to-cart-btn,
 .view-btn {
-  /* Common button styles */
   background-color: transparent;
-  border: 2px solid #db6934; /* Thin border */
+  border: 0.125em solid #db6934; /* Thin border */
   color: #db4d34;
-  padding: 10px 30px; /* Adjust padding for button width */
-  font-size: 18px;
+  padding: 0.625em 1.875em; /* Adjust padding for button width */
+  font-size: 1.125em; /* 18px converted to em */
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 5px; /* Adjust border-radius for a slightly rounded appearance */
+  border-radius: 0.3125em; /* Adjust border-radius for a slightly rounded appearance */
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  margin-right: 10px;
 }
 
+.btn-primary:hover,
+.prev-btn:hover,
+.next-btn:hover,
 .add-to-cart-btn:hover,
 .view-btn:hover {
-  /* Button hover effect */
   background-color: #ffffff;
   color: #0e0909; /* Change text color on hover */
   border-color: #ffffff; /* Change border color on hover */
 }
 
 /* Adjust button appearance when pressed */
+.btn-primary:active,
+.prev-btn:active,
+.next-btn:active,
 .add-to-cart-btn:active,
 .view-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(0.0625em); /* 1px converted to em */
+  box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.3); /* 1px converted to em */
 }
 
+/* Navigation Buttons */
+.prev-btn,
+.next-btn {
+  font-weight: bold;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 0.625em; /* 10px converted to em */
+  padding: 0.75em 1.5em; /* Adjust padding */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
 
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Cart Styles */
 .cart-container {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin-top: 1.25em; /* 20px converted to em */
+  padding: 0.625em;
+  border: 0.0625em solid #ccc; /* 1px converted to em */
+  border-radius: 0.3125em; /* 5px converted to em */
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 1.25em; /* 20px converted to em */
+  right: 1.25em; /* 20px converted to em */
   background-color: #fff;
   z-index: 1000;
 }
 
 .cart-item {
-  margin-bottom: 10px;
+  margin-bottom: 0.625em; /* 10px converted to em */
 }
 
 .cart-item button {
-  margin-left: 10px;
+  margin-left: 0.625em; /* 10px converted to em */
 }
 
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .card {
+    width: 45%; /* Adjust width for two cards per row */
+    margin-right: 0.3125em; /* 5px converted to em */
+  }
 
+  .prev-btn,
+  .next-btn {
+    margin-left: 0.3125em; /* 5px converted to em */
+  }
+}
 
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+  .card {
+    width: 100%; /* Set width to full for single card per row */
+    margin: 1em 0; /* Adjust margin for full width */
+  }
 
-
-
-
-
-
-
-
-
-
-
+  .prev-btn,
+  .next-btn {
+    margin: 0.625em 0; /* Adjust margin for full width */
+  }
+}
 
 
 
