@@ -384,14 +384,14 @@ function fetchLatestProducts(category) {
     displayLatestProducts(category, products);
   });
 }
-
 function displayLatestProducts(category, products) {
   const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
   container.empty(); // Clear previous content
 
   let activeIndex = 0; // Index of the first active card
-  const cardsPerPage = 4; // Number of cards to display per page
-   if ($(window).width() <= 576) {
+  let cardsPerPage = 4; // Number of cards to display per page by default
+
+  if ($(window).width() <= 576) {
     cardsPerPage = 2; // Set the number of cards to display per page for phone screens
   }
 
@@ -402,28 +402,21 @@ function displayLatestProducts(category, products) {
       const product = products[i];
       const card = $(`
         <div class="card mt-3 ${i === activeIndex ? 'active' : 'd-none'}">
-         
           <div class="card-header">${product.productName}</div>
           <div class="card-body">
-            <p>  ${product.description}</p>
-            
+            <p>${product.description}</p>
             <p>Price: $${product.price}</p>
             <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
-            <div class="overlay">
-               
-            </div>
+            <div class="overlay"></div>
           </div>
         </div>
       `);
       
-      // Create button container and buttons
-      const buttonContainer = document.createElement('div');
-      buttonContainer.classList.add('button-container');
+      // Create button container and buttons using jQuery
+      const buttonContainer = $('<div class="button-container"></div>');
 
-      const viewBtn = document.createElement('button');
-      viewBtn.classList.add('view-btn');
-      viewBtn.textContent = 'View';
-      viewBtn.addEventListener('click', () => {
+      const viewBtn = $('<button class="view-btn">View</button>');
+      viewBtn.on('click', () => {
         viewProduct({
           productId: product._id,
           productName: product.productName,
@@ -434,21 +427,20 @@ function displayLatestProducts(category, products) {
         });
       });
 
-      const addToCartBtn = document.createElement('button');
-      addToCartBtn.classList.add('add-to-cart-btn');
-      addToCartBtn.textContent = 'Add to Cart';
-      addToCartBtn.setAttribute('id', `add-to-cart-${product._id}`); // Add id attribute
-      addToCartBtn.addEventListener('click', () => {
+      const addToCartBtn = $(`<button class="add-to-cart-btn" id="add-to-cart-${product._id}">Add to Cart</button>`);
+      addToCartBtn.on('click', () => {
         addToCart(product._id, product.productName, product.price);
       });
 
-      buttonContainer.appendChild(viewBtn);
-      buttonContainer.appendChild(addToCartBtn); // Add the Add to Cart button
-      card.find('.overlay').append(buttonContainer); // Append button container to card overlay
+      buttonContainer.append(viewBtn);
+      buttonContainer.append(addToCartBtn);
+      card.find('.overlay').append(buttonContainer);
       container.append(card);
     }
   }
 
+  // Call updateCards initially and on window resize
+  $(window).on('resize', updateCards);
   updateCards();
 
   // Navigation buttons
@@ -466,9 +458,6 @@ function displayLatestProducts(category, products) {
     }
   });
 }
-
-
-// Define a variable to store cart items
 
 
  
