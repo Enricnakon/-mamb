@@ -391,6 +391,9 @@ function displayLatestProducts(category, products) {
 
   let activeIndex = 0; // Index of the first active card
   const cardsPerPage = 4; // Number of cards to display per page
+   if ($(window).width() <= 576) {
+    cardsPerPage = 2; // Set the number of cards to display per page for phone screens
+  }
 
   function updateCards() {
     container.empty(); // Clear previous content
@@ -480,8 +483,9 @@ function addToCart(productId, productName, price) {
         cartItems[index].quantity++;
     } else {
         cartItems.push({
-            productId: productId,
-            productName: productName,
+          productId: productId,   
+          productName: productName,
+          
             price: price,
             quantity: 1
         });
