@@ -33,7 +33,7 @@
  
   font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
   color: #333;
-  margin-right: 10px; /* Adjust margin as needed */
+  margin: -1210px;
 }
 @media only screen and (max-width: 767px) {
   .tagline.blink {
@@ -364,24 +364,6 @@ select::-ms-expand {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -394,19 +376,13 @@ select::-ms-expand {
   background-color: rgba(0,0,0,0.6);
 }
 
-@media screen and (max-width: 768px) {
-  .modal {
-    width: 90%;
-  }
-}
-
 .modal-content {
   background-color: #fefefe;
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-   width: 40%;
+  width: 40%;
 }
 
 .close {
@@ -466,69 +442,185 @@ a:hover {
   display: none;
 }
 
-/* Category */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header Styles */
+.header1 {
+  background-color: rgba(247, 247, 247, 0.959);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(31, 5, 5, 0.5);
+  text-decoration: #b14024d2;
+}
+
+
+
+
+
+.header1 .middle-section {
+  display: flex;
+  align-items: center;
+}
+
+.header1 .feature {
+  margin-right: 20px;
+  display: inline-block; /* Set to display inline-block */
+}
+
+/* CSS for social media icons */
+.social-icon {
+  color: black; /* Set the color to black */
+  border-right: 2px solid #ccc; /* Add vertical line separator */
+  padding-right: 10px; /* Add some space between icons and separator */
+  padding: 0 10px; /* Add space between icons and separators */
+
+}
+
+/* Remove border from last icon */
+.social-icon:last-child {
+  border-right: none;
+}
+
+/* Optional: Add hover effect */
+.social-icon:hover {
+  color: #333; /* Set the hover color */
+}
+
+
+/* Remove background, border, and selection styles for select elements */
+select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Remove the default arrow in select elements */
+select::-ms-expand {
+  display: none;
+}
+
+
+/* Vertical line separator */
+.lc-section .feature {
+  position: relative;
+}
+.lc-section .feature::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px; /* Adjust the distance from the right */
+  transform: translateY(-50%);
+  height: 20px; /* Adjust the height of the line */
+  border-right: 1px solid #ccc; /* Define the line */
+}
+
+
+/* Logo Styles */
+ 
+
+/* Feature Button Styles */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .category h6 {
   /* Your styles here */
   font-size: 20px;
   margin-left: 300px;
 }
-
 .category-products {
   margin-left: 300px;
   /* Your styles here */
 }
 
-@media screen and (max-width: 768px) {
-  .category h6,
-  .category-products {
-    margin-left: 0;
-  }
-}
-
-/* Card Container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
 
-@media screen and (max-width: 768px) {
-  .card-container {
-    justify-content: center;
-  }
 }
-
-/* Card */
-/* Card Container */
-.card-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  justify-content: space-between; /* Distribute space between cards */
-}
-
-/* Card */
 .card {
   position: relative;
   overflow: hidden;
   margin-right: -100px;
-  width: 220px;
-  margin: 10px;
-  height: 400px; /* Set a fixed height */
-  background-color: rgba(116, 53, 53, 0.219); /* Semi-transparent white background */
-  box-shadow: 0 4px 8px rgba(122, 82, 82, 0.1);
-  transition: transform 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-  .card {
-    width: 90%; /* Adjust width for smaller screens */
-    margin: 10px auto; /* Center-align cards */
-    height: auto; /* Allow height to adjust based on content */
-  }
-
-  .btn {
-    margin-left: 0; /* Adjust button margin for smaller screens */
-  }
 }
 
 .card .overlay {
@@ -543,38 +635,47 @@ a:hover {
   align-items: center;
   flex-direction: column;
   transition: background-color 0.3s ease;
+
 }
 
 .card:hover .overlay {
   display: flex;
 }
 
-.overlay .btn {
-  display: none;
-  margin: 5px;
-}
-
 .card:hover .overlay .btn {
   display: block;
 }
 
-.card img {
-  width: 250px; /* Set a fixed width */
-  height: 350px; /* Set a fixed height */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
-  border-radius: 5px;
+.overlay .btn {
+  display: none;
+  margin: 5px;
+}
+.card {
+  width: 220px;
+  margin: 10px;
+  height: 400px; /* Set a fixed height */
+  
+ 
+ 
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card .card-header {
   font-size: 18px;
   font-weight: bold;
   margin: 10px;
+
 }
 
 .card p {
   font-size: 14px;
-  line-height: 1.4;
-  margin-bottom: 10px;
+  margin: 0 10px 10px;
 }
 
 .card-container .btn {
@@ -594,9 +695,32 @@ a:hover {
   background-color: #dd444459;
   color: #fcfcfc;
 }
+.card img {
+  width: 250px; /* Set a fixed width */
+  height: 350px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+  border-radius: 5px;
+}
+
+
+.card .card-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
 
 /* Navigation Buttons */
+/* Navigation Buttons */
+
 .btn {
+  /* Your styles here */
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -604,33 +728,63 @@ a:hover {
   margin-left: 300px;
 }
 
+.btn-primary {
+  /* Your styles here */
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  /* Your styles here */
+  background-color: #2980b9;
+}
+
 .prev-btn,
 .next-btn {
+  /* Your styles here */
   font-weight: bold;
   color: #fff;
   background-color: #3498db;
   border: none;
   border-radius: 25px;
   padding: 12px 24px;
+  
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+
+
 }
 
 .prev-btn:hover,
 .next-btn:hover {
+  /* Your styles here */
   background-color: #2980b9;
   transform: scale(1.05);
-}
 
-@media screen and (max-width: 768px) {
-  .btn {
-    margin-left: 0;
-  }
 }
+ 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Button Styles */
 /* Button Styles */
 .add-to-cart-btn,
 .view-btn {
+  /* Common button styles */
   background-color: transparent;
   border: 2px solid #db6934; /* Thin border */
   color: #db4d34;
@@ -646,23 +800,19 @@ a:hover {
 
 .add-to-cart-btn:hover,
 .view-btn:hover {
+  /* Button hover effect */
   background-color: #ffffff;
   color: #0e0909; /* Change text color on hover */
   border-color: #ffffff; /* Change border color on hover */
 }
 
+/* Adjust button appearance when pressed */
 .add-to-cart-btn:active,
 .view-btn:active {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 768px) {
-  .add-to-cart-btn,
-  .view-btn {
-    margin-right: 0;
-  }
-}
 
 
 
@@ -671,45 +821,34 @@ a:hover {
 
 
 
-/* Media query for smaller screens */
-@media (max-width: 576px) {
-  .cart-container {
-    width: 90%;
-    margin: 20px auto;
-    padding: 15px;
-  }
-  #orderForm {
-    padding: 15px;
-  }
-}
 
-/* Additional custom styles */
+
+
+
+
+
+
 .cart-container {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.cart-container h2,
-.cart-container h3 {
-  color: #333;
-}
-
-.cart-container p {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.form-container {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.form-control {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 5px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  z-index: 1000;
 }
+
+.cart-item {
+  margin-bottom: 10px;
+}
+
+.cart-item button {
+  margin-left: 10px;
+}
+
+
 
 
 
@@ -754,13 +893,6 @@ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
 
 
-/* Adjust image sizes based on screen size */
-@media screen and (max-width: 768px) {
-  .image-container img {
-      width: 100px; /* Adjust width for smaller screens */
-      height: 100px; /* Adjust height for smaller screens */
-  }
-}
 
 /* Modal Styling */
 .modal {
@@ -818,24 +950,6 @@ color: black;
 text-decoration: none;
 cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Form container */
 .form-container {
@@ -930,6 +1044,7 @@ text-align: center;
 
 
  
+
 
 
 
