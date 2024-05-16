@@ -678,6 +678,86 @@
 
 
  
+
+function displayLatestProducts(category, products) {
+  const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
+  container.empty(); // Clear previous content
+
+  let activeIndex = 0; // Index of the first active card
+  const cardsPerPage =  100000; // Number of cards to display per page
+
+  function updateCards() {
+    container.empty(); // Clear previous content
+
+    for (let i = activeIndex; i < activeIndex + cardsPerPage && i < products.length; i++) {
+      const product = products[i];
+      const card = $(`
+        <div class="card mt-3 ${i === activeIndex ? 'active' : 'd-none'}">
+         
+          <div class="card-header">${product.productName}</div>
+          <div class="card-body">
+            <p>  ${product.description}</p>
+            
+            <p>Price: $${product.price}</p>
+            <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
+            <div class="overlay">
+               
+            </div>
+          </div>
+        </div>
+      `);
+      
+      // Create button container and buttons
+      const buttonContainer = document.createElement('div');
+      buttonContainer.classList.add('button-container');
+
+      const viewBtn = document.createElement('button');
+      viewBtn.classList.add('view-btn');
+      viewBtn.textContent = 'View';
+      viewBtn.addEventListener('click', () => {
+        viewProduct({
+          productId: product._id,
+          productName: product.productName,
+          description: product.description,
+          price: product.price,
+          category: product.category,
+          productImages: product.productImages
+        });
+      });
+
+      const addToCartBtn = document.createElement('button');
+      addToCartBtn.classList.add('add-to-cart-btn');
+      addToCartBtn.textContent = 'Add to Cart';
+      addToCartBtn.setAttribute('id', `add-to-cart-${product._id}`); // Add id attribute
+      addToCartBtn.addEventListener('click', () => {
+        addToCart(product._id, product.productName, product.price);
+      });
+
+      buttonContainer.appendChild(viewBtn);
+      buttonContainer.appendChild(addToCartBtn); // Add the Add to Cart button
+      card.find('.overlay').append(buttonContainer); // Append button container to card overlay
+      container.append(card);
+    }
+  }
+
+  updateCards();
+
+  // Navigation buttons
+  container.parent().find('.next-btn').click(function() {
+    if (activeIndex + cardsPerPage < products.length) {
+      activeIndex += cardsPerPage;
+      updateCards();
+    }
+  });
+
+  container.parent().find('.prev-btn').click(function() {
+    if (activeIndex - cardsPerPage >= 0) {
+      activeIndex -= cardsPerPage;
+      updateCards();
+    }
+  });
+}
+
  
 
 

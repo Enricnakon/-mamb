@@ -33,7 +33,7 @@
  
   font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
   color: #333;
-  margin: -1210px;
+  margin-right: 10px; /* Adjust margin as needed */
 }
 @media only screen and (max-width: 767px) {
   .tagline.blink {
@@ -340,6 +340,47 @@ select::-ms-expand {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Modal */
 .modal {
   display: none;
@@ -458,6 +499,14 @@ a:hover {
 }
 
 /* Card */
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between; /* Distribute space between cards */
+}
+
+/* Card */
 .card {
   position: relative;
   overflow: hidden;
@@ -472,9 +521,13 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .card {
-    width: 90%;
-    margin: 10px auto;
-    height: auto;
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 10px auto; /* Center-align cards */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .btn {
+    margin-left: 0; /* Adjust button margin for smaller screens */
   }
 }
 
@@ -544,7 +597,6 @@ a:hover {
 
 /* Navigation Buttons */
 .btn {
-  /* Your styles here */
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -554,7 +606,6 @@ a:hover {
 
 .prev-btn,
 .next-btn {
-  /* Your styles here */
   font-weight: bold;
   color: #fff;
   background-color: #3498db;
@@ -567,7 +618,6 @@ a:hover {
 
 .prev-btn:hover,
 .next-btn:hover {
-  /* Your styles here */
   background-color: #2980b9;
   transform: scale(1.05);
 }
@@ -581,7 +631,6 @@ a:hover {
 /* Button Styles */
 .add-to-cart-btn,
 .view-btn {
-  /* Common button styles */
   background-color: transparent;
   border: 2px solid #db6934; /* Thin border */
   color: #db4d34;
@@ -597,7 +646,6 @@ a:hover {
 
 .add-to-cart-btn:hover,
 .view-btn:hover {
-  /* Button hover effect */
   background-color: #ffffff;
   color: #0e0909; /* Change text color on hover */
   border-color: #ffffff; /* Change border color on hover */
@@ -605,7 +653,6 @@ a:hover {
 
 .add-to-cart-btn:active,
 .view-btn:active {
-  /* Adjust button appearance when pressed */
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -624,30 +671,45 @@ a:hover {
 
 
 
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+  .cart-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  #orderForm {
+    padding: 15px;
+  }
+}
 
-
-
+/* Additional custom styles */
 .cart-container {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  position: fixed;
-  top: 10px;
-  right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2,
+.cart-container h3 {
+  color: #333;
+}
+
+.cart-container p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-container {
   background-color: #fff;
-  z-index: 1000;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.cart-item {
-  margin-bottom: 10px;
+.form-control {
+  border-radius: 5px;
 }
-
-.cart-item button {
-  margin-left: 10px;
-}
-
-
 
 
 

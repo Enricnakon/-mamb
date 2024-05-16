@@ -603,8 +603,9 @@ function addToCart(productId, productName, price) {
         img.src = `/images/${image}`;
         img.alt = product.productName;
         img.onclick = () => swapImages(index);
-        img.style.width = index === 0 ? '800px' : '50px';
-        img.style.height = index === 0 ? '590px' : '50px';
+        img.style.width = index === 0 ? '80%' : '50%';
+        img.style.height = index === 0 ? '60%' : '50%';
+        
         imageContainer1.appendChild(img);
       });
       // Display the modal
