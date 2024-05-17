@@ -884,13 +884,6 @@ select::-ms-expand {
 
 
 
-
-
-
-
-
-
-
 /* Button Styles */
 .add-to-cart-btn,
 .view-btn {
@@ -926,7 +919,7 @@ select::-ms-expand {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   background-color: #fff;
@@ -1040,29 +1033,78 @@ select::-ms-expand {
   color: #fff;
 }
 
- 
+/* Cart icon */
+.cart-icon {
+  position: relative;
+  top: 8px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
+.cart-icon span {
+  margin-left: 5px;
+  font-size: 16px;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
 
+/* Cart container */
+.cart-container {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 20px;
+  border-radius: 5px;
+}
 
+.cart-container .controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 
+.cart-container .controls button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* CSS for cart buttons */
+/* CSS for cart buttons */
+.controls {
+  margin-bottom: 10px; /* Add some space below the buttons */
+}
 
+.controls button {
+  background-color: #007bff; /* Blue background color */
+  color: #792121; /* White text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  padding: 8px 16px; /* Padding for button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin-right: 10px; /* Add some space between the buttons */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.controls button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
 
 
 

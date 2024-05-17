@@ -82,3 +82,25 @@ $(document).ready(function () {
         window.location.href = 'news.html';
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+function minimizeCart() {
+    const cartItems = document.getElementById('cartItems');
+    cartItems.style.display = cartItems.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function closeCart() {
+    cartVisible = false;
+    document.getElementById('cart').style.display = 'none';
+  }

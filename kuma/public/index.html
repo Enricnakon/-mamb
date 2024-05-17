@@ -136,6 +136,16 @@
     <input type="text" placeholder="Search..." class="search-input">
     <button type="submit" class="search-button">Search</button>
   </div>
+
+  <a href="#" class="cart-link" onclick="showCart(event)">
+    <div id="cartIcon" class="cart-icon">
+      <span id="cartCount">0</span>
+      🛒
+    </div>
+  </a>
+  
+  
+
   <div class="user-actions">
     <div class="sign">Sign In/Sign Up</div>
   </div>
@@ -562,34 +572,43 @@
       </div>
 
 
-      <div id="cart" class="cart-container" style="display: none;">
+
+
+
+
+
+
+
+
+      <section id="cart" class="cart-container">
+        <!-- Cart buttons -->
+        <div class="controls">
+          <button onclick="minimizeCart()">_0</button>
+          <button onclick="closeCart()">x</button>
+        </div>
         <h2>Shopping Cart</h2>
         <div id="cartItems"></div>
         <p>Total Price: <span id="totalPrice">0</span></p>
         <button class="btn btn-primary" onclick="toggleOrderForm()">Place Your Order</button>
         <div id="orderForm" style="display: none;" class="form-container">
-     
-            <h3>Order Details</h3>
-            <form id="placeOrderForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" required>
-                </div>
-                <button type="button" class="btn btn-success" onclick="submitOrder()">Submit Order</button>
-            </form>
+          <h3>Order Details</h3>
+          <form id="placeOrderForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <button type="button" class="btn btn-success" onclick="submitOrder()">Submit Order</button>
+          </form>
         </div>
-    </div>
-
-
-
+      </section>
 
 
 

@@ -568,3 +568,79 @@ app.get('/view/form', (req, res) => {
     // Respond with a simple message indicating that the form is accessed
     res.send('This is the form page');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showCart(event) {
+  event.preventDefault();
+  // Check if the cart section already exists
+  var existingCart = document.getElementById("cart");
+  if (!existingCart) {
+    // Create the section element
+    var cartSection = document.createElement("section");
+    cartSection.id = "cart";
+    cartSection.className = "cart-container";
+
+    // Cart buttons
+    var controlsDiv = document.createElement("div");
+    controlsDiv.className = "controls";
+    controlsDiv.innerHTML = '<button onclick="minimizeCart()">_0</button><button onclick="closeCart()">x</button>';
+
+    // Shopping Cart heading
+    var heading = document.createElement("h2");
+    heading.textContent = "Shopping Cart";
+
+    // Cart items container
+    var cartItemsDiv = document.createElement("div");
+    cartItemsDiv.id = "cartItems";
+
+    // Total Price
+    var totalPricePara = document.createElement("p");
+    totalPricePara.innerHTML = 'Total Price: <span id="totalPrice">0</span>';
+
+    // Place Order button
+    var placeOrderBtn = document.createElement("button");
+    placeOrderBtn.className = "btn btn-primary";
+    placeOrderBtn.textContent = "Place Your Order";
+    placeOrderBtn.onclick = toggleOrderForm;
+
+    // Order Form container
+    var orderFormDiv = document.createElement("div");
+    orderFormDiv.id = "orderForm";
+    orderFormDiv.className = "form-container";
+    orderFormDiv.style.display = "none";
+    orderFormDiv.innerHTML = '<h3>Order Details</h3><form id="placeOrderForm"><div class="form-group"><label for="name">Name</label><input type="text" class="form-control" id="name" required></div><div class="form-group"><label for="email">Email address</label><input type="email" class="form-control" id="email" required></div><div class="form-group"><label for="phone">Phone</label><input type="tel" class="form-control" id="phone" required></div><button type="button" class="btn btn-success" onclick="submitOrder()">Submit Order</button></form>';
+
+    // Append elements to the section
+    cartSection.appendChild(controlsDiv);
+    cartSection.appendChild(heading);
+    cartSection.appendChild(cartItemsDiv);
+    cartSection.appendChild(totalPricePara);
+    cartSection.appendChild(placeOrderBtn);
+    cartSection.appendChild(orderFormDiv);
+
+    // Append the section to the body
+    document.body.appendChild(cartSection);
+  } else {
+    // If the cart section already exists, toggle its visibility
+    existingCart.style.display = existingCart.style.display === "none" ? "block" : "none";
+  }
+}
+
+// Function to toggle the order form visibility
+function toggleOrderForm() {
+  var orderForm = document.getElementById("orderForm");
+  orderForm.style.display = orderForm.style.display === "none" ? "block" : "none";
+}
