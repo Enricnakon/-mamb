@@ -392,7 +392,7 @@
   <div id="productModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <div class="image-container" id="imageContainer1"></div> <!-- Container for images -->
+      <div class="image-container1" id="imageContainer"></div> <!-- Container for images -->
       <div class="product-details" id="productDetails"></div> <!-- Placeholder for product details -->
     </div>
   </div>
@@ -659,8 +659,6 @@
 
 
 
-
- 
 function displayLatestProducts(category, products) {
   const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
   container.empty(); // Clear previous content
@@ -736,7 +734,6 @@ function displayLatestProducts(category, products) {
     }
   });
 }
-
 
 
 
