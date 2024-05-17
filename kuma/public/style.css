@@ -598,12 +598,13 @@ select::-ms-expand {
 @media (max-width: 768px) {
   .category h6,
   .category-products {
-    margin-left: 20%; /* Adjust margin for smaller screens */
+    margin-left: 25%; /* Adjust margin for smaller screens */
   }
 }
 
 .category h6 {
   font-size: 1.25em; /* 20px converted to em */
+  margin-left: 21%; /* Adjust margin for smaller screens */
 }
 
 /* Card Styles */
@@ -612,19 +613,20 @@ select::-ms-expand {
   flex-wrap: wrap;
   justify-content: flex-start;
     position: relative; 
+    margin-left: 21%; /* Adjust margin for smaller screens */
 }
 
 .card {
    position: relative;
-  width: 20%; /* Adjust width for four cards per row */
-  margin: 1em; /* Adjust margin for spacing */
-  height: 25em; /* Set a fixed height */
+  width: 23%; /* Adjust width for four cards per row */
+  margin: 0em; /* Adjust margin for spacing */
+  height: 27em; /* Set a fixed height */
   background-color: #fff;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
-  margin-right: 1.5em; /* Adjust right margin for spacing */
+  margin-right: 1.20em; /* Adjust right margin for spacing */
 }
 
 .card:hover {
@@ -660,7 +662,7 @@ select::-ms-expand {
 
 .card img {
   width: 100%; /* Set image width to fill container */
-  height: auto; /* Maintain aspect ratio */
+  height: 50%; /* Maintain aspect ratio */
   border-radius: 5px;
 }
 
@@ -698,6 +700,7 @@ select::-ms-expand {
   border-radius: 0.3125em; /* Adjust border-radius for a slightly rounded appearance */
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  
 }
 
 .btn-primary:hover,
@@ -737,14 +740,15 @@ select::-ms-expand {
   transition: background-color 0.3s, transform 0.2s;
   position: absolute;
   bottom: 160px; /* Adjust as needed */
+  margin-left: 21%; /* Adjust margin for smaller screens */
 }
 
 .prev-btn {
-  left: 10px; /* Adjust as needed */
+  left: 300px; /* Adjust as needed */
 }
 
 .next-btn {
-  right: 10px; /* Adjust as needed */
+  right: 36px; /* Adjust as needed */
 }
 
 .prev-btn:hover,
@@ -757,6 +761,8 @@ select::-ms-expand {
 
 .animated-element {
   /* Example animation */
+  
+  margin-left: 21%; /* Adjust margin for smaller screens */
   animation: moveRight 1s ease-in-out infinite alternate;
 }
 

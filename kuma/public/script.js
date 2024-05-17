@@ -384,83 +384,9 @@ function fetchLatestProducts(category) {
     displayLatestProducts(category, products);
   });
 }
-function displayLatestProducts(category, products) {
-  const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
-  container.empty(); // Clear previous content
-
-  let activeIndex = 0; // Index of the first active card
-  let cardsPerPage = 4; // Number of cards to display per page by default
-
-  if ($(window).width() <= 576) {
-    cardsPerPage = 2; // Set the number of cards to display per page for phone screens
-  }
-
-  function updateCards() {
-    container.empty(); // Clear previous content
-
-    for (let i = activeIndex; i < activeIndex + cardsPerPage && i < products.length; i++) {
-      const product = products[i];
-      const card = $(`
-        <div class="card mt-3 ${i === activeIndex ? 'active' : 'd-none'}">
-          <div class="card-header">${product.productName}</div>
-          <div class="card-body">
-            <p>${product.description}</p>
-            <p>Price: $${product.price}</p>
-            <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
-            <div class="overlay"></div>
-          </div>
-        </div>
-      `);
-      
-      // Create button container and buttons using jQuery
-      const buttonContainer = $('<div class="button-container"></div>');
-
-      const viewBtn = $('<button class="view-btn">View</button>');
-      viewBtn.on('click', () => {
-        viewProduct({
-          productId: product._id,
-          productName: product.productName,
-          description: product.description,
-          price: product.price,
-          category: product.category,
-          productImages: product.productImages
-        });
-      });
-
-      const addToCartBtn = $(`<button class="add-to-cart-btn" id="add-to-cart-${product._id}">Add to Cart</button>`);
-      addToCartBtn.on('click', () => {
-        addToCart(product._id, product.productName, product.price);
-      });
-
-      buttonContainer.append(viewBtn);
-      buttonContainer.append(addToCartBtn);
-      card.find('.overlay').append(buttonContainer);
-      container.append(card);
-    }
-  }
-
-  // Call updateCards initially and on window resize
-  $(window).on('resize', updateCards);
-  updateCards();
-
-  // Navigation buttons
-  container.parent().find('.next-btn').click(function() {
-    if (activeIndex + cardsPerPage < products.length) {
-      activeIndex += cardsPerPage;
-      updateCards();
-    }
-  });
-
-  container.parent().find('.prev-btn').click(function() {
-    if (activeIndex - cardsPerPage >= 0) {
-      activeIndex -= cardsPerPage;
-      updateCards();
-    }
-  });
-}
-
-
  
+  
+
     const cartItems = [];
 
     // Function to handle adding product to cart
