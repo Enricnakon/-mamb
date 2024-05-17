@@ -387,10 +387,9 @@ function fetchLatestProducts(category) {
  
   
 
-    const cartItems = [];
+const cartItems = [];
 
-    // Function to handle adding product to cart
-   // Function to handle adding product to cart
+// Function to handle adding product to cart
 function addToCart(productId, productName, price) {
     const index = cartItems.findIndex(item => item.productId === productId);
 
@@ -400,16 +399,34 @@ function addToCart(productId, productName, price) {
         cartItems.push({
           productId: productId,   
           productName: productName,
-          
-            price: price,
-            quantity: 1
+          price: price,
+          quantity: 1
         });
     }
+
+    // Call the function to update the cart count
+    updateCartCount();
 
     // Show the cart container
     document.getElementById('cart').style.display = 'block';
 
+    // Update the cart display
     updateCartDisplay();
+}
+
+// Function to update the cart count display
+function updateCartCount() {
+    // Get the current cart count
+    const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+    // Update the cart count display
+    document.getElementById('cartCount').textContent = cartCount;
+}
+
+// Function to update the cart display
+function updateCartDisplay() {
+    // Update the cart display with cartItems data
+    // This function should be implemented according to your specific UI requirements
 }
 
     // Function to update the cart display
@@ -644,3 +661,38 @@ function toggleOrderForm() {
   var orderForm = document.getElementById("orderForm");
   orderForm.style.display = orderForm.style.display === "none" ? "block" : "none";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
