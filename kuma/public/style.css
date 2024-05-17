@@ -611,9 +611,11 @@ select::-ms-expand {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+    position: relative; 
 }
 
 .card {
+   position: relative;
   width: 20%; /* Adjust width for four cards per row */
   margin: 1em; /* Adjust margin for spacing */
   height: 25em; /* Set a fixed height */
@@ -719,6 +721,10 @@ select::-ms-expand {
 }
 
 /* Navigation Buttons */
+.button-container {
+  position: relative;
+}
+
 .prev-btn,
 .next-btn {
   font-weight: bold;
@@ -729,6 +735,16 @@ select::-ms-expand {
   padding: 0.75em 1.5em; /* Adjust padding */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  position: absolute;
+  bottom: 160px; /* Adjust as needed */
+}
+
+.prev-btn {
+  left: 10px; /* Adjust as needed */
+}
+
+.next-btn {
+  right: 10px; /* Adjust as needed */
 }
 
 .prev-btn:hover,
@@ -737,8 +753,48 @@ select::-ms-expand {
   transform: scale(1.05);
 }
 
+
+
+.animated-element {
+  /* Example animation */
+  animation: moveRight 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Cart Styles */
 .cart-container {
+
   margin-top: 1.25em; /* 20px converted to em */
   padding: 0.625em;
   border: 0.0625em solid #ccc; /* 1px converted to em */

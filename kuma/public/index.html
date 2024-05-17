@@ -451,53 +451,61 @@
 
 
 
-
-
-
-
-
-
-
-      <!-- Right Column: Latest Products -->
-      <div class="order-md-2">
-        <div class="row justify-content-end">
-            <div class="">
-                <div id="phones" class="category text-right mt-3">
-                    <h6><i class="fas fa-mobile-alt mr-2"></i>Latest Phones</h6>
-                    <div id="latestPhones" class="category-products card-container"></div>
-                    <div class="text-right mt-3">
-                        <button class="btn btn-primary prev-btn"><i class="fas fa-arrow-left"></i> Prev</button>
-                        <button class="btn btn-primary next-btn">Next <i class="fas fa-arrow- "></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="">
-                <div id="computers" class="category text-right mt-3">
-                    <h6><i class="fas fa-laptop mr-2"></i>Latest Computers</h6>
-                    <div id="latestComputers" class="category-products card-container"></div>
-                    <div class="text-right mt-3">
-                        <button class="btn btn-primary prev-btn"><i class="fas fa-arrow-left"></i> Prev</button>
-                        <button class="btn btn-primary next-btn">Next <i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="">
-                <div id="house" class="category text-right mt-3">
-                    <h6><i class="fas fa-home mr-2"></i>Latest Houses</h6>
-                    <div id="latestHouse" class="category-products card-container"></div>
-                    <div class="text-left mt-3">
-                        <button class="btn btn-primary prev-btn"><i class="fas fa-arrow-left"></i> Prev</button>
-                        <button class="btn btn-primary next-btn">Next <i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-
-
-
+ 
+<!-- Right Column: Latest Products -->
+<div class="order-md-2">
+  <div class="row justify-content-end">
+      <div class="col-md-4">
+          <div id="phones" class="category text-right mt-3">
+              <h6><i class="fas fa-mobile-alt mr-2"></i>Latest Phones</h6>
+                <div id="latestPhones" class="category-products card-container"></div>
+              <div class="button-container">
+                <button class="btn btn-primary prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-primary next-btn"><i class="fas fa-chevron-right"></i></button>
+                
+              </div>
+              <div class="animated-element"> <a href="phones.html">
+                <!-- Call to action button -->
+                <button>Explore Now</button>
+              </a> </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div id="computers" class="category text-right mt-3">
+              <h6><i class="fas fa-laptop mr-2"></i>Latest Computers</h6>
+  
+              <div id="latestComputers" class="category-products card-container"></div>
+              <div class="button-container">
+                <button class="btn btn-primary prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-primary next-btn"><i class="fas fa-chevron-right"></i></button>
+                
+                
+              </div>
+              <div class="animated-element"> <a href="target_page.html">
+                <!-- Call to action button -->
+                <button>Explore Now</button>
+              </a> </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div id="house" class="category text-right mt-3">
+              <h6><i class="fas fa-home mr-2"></i>Latest Houses</h6>
+ 
+              <div id="latestHouse" class="category-products card-container"></div>
+              <div class="button-container">
+                <button class="btn btn-primary prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-primary next-btn"><i class="fas fa-chevron-right"></i></button>
+                
+              </div>
+             
+              <div class="animated-element"> <a href="target_page.html">
+                <!-- Call to action button -->
+                <button>Explore Now</button>
+              </a> </div>
+          </div>
+      </div>
+  </div>
+</div>
 
 
 
@@ -552,7 +560,7 @@
 
       <div id="cart" class="cart-container" style="display: none;">
         <h2>Shopping Cart</h2>
-        <div id="cartItems">  <br> </div>
+        <div id="cartItems ">  </div>
 
         <p>Total Price: <span id="totalPrice">0</span></p>
         <button class="btn btn-primary" onclick="toggleOrderForm()">Place Your Order</button>
