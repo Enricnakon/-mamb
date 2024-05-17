@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sty.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-fEfAw+4kpOwVFDYILxjsG6eWJ9ODHkAz/Fxrd2oKPgzTt0nE8xLdWwgpNcA15I2Ui6h4/4SX/itg/G9QEqZgCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
 
@@ -392,7 +392,7 @@
   <div id="productModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <div class="image-container1" id="imageContainer"></div> <!-- Container for images -->
+      <div class="image-container" id="imageContainer1"></div> <!-- Container for images -->
       <div class="product-details" id="productDetails"></div> <!-- Placeholder for product details -->
     </div>
   </div>
@@ -451,6 +451,9 @@
 
 
 
+
+
+ 
  
  
 <!-- Right Column: Latest Products -->
@@ -490,9 +493,9 @@
       </div>
       <div class="col-md-4">
           <div id="house" class="category text-right mt-3">
-              <h6><i class="fas fa-home mr-2"></i>Latest Houses</h6> 
+              <h6><i class="fas fa-home mr-2"></i>Latest Houses</h6>
  
-              <div id="latestHouse"class="category-products card-container"></div>
+              <div id="latestHouse" class="category-products card-container"></div>
               <div class="button-container">
                 <button class="btn btn-primary prev-btn"><i class="fas fa-chevron-left"></i></button>
                 <button class="btn btn-primary next-btn"><i class="fas fa-chevron-right"></i></button>
@@ -507,6 +510,10 @@
       </div>
   </div>
 </div>
+
+
+
+
 
 
 
@@ -557,12 +564,11 @@
 
       <div id="cart" class="cart-container" style="display: none;">
         <h2>Shopping Cart</h2>
-        <div id="cartItems ">  </div>
-
+        <div id="cartItems"></div>
         <p>Total Price: <span id="totalPrice">0</span></p>
         <button class="btn btn-primary" onclick="toggleOrderForm()">Place Your Order</button>
         <div id="orderForm" style="display: none;" class="form-container">
-            <hr>
+     
             <h3>Order Details</h3>
             <form id="placeOrderForm">
                 <div class="form-group">
@@ -593,15 +599,7 @@
 
 
 
-
  
-
-
-
-
-
-
-
 
 
 
@@ -647,6 +645,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 function displayLatestProducts(category, products) {
   const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
@@ -665,7 +678,7 @@ function displayLatestProducts(category, products) {
     for (let i = activeIndex; i < activeIndex + cardsPerPage && i < products.length; i++) {
       const product = products[i];
       const card = $(`
-        <div class="card mt-3 ${i === activeIndex ? 'active' : 'd-none'}">
+        <div class="card mt-3">
           <div class="card-header">${product.productName}</div>
           <div class="card-body">
             <p>${product.description}</p>
@@ -675,7 +688,7 @@ function displayLatestProducts(category, products) {
           </div>
         </div>
       `);
-      
+
       // Create button container and buttons using jQuery
       const buttonContainer = $('<div class="button-container"></div>');
 
@@ -691,12 +704,9 @@ function displayLatestProducts(category, products) {
         });
       });
 
-      // Only the add to cart button functionality will be updated here
-      const addToCartBtn = document.createElement('button');
-      addToCartBtn.classList.add('add-to-cart-btn');
-      addToCartBtn.textContent = 'Add to Cart';
-      addToCartBtn.setAttribute('id', `add-to-cart-${product._id}`); // Add id attribute
-      addToCartBtn.addEventListener('click', () => {
+      const addToCartBtn = $('<button class="add-to-cart-btn">Add to Cart</button>');
+      addToCartBtn.attr('id', `add-to-cart-${product._id}`);
+      addToCartBtn.on('click', () => {
         addToCart(product._id, product.productName, product.price);
       });
 
@@ -726,6 +736,13 @@ function displayLatestProducts(category, products) {
     }
   });
 }
+
+
+
+
+
+
+ 
 
 
   </script>
