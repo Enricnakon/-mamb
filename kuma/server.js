@@ -591,19 +591,27 @@ app.get('/products/:subcategory', async (req, res) => {
     }
 });
 
-app.get('/category/:category/:subcategory', async (req, res) => {
-    const category = req.params.category;
-    const subcategory = req.params.subcategory;
-    try {
-        const products = await Product.find({ category, subCategory: subcategory });
-        res.json(products);
-    } catch (err) {
-        console.error('Error fetching products:', err.message);
-        res.status(500).json({ error: 'Internal server error' });
-    }
+app.get('/products/subcategory/:subCategory', async (req, res) => {
+  try {
+    const { subCategory } = req.params;
+    const products = await Product.find({ subCategory });
+    res.json(products); // Return products as JSON
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server Error' });
+  }
 });
 
-
+router.get('/subcategory/:subCategory', async (req, res) => {
+  try {
+    const { subCategory } = req.params;
+    const products = await Product.find({ subCategory });
+    res.json(products); // Return products as JSON
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
 
 
 

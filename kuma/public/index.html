@@ -674,13 +674,13 @@
     <div class="navbar10">
       <a href="categoty.html" class="subcategory-link" data-subcategory="Sofas">Sofas</a>
       <a href="#" class="subcategory-link" data-subcategory="Chairs">Chairs</a>
-      <a href="categoty.html" class="subcategory-link" data-subcategory="Beds">Beds</a>
-      <a href="categoty.html" class="subcategory-link" data-subcategory="Cabinets">Cabinets</a>
-      <a href="#" class="subcategory-link" data-subcategory="Desks">Desks</a>
-      <a href="#" class="subcategory-link" data-subcategory="Bookcases">Bookcases</a>
-      <a href="#" class="subcategory-link" data-subcategory="Dressers">Dressers</a>
-      <a href="#" class="subcategory-link" data-subcategory="Benches">Benches</a>
-      <a href="#" class="subcategory-link" data-subcategory="Wardrobes">Wardrobes</a>
+      <a href="#" class="subcategory-link" data-subcategory="Beds">Beds</a>
+      <a href="#" id="card501" data-subcategory="Cabinets">Cabinets</a>
+      <a href="#" id="card601" data-subcategory="Desks">Desks</a>
+      <a href="#" id="card701" data-subcategory="Bookcases">Bookcases</a>
+      <a href="#" id="card801" data-subcategory="Dressers">Dressers</a>
+      <a href="#" id="card901" data-subcategory="Benches">Benches</a>
+      <a href="#" id="card1001" data-subcategory="Wardrobes">Wardrobes</a>
     </div>
   </div>
 </div>
@@ -688,6 +688,8 @@
       
     
             <div id="latestFurniture" class="category-products card-container"></div> <!-- Updated id to "latestFurniture" -->
+ 
+           
             <div class="button-container">
                 <button class="btn btn-primary prev-btn"><i class="fas fa-chevron-left"></i></button>
                 <button class="btn btn-primary next-btn"><i class="fas fa-chevron-right"></i></button>
@@ -1059,8 +1061,22 @@
 
 
 
+document.querySelectorAll('.subcategory-link').forEach(link => {
+  link.addEventListener('click', async (event) => {
+    event.preventDefault();
+    const subCategory = event.target.getAttribute('data-subcategory');
+    
+    try {
+      const response = await fetch(`/products/subcategory/${subCategory}`);
+      if (!response.ok) throw new Error('Network response was not ok');
 
-
+      const products = await response.json();
+      displayLatestProducts('Furniture', products); // Assuming 'Furniture' is the category
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  });
+});
 
 function displayLatestProducts(category, products) {
   const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
@@ -1084,11 +1100,6 @@ function displayLatestProducts(category, products) {
           <div class="card-body">
             <p>${product.description}</p>
             <p>Price: tsh${product.price}</p>
-
-           
- 
-
-
             <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
             <div class="overlay"></div>
           </div>
@@ -1142,9 +1153,6 @@ function displayLatestProducts(category, products) {
     }
   });
 }
-
-
-
 
 
 
@@ -1236,6 +1244,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
