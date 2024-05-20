@@ -579,23 +579,29 @@ app.get('/products/:subcategory', async (req, res) => {
 
 
 
-
+// 
 
   app.get('/products', async (req, res) => {
     try {
-      const products = await Product.find(); // Fetch all products from the database
-      res.render('productupld', { products }); // Render the EJS view and pass the products data to it
+        const products = await Product.find();
+        res.render('productupld', { products });
     } catch (err) {
-      console.error('Error fetching products:', err);
-      res.status(500).send('Internal Server Error');
+        console.error('Error fetching products:', err);
+        res.status(500).send('Internal Server Error');
     }
-  });
+});
 
-
-
-
-
-
+app.get('/category/:category/:subcategory', async (req, res) => {
+    const category = req.params.category;
+    const subcategory = req.params.subcategory;
+    try {
+        const products = await Product.find({ category, subCategory: subcategory });
+        res.json(products);
+    } catch (err) {
+        console.error('Error fetching products:', err.message);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
 
 
