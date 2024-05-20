@@ -618,15 +618,15 @@ select::-ms-expand {
 
 .card {
    position: relative;
-  width: 23%; /* Adjust width for four cards per row */
+  width: 20%; /* Adjust width for four cards per row */
   margin: 0em; /* Adjust margin for spacing */
-  height: 27em; /* Set a fixed height */
+  height: 25em; /* Set a fixed height */
   background-color: #fff;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
-  margin-right: 1.20em; /* Adjust right margin for spacing */
+  margin-right: 1.15em; /* Adjust right margin for spacing */
 }
 
 .card:hover {
@@ -662,7 +662,7 @@ select::-ms-expand {
 
 .card img {
   width: 100%; /* Set image width to fill container */
-  height: 50%; /* Maintain aspect ratio */
+  height: 100%; /* Maintain aspect ratio */
   border-radius: 5px;
 }
 
@@ -771,7 +771,7 @@ select::-ms-expand {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(100px);
+    transform: translateX(0px);
   }
 }
 
@@ -1040,7 +1040,7 @@ select::-ms-expand {
   right: 20px;
   font-size: 24px;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #8d5e5e;
   color: #fff;
   padding: 10px;
   border-radius: 50%;
@@ -1071,6 +1071,8 @@ select::-ms-expand {
   z-index: 999;
   padding: 20px;
   border-radius: 5px;
+ z-index: 100;
+  
 }
 
 .cart-container .controls {
@@ -1127,3 +1129,340 @@ select::-ms-expand {
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.advertisement2-card2 {
+  position: absolute;
+  width: 250px;
+  border: 3px solid #ccc;
+  overflow: hidden;
+  margin: 20px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  top: 900px;
+}
+
+.image-container9 {
+  height: 150px;
+}
+
+.image-container9 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 5px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.brand-logo img {
+  width: 60px;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.contact-info {
+  margin-bottom: 5px;
+}
+
+.contact-info p {
+  margin: 2px 0;
+  font-size: 12px;
+}
+
+.social-links {
+  margin-top: auto;
+  font-size: 14px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 5px;
+  color: #333; /* Adjust color as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar0 {
+  display: flex;
+  overflow-x:  hidden; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap cards to the viewport */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 280px; /* Add left margin */
+}
+
+.card0 {
+  flex: 0 0 92px; /* Adjust card width */
+  height: 80px; /* Adjust card height */
+  margin: 10px; /* Adjust spacing between cards */
+  background-color: #8135355e;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card0:hover {
+  background-color: #f0f0f0;
+}
+
+.card0 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 25px; /* Adjust font size */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar10 {
+  display: flex;
+  overflow-x: hidden; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scroll bar */
+  scroll-snap-type: x mandatory; /* Snap cards to the viewport */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 280px; /* Add left margin */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.navbar10 a {
+  flex: 0 0 140px; /* Adjust link width */
+  height: 40px; /* Adjust link height */
+  margin: 10px; /* Adjust spacing between links */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #853e3e11;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px; /* Adjust font size */
+  position: relative; /* Required for positioning the pseudo-element */
+}
+
+.navbar10 a:after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* Position the line closer to the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Adjust to set the width of the line */
+  border-bottom: 1px solid #333; /* Add bottom border */
+}

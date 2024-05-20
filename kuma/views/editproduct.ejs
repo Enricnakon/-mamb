@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+
+
+.navbar {
+    background-color: #922f11; /* Navbar background color */
+    padding: 5px 10px; /* Adjust navbar padding */
+}
+
+.navbar-brand {
+    color: #ffffff; /* Navbar brand color */
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust navbar brand font size */
+}
+
+.nav-link {
+    color: #ffffff; /* Navbar link color */
+    padding: 5px 10px; /* Adjust navbar link padding */
+    font-size: 1rem; /* Adjust navbar link font size */
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Navbar link color on hover */
+}
+
+
+</style>
+ 
+
+
+<body>
+    
+ 
+ <nav class="navbar">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/viewFormData">
+            <i class="fas fa-eye"></i> 
+       
+        
+   
+            <i class="fas fa-edit"></i> Edit
+        </a> <!-- Icon for editing -->
+        
+
+
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/link2">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/link3">Link 3</a>
+      </li>
+    </ul>
+  </nav>
+  
+<br>
+  
+
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-tags"></i> Edit Your Product</h3>
+                    </div>
+                    <div class="card-body">
+                        <form enctype="multipart/form-data" method="post" action="/editProduct/<%= product._id %>">
+                            <div class="form-group">
+                                <label for="productName">Product Name:</label>
+                                <input type="text" class="form-control" name="productName" value="<%= product.productName %>" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" name="description" rows="3" required><%= product.description %></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price:</label>
+                                <input type="number" class="form-control" name="price" value="<%= product.price %>" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category:</label>
+                                <select class="form-control" name="category" required>
+                                    <option value="phones" <%= product.category === 'phones' ? 'selected' : '' %>>Phones</option>
+                                    <option value="computers" <%= product.category === 'computers' ? 'selected' : '' %>>Computers</option>
+                                    <option value="house" <%= product.category === 'house' ? 'selected' : '' %>>Houses</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="productImages">Product Images (up to 3 images):</label>
+                                <input type="file" class="form-control-file" id="productImages" name="productImages" accept="image/*" multiple onchange="previewImages(event)">
+                                <div id="imagePreview" class="mt-2">
+                                    <% product.productImages.forEach(function(image) { %>
+                                        <img src="/images/<%= image %>" class="img-thumbnail mr-2 mb-2" style="max-width: 100px;">
+                                    <% }); %>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Update Product</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function previewImages(event) {
+            var preview = document.getElementById('imagePreview');
+            preview.innerHTML = ''; // Clear previous previews
+            var files = event.target.files;
+
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    var imageContainer = document.createElement('div');
+                    imageContainer.className = 'image-container'; // Add a class for styling
+                    var image = document.createElement('img');
+                    image.className = 'img-thumbnail mr-2 mb-2';
+                    image.style.maxWidth = '100px';
+                    image.src = e.target.result;
+                    imageContainer.appendChild(image);
+                    preview.appendChild(imageContainer);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -477,18 +477,32 @@ app.get('/latest', async (req, res) => {
 
 
 
+// Route to fetch all products
+app.get('/products', async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (err) {
+    console.error('Error fetching products:', err.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
+// Route to fetch products with a specific subcategory
+app.get('/products/:subcategory', async (req, res) => {
+  const subcategory = req.params.subcategory; // Get the subcategory from the request params
 
- 
-  app.get('/products', async (req, res) => {
-    try {
-      const products = await Product.find();
-      res.json(products);
-    } catch (err) {
-      console.error('Error fetching products:', err.message);
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  });
+  try {
+    // Query the database for products with the specified subcategory
+    const products = await Product.find({ subCategory: subcategory });
+
+    // Send the products as a response
+    res.json(products);
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
   
   // Define route to render the product details EJS file
   // Define route to render the product details EJS file
@@ -562,41 +576,52 @@ app.get('/latest', async (req, res) => {
   
 
   module.exports = router;
-  app.get('/orders', async (req, res) => {
+
+
+
+
+
+  app.get('/products', async (req, res) => {
     try {
-      // Query the database for orders and sort them by creation timestamp in ascending order
-      const orders = await Order.find().sort({ createdAt: 1 });
+      const products = await Product.find(); // Fetch all products from the database
+      res.render('productupld', { products }); // Render the EJS view and pass the products data to it
+    } catch (err) {
+      console.error('Error fetching products:', err);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  app.get('/admin', async (req, res) => {
+    try {
+      // Define an async function inside the route handler
+      const fetchOrders = async () => {
+        return await Order.find().sort({ createdAt: 1 });
+      };
   
-      res.status(200).json(orders);
+      // Call the async function and wait for the result
+      const orders = await fetchOrders();
+  
+      // Render the admin.ejs file and pass the orders data to it
+      res.render('admin', { orders });
     } catch (error) {
       console.error('Error fetching orders:', error);
       res.status(500).json({ error: 'Internal server error' });
     }
   });
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   
 app.get('/views/admin_dashboard', async (req, res) => {
     try {
@@ -636,18 +661,164 @@ app.get('/views/admin_dashboard', async (req, res) => {
       res.status(500).send('Internal Server Error');
     }
   });
+
+
+
   
- // Handle form submissions to add products
+  app.get('/productupld', async (req, res) => {
+    try {
+      const products = await Product.find(); // Fetch all products from the database
+      res.render('productupld', { products }); // Pass the products data to the view
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Server Error');
+    }
+  });
+  
+// Get Edit Product Form
+app.get('/editProduct/:id', async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id); // Find the product by ID
+    res.render('editproduct', { product }); // Render the editproduct view with product data
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server Error');
+  }
+});
+
+// Update Product Route
+app.post('/editProduct/:id', upload.array('productImages', 3), async (req, res) => {
+  try {
+    const { productName, description, price, category } = req.body;
+    let product = await Product.findById(req.params.id); // Find the product by ID
+
+    product.productName = productName;
+    product.description = description;
+    product.price = price;
+    product.category = category;
+
+    // Handle image updates
+    if (req.files) {
+      const imagePaths = req.files.map(file => file.filename);
+      if (imagePaths.length > 0) {
+        product.productImages = imagePaths; // Replace existing images with new ones
+      }
+    }
+
+    await product.save(); // Save the updated product
+    // Redirect to the /form page after updating
+    res.redirect('/productupld');
+  } catch (error) {
+    console.error('Error processing form data:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// Delete Product Route
+app.post('/delete/:id', async (req, res) => {
+  try {
+      await Product.findByIdAndDelete(req.params.id); // Find and delete the product by ID
+      res.redirect('/productupld'); // Redirect to the product listing page after deleting
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Server Error');
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  app.get('/ordersview', async (req, res) => {
+    try {
+      const orders = await Order.find(); // Fetch all orders from the database
+      res.render('ordersview', { orders }); // Pass the orders data to the view
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Server Error');
+    }
+  });
+  
+// POST route to handle deletion of orders
+app.post('/orders/delete/:orderId', async (req, res) => {
+  const { orderId } = req.params;
+  try {
+      // Find the order by ID and delete it
+      await Order.findByIdAndDelete(orderId);
+      res.redirect('/ordersview'); // Redirect back to the orders view after deletion
+  } catch (error) {
+      console.error(error);
+      res.status(500).send('Server Error');
+  }
+});
+
+
+
+
+
+
+
+
+
+
 app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
   try {
     console.log('Session data:', req.session);
-    
+
     // Ensure user is authenticated
     if (!req.session.userId) {
       return res.status(401).send('Unauthorized');
     }
-    
-    const { productName, description, price, category } = req.body;
+
+    const { productName, description, price, subCategory, category } = req.body;
+    console.log('Request body:', req.body);
+    console.log('Received subCategory:', subCategory);
+
     const productImages = req.files.map(file => file.filename);
 
     if (productImages.length !== 3) {
@@ -662,8 +833,9 @@ app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
       description,
       price,
       category,
+      subCategory,
       productImages,
-      createdBy: userId, // Set createdBy field to the authenticated user's ID from session
+      createdBy: userId
     });
 
     await newProduct.save(); // Save the new product to the database
@@ -675,9 +847,6 @@ app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-
-
-
 
 
 
@@ -742,5 +911,6 @@ app.get('/viewFormData', async (req, res) => {
 
 
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});

@@ -23,271 +23,252 @@
             max-height: 100px;
         }
 
-
-
-
         .navbar {
-    display: static;
-    background-color: #b14024d2;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #ffffff;
-}
-
-.navbar-brand {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 2.2em;
-    text-decoration: none;
-}
-
-.navbar-nav {
-    display: flex;
-    list-style-type: none;
-}
-
-.nav-item {
-    margin-right: 10px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #333;
-}
-
-.nav-link:hover {
-    color: #ffffff;
-}
-
-.form-inline {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the form horizontally */
-    flex-grow: 1; /* Allow the form to grow and take up the remaining space */
-}
-
-.form-control {
-    margin-right: 10px;
-}
-.navbar {
-            background-color: #922f11; /* Navbar background color */
-            padding: 5px 10px; /* Adjust navbar padding */
+            display: static;
+            background-color: #b14024d2;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
         }
 
         .navbar-brand {
-            color: #ffffff; /* Navbar brand color */
+            color: #ffffff;
             font-weight: bold;
-            font-size: 1.5rem; /* Adjust navbar brand font size */
+            font-size: 2.2em;
+            text-decoration: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav-item {
+            margin-right: 10px;
         }
 
         .nav-link {
-            color: #ffffff; /* Navbar link color */
-            padding: 5px 10px; /* Adjust navbar link padding */
-            font-size: 1rem; /* Adjust navbar link font size */
+            text-decoration: none;
+            color: #333;
         }
 
         .nav-link:hover {
-            color: #ffffff; /* Navbar link color on hover */
+            color: #ffffff;
         }
-/* Optional: Adjust spacing */
- 
 
+        .form-inline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
 
+        .form-control {
+            margin-right: 10px;
+        }
 
+        .navbar {
+            background-color: #922f11;
+            padding: 5px 10px;
+        }
 
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
 
+        .nav-link {
+            color: #ffffff;
+            padding: 5px 10px;
+            font-size: 1rem;
+        }
 
+        .nav-link:hover {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
-
-
-
-
-
-
-    <nav class="navbar navbar-expand-lg navbar-light  ">
-        
-      
-
- 
- 
-    
-
-
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="ml-auto">
-            <!-- Change the text to "User" -->
             <a href="/userProducts">Go to User Page</a>
-
         </div>
-
-
-        
-        <!-- Navigation Links with Larger Icons -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-           
-                </li>
-                <li class="nav-item">
-                    
-                </li>
-                <li class="nav-item">
-                
-                </li>
-
-                
-            </ul>
+            <ul class="navbar-nav mr-auto"></ul>
         </div>
-         
-        <!-- Search Form -->
-        
-    
-        <!-- Register and Login Links -->
         <div class="ml-auto">
-            
             <a href="/login">Logout</a>
         </div>
     </nav>
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="container-fluid h-100">
         <div class="row justify-content-center align-items-center h-100">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3><i class="fas fa-tags"></i> Sell Your Product</h3>
-                    </div>
-                    <div class="card-body">
-                        <form enctype="multipart/form-data" method="post" action="/addProduct">
-                            <div class="form-group">
-                                <label for="productName">Product Name:</label>
-                                <input type="text" class="form-control" name="productName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Description:</label>
-                                <textarea class="form-control" name="description" rows="3" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Price:</label>
-                                <input type="number" class="form-control" name="price" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="category">Category:</label>
-                                <select class="form-control" name="category" required>
-                                    <option value="phones"><i class="fas fa-mobile-alt"></i> Phones</option>
-                                    <option value="computers"><i class="fas fa-laptop"></i> Computers</option>
-                                    <option value="house"><i class="fas fa-home"></i> Houses</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="productImages">Product Images (up to 3 images):</label>
-                                <input type="file" class="form-control-file" id="productImages" name="productImages" required accept="image/*" multiple onchange="previewImages(event)">
-                                <div id="imagePreview" class="mt-2"></div>
-                            </div>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload Product</button>
-                            
-                        </form>
-                    </div>
-                </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h3><i class="fas fa-tags"></i> Sell Your Product</h3>
+              </div>
+              <div class="card-body">
+                <form enctype="multipart/form-data" method="post" action="/addProduct">
+                  <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" class="form-control" name="productName" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" name="description" rows="3" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" class="form-control" name="price" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select class="form-control" name="category" id="category" required>
+                      <option value="phones">Phones</option>
+                      <option value="computers">Computers</option>
+                      <option value="house">House</option>
+                      <option value="vehicle">Vehicle</option>
+                      <option value="furniture">Furniture</option>
+                      <option value="clothes">Clothes</option>
+                      <option value="cosmetics">Cosmetics</option>
+                      <option value="services">Services</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="subCategory">Subcategory:</label>
+                    <select class="form-control" name="subCategory" id="subCategory" required>
+                      <!-- Subcategories will be populated based on selected category -->
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="productImages">Product Images (up to 3 images):</label>
+                    <input type="file" class="form-control-file" id="productImages" name="productImages" required accept="image/*" multiple onchange="previewImages(event)">
+                    <div id="imagePreview" class="mt-2"></div>
+                  </div>
+                  <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload Product</button>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+    
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('category').addEventListener('change', function() {
+    var subCategory = document.getElementById('subCategory');
+    subCategory.innerHTML = ''; // Clear previous options
 
-    <script>
-  function previewImages(event) {
-    var preview = document.getElementById('imagePreview');
-    preview.innerHTML = ''; // Clear previous previews
-    var files = event.target.files;
+    var selectedCategory = this.value;
+    var options = [];
 
-    if (files.length !== 3) {
-        alert("Please upload exactly 3 images.");
-        event.target.value = ''; // Clear the file input
-        return;
+    if (selectedCategory === 'phones') {
+      options = ['Smartphones', 'Feature Phones', 'Accessories'];
+    } else if (selectedCategory === 'computers') {
+      options = ['Laptops', 'Desktops', 'Components'];
+    } else if (selectedCategory === 'house') {
+      options = ['Apartments', 'Villas', 'Land'];
+    } else if (selectedCategory === 'vehicle') {
+      options = ['Cars', 'Motorcycles', 'Trucks'];
+    } else if (selectedCategory === 'furniture') {
+      options = ['Sofas',
+        'Tables',
+        'Chairs',
+        'Beds',
+        'Cabinets',
+        'Desks',
+        'Bookcases',
+        'Dressers',
+        'Benches',
+        'Wardrobes'];
+    } else if (selectedCategory === 'clothes') {
+      options = ['Male', 'Female', 'babe girl', 'babe baby'];
+    } else if (selectedCategory === 'cosmetics') {
+      options = ['Makeup', 'Skincare', 'Fragrances'];
+    } else if (selectedCategory === 'services') {
+      options = ['Health', 'Transport', 'Hotel', 'Laundry','foods',];
     }
 
-    for (var i = 0; i < files.length; i++) {
-        var file = files[i];
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-            var imageContainer = document.createElement('div');
-            imageContainer.className = 'image-container'; // Add a class for styling
-            var image = document.createElement('img');
-            image.className = 'thumbnail mr-2 mb-2';
-            image.src = e.target.result;
-            imageContainer.appendChild(image);
-            preview.appendChild(imageContainer);
-        };
-
-        reader.readAsDataURL(file);
-    }
-}
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('addProductForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        var formData = new FormData(this);
-
-        fetch('/addProduct', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Check if the product was added successfully
-            if (data.success) {
-                // Redirect to the /form page
-                window.location.href = '/form';
-            } else {
-                // Handle errors if product addition failed
-                console.error('Error adding product:', data.error);
-                // Optionally, display error message to the user
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            // Optionally, display error message to the user
-        });
+    // Populate subcategory select element
+    options.forEach(function(option) {
+      var opt = document.createElement('option');
+      opt.value = option;
+      opt.text = option;
+      subCategory.appendChild(opt);
     });
+  });
 });
 
+        function previewImages(event) {
+            var preview = document.getElementById('imagePreview');
+            preview.innerHTML = ''; // Clear previous previews
+            var files = event.target.files;
 
+            if (files.length !== 3) {
+                alert("Please upload exactly 3 images.");
+                event.target.value = ''; // Clear the file input
+                return;
+            }
 
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var reader = new FileReader();
 
+                reader.onload = function(e) {
+                    var imageContainer = document.createElement('div');
+                    imageContainer.className = 'image-container'; // Add a class for styling
+                    var image = document.createElement('img');
+                    image.className = 'thumbnail mr-2 mb-2';
+                    image.src = e.target.result;
+                    imageContainer.appendChild(image);
+                    preview.appendChild(imageContainer);
+                };
 
+                reader.readAsDataURL(file);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('addProductForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                var formData = new FormData(this);
+
+                fetch('/addProduct', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Check if the product was added successfully
+                    if (data.success) {
+                        // Redirect to the /form page
+                        window.location.href = '/form';
+                    } else {
+                        // Handle errors if product addition failed
+                        console.error('Error adding product:', data.error);
+                        // Optionally, display error message to the user
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Optionally, display error message to the user
+                });
+            });
+        });
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-   
 </body>
 </html>

@@ -367,15 +367,23 @@ function verifyEmail() {
 
 
 
-
-
-  $(document).ready(function() {
+$(document).ready(function() {
   // Fetch latest products for phones on document load
   fetchLatestProducts('phones');
   // Fetch latest products for computers on document load
   fetchLatestProducts('computers');
   // Fetch latest products for houses on document load
   fetchLatestProducts('house');
+  // Fetch latest products for vehicles on document load
+  fetchLatestProducts('vehicle');
+  // Fetch latest products for furniture on document load
+  fetchLatestProducts('furniture');
+  // Fetch latest products for clothes on document load
+  fetchLatestProducts('clothes');
+  // Fetch latest products for cosmetics on document load
+  fetchLatestProducts('cosmetics');
+  // Fetch latest products for services on document load
+  fetchLatestProducts('services');
 });
 
 function fetchLatestProducts(category) {
@@ -384,6 +392,7 @@ function fetchLatestProducts(category) {
     displayLatestProducts(category, products);
   });
 }
+
  
   
 
@@ -692,7 +701,52 @@ function toggleOrderForm() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('.navbar10');
+  const links = navbar.querySelectorAll('a');
+  let currentIndex = 0;
+  const intervalTime = 3000; // Time in milliseconds for auto-rotation
+  let autoScroll;
 
+  const scrollToLink = (index) => {
+    const link = links[index];
+    const offsetLeft = link.offsetLeft;
+    const linkWidth = link.offsetWidth;
+    const navbarWidth = navbar.clientWidth;
+    
+    // Calculate the position to scroll
+    const scrollPosition = offsetLeft - (navbarWidth / 2) + (linkWidth / 2);
+    
+    navbar.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+    currentIndex = index;
+  };
 
+  const startAutoScroll = () => {
+    autoScroll = setInterval(() => {
+      currentIndex = (currentIndex + 1) % links.length;
+      scrollToLink(currentIndex);
+    }, intervalTime);
+  };
 
+  const stopAutoScroll = () => {
+    clearInterval(autoScroll);
+  };
 
+  // Start auto-rotation
+  startAutoScroll();
+
+  // Add event listeners to stop auto-rotation on mouse enter and resume on mouse leave
+  navbar.addEventListener('mouseenter', stopAutoScroll);
+  navbar.addEventListener('mouseleave', startAutoScroll);
+
+  // Add event listeners to navigate to links on click
+  links.forEach((link, index) => {
+    link.addEventListener('click', () => {
+      scrollToLink(index);
+      stopAutoScroll(); // Optional: stop auto-rotation on click
+    });
+  });
+});
