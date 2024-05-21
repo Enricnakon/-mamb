@@ -728,7 +728,6 @@ select::-ms-expand {
   position: relative;
 }
 
-/* Button Styles */
 .prev-btn,
 .next-btn {
   font-weight: bold;
@@ -740,30 +739,22 @@ select::-ms-expand {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   position: absolute;
-  bottom: 10em; /* 160px converted to em */
+  bottom: 160px; /* Adjust as needed */
   margin-left: 21%; /* Adjust margin for smaller screens */
 }
 
 .prev-btn {
-  left: 0.10em; /* 300px converted to em */
+  left: 300px; /* Adjust as needed */
 }
 
 .next-btn {
-  right: 2.25em; /* 36px converted to em */
+  right: 36px; /* Adjust as needed */
 }
 
 .prev-btn:hover,
 .next-btn:hover {
   background-color: #2980b9;
   transform: scale(1.05);
-}
-
-/* Media Queries */
-@media (max-width: 75em) { /* 1200px */
-  .prev-btn,
-  .next-btn {
-    display: none;
-  }
 }
 
 
@@ -1202,21 +1193,22 @@ select::-ms-expand {
 
 
 
-/* Advertisement Card Styles */
+
+
 .advertisement2-card2 {
   position: absolute;
-  width: 15.625em; /* 250px */
-  border: 0.1875em solid #ccc; /* 3px */
+  width: 250px;
+  border: 3px solid #ccc;
   overflow: hidden;
-  margin: 1.25em; /* 20px */
-  height: 31.25em; /* 500px */
+  margin: 20px;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  top: 56.25em; /* 900px */
+  top: 900px;
 }
 
 .image-container9 {
-  height: 9.375em; /* 150px */
+  height: 150px;
 }
 
 .image-container9 img {
@@ -1226,69 +1218,193 @@ select::-ms-expand {
 }
 
 .content {
-  padding: 0.3125em; /* 5px */
+  padding: 5px;
 }
 
 h2 {
-  font-size: 1.125em; /* 18px */
-  margin-bottom: 0.3125em; /* 5px */
+  font-size: 18px;
+  margin-bottom: 5px;
   margin-top: 0;
 }
 
 p {
-  margin-bottom: 0.625em; /* 10px */
-  font-size: 0.875em; /* 14px */
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 0.5em 1em; /* 8px 16px */
+  padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
   text-decoration: none;
-  border-radius: 0.3125em; /* 5px */
-  margin-bottom: 0.625em; /* 10px */
-  font-size: 0.875em; /* 14px */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .brand-logo img {
-  width: 3.75em; /* 60px */
+  width: 60px;
   height: auto;
-  margin-top: 0;
-  margin-bottom: 0.3125em; /* 5px */
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 .contact-info {
-  margin-bottom: 0.3125em; /* 5px */
+  margin-bottom: 5px;
 }
 
 .contact-info p {
-  margin: 0.125em 0; /* 2px 0 */
-  font-size: 0.75em; /* 12px */
+  margin: 2px 0;
+  font-size: 12px;
 }
 
 .social-links {
   margin-top: auto;
-  font-size: 0.875em; /* 14px */
+  font-size: 14px;
 }
 
 .social-links a {
   display: inline-block;
-  margin-right: 0.3125em; /* 5px */
+  margin-right: 5px;
   color: #333; /* Adjust color as needed */
 }
 
-/* Media Queries */
-@media (max-width: 75em) { /* 1200px */
-  .advertisement2-card2 {
-    display: none;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar0 {
+  display: flex;
+  overflow-x:  hidden; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap cards to the viewport */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 280px; /* Add left margin */
 }
 
-@media (min-width: 75em) { /* 1200px */
-  .advertisement2-card2 {
-    display: flex;
-  }
+.card0 {
+  flex: 0 0 92px; /* Adjust card width */
+  height: 80px; /* Adjust card height */
+  margin: 10px; /* Adjust spacing between cards */
+  background-color: #8135355e;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card0:hover {
+  background-color: #f0f0f0;
+}
+
+.card0 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 25px; /* Adjust font size */
 }
 
 
@@ -1313,148 +1429,40 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 75em) { /* 1200px */
-  .navbar0 {
-    display: flex;
-    overflow-x: hidden; /* Allow horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Snap cards to the viewport */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-    justify-content: flex-start; /* Align items to the left */
-    margin-left: 17.5em; /* 280px converted to em */
-  }
-
-  .card0 {
-    flex: 0 0 5.75em; /* 92px converted to em */
-    height: 5em; /* 80px converted to em */
-    margin: 0.625em; /* 10px converted to em */
-    background-color: #8135355e;
-    border-radius: 0.625em; /* 10px converted to em */
-    text-align: center;
-    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1); /* 0 4px 8px converted to em */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .card0:hover {
-    background-color: #f0f0f0;
-  }
-
-  .card0 a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5625em; /* 25px converted to em */
-  }
-
-  .navbar10 {
-    display: flex;
-    overflow-x: hidden; /* Allow horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical scroll bar */
-    scroll-snap-type: x mandatory; /* Snap cards to the viewport */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-    justify-content: flex-start; /* Align items to the left */
-    margin-left: 17.5em; /* 280px converted to em */
-    scroll-behavior: smooth; /* Enable smooth scrolling */
-  }
-
-  .navbar10 a {
-    flex: 0 0 8.75em; /* 140px converted to em */
-    height: 2.5em; /* 40px converted to em */
-    margin: 0.625em; /* 10px converted to em */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #853e3e11;
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9375em; /* 15px converted to em */
-    position: relative; /* Required for positioning the pseudo-element */
-  }
-
-  .navbar10 a:after {
-    content: '';
-    position: absolute;
-    bottom: -0.0625em; /* -1px converted to em */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%; /* Adjust to set the width of the line */
-    border-bottom: 1px solid #333; /* Add bottom border */
-  }
+.navbar10 {
+  display: flex;
+  overflow-x: hidden; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scroll bar */
+  scroll-snap-type: x mandatory; /* Snap cards to the viewport */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  justify-content: flex-start; /* Align items to the left */
+  margin-left: 280px; /* Add left margin */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.navbar10 a {
+  flex: 0 0 140px; /* Adjust link width */
+  height: 40px; /* Adjust link height */
+  margin: 10px; /* Adjust spacing between links */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #853e3e11;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px; /* Adjust font size */
+  position: relative; /* Required for positioning the pseudo-element */
+}
+
+.navbar10 a:after {
+  content: '';
+  position: absolute;
+  bottom: -1px; /* Position the line closer to the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Adjust to set the width of the line */
+  border-bottom: 1px solid #333; /* Add bottom border */
 }
