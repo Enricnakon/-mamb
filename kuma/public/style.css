@@ -63,6 +63,24 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header Styles */
 .header1 {
   background-color: rgba(247, 247, 247, 0.959);
   padding: 0.5rem 1rem; /* Reduced padding */
@@ -71,27 +89,27 @@
   align-items: center;
   color: rgba(31, 5, 5, 0.5);
   text-decoration: none;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
-/* Media Query for Mobile Screens */
-@media only screen and (max-width: 767px) {
-  .right-section {
-      display: none; /* Hide the right section for mobile screens */
-  }
+/* Right Section Styles */
+.right-section {
+  display: flex;
+  align-items: center;
 }
 
-/* Adjust font size for better readability on smaller screens */
-.header1 span {
-  font-size: 1.0rem; /* Reduced font size */
+/* Social Icons Styles */
+.social-icons {
+  display: flex;
+  align-items: center;
 }
 
-/* CSS for social media icons */
 .social-icon {
   color: black;
   border-right: 1px solid #ccc; /* Reduced border width */
   padding: 0 0.25rem; /* Reduced padding */
   font-size: 0.8rem; /* Reduced font size */
+  margin-right: 0.5rem; /* Added margin between icons */
 }
 
 /* Optional: Add hover effect */
@@ -104,20 +122,19 @@
   border-right: none;
 }
 
-/* Remove background, border, and selection styles for select elements */
+/* Select Styles */
 select {
   background-color: transparent;
   border: none;
   outline: none;
   font-size: 1.0rem; /* Reduced font size */
+  margin-right: 0.5rem; /* Added margin between selects */
 }
 
 /* Remove the default arrow in select elements */
 select::-ms-expand {
   display: none;
 }
-
-
 
 
 
