@@ -81,6 +81,7 @@
 
 
 /* Header Styles */
+/* Header Styles */
 .header1 {
   background-color: rgba(247, 247, 247, 0.959);
   padding: 0.5rem 1rem; /* Reduced padding */
@@ -137,14 +138,23 @@ select::-ms-expand {
 
 /* Media Query for Small Screens */
 @media only screen and (max-width: 767px) {
-  /* Show only the right section for small screens */
+  /* Show only the specified part for small screens */
   .right-section {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Display in a column */
+    align-items: flex-start; /* Align items to the start */
     margin-top: 10px; /* Add some margin for spacing */
   }
 }
 
+/* Media Query for Big Screens */
+@media only screen and (min-width: 768px) {
+  /* Show the entire right section for big screens */
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+}
 
 
 
