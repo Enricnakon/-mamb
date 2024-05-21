@@ -11,17 +11,134 @@ document.getElementById("forgotPasswordLink").addEventListener("click", function
   document.getElementById("forgotPasswordModal").style.display = "block";
 });
 // Get the logout modal
-var logoutModal = document.getElementById('logoutModal');
 
-// Get the logout button
-var logoutButton = document.getElementById('logoutButton');
 
-// When the user clicks the logout button, display the logout modal
-logoutButton.addEventListener('click', function() {
-    logoutModal.style.display = 'block';
+// Handle opening and closing of modals
+document.querySelectorAll('.close').forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    closeBtn.closest('.modal').style.display = 'none';
+  });
 });
 
-// Close modal when close button is clicked
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Event listener for the logout button in the new location
+document.getElementById('logoutButton').addEventListener('click', () => {
+  document.getElementById('logoutModal').style.display = 'block';
+});
+
+// Event listener for confirming logout in the logout modal
+document.getElementById('logoutConfirmButton').addEventListener('click', async () => {
+  try {
+    const response = await fetch('/logout', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) throw new Error('Failed to logout');
+
+    const result = await response.json();
+    if (result.message === 'Logged out successfully') {
+      // Perform any UI updates needed after logout
+      alert('Logged out successfully');
+      document.getElementById('logoutModal').style.display = 'none';
+      // Redirect to the login page or home page
+      window.location.href = '/login'; // Adjust the URL as needed
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Failed to logout');
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Handle opening and closing of modals
+document.querySelectorAll('.close').forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    closeBtn.closest('.modal').style.display = 'none';
+  });
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+  }
+});
+
+// Event listener for the logout button in the new location
+document.getElementById('logoutButton').addEventListener('click', () => {
+  document.getElementById('logoutModal').style.display = 'block';
+});
+
+// Event listener for confirming logout in the logout modal
+document.getElementById('logoutConfirmButton').addEventListener('click', () => {
+  // Perform logout actions here
+  console.log('User logged out');
+  document.getElementById('logoutModal').style.display = 'none';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var closeButtons = document.querySelectorAll('.close');
 closeButtons.forEach(function(button) {
   button.addEventListener('click', function() {

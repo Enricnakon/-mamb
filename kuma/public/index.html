@@ -151,6 +151,12 @@
   </div>
 </div>
 
+
+<div id="logoutButtonContainer">
+  <button type="button" id="logoutButton">Logout</button>
+</div>
+
+
 <div id="dropdownMenu" class="dropdown-content">
   <a href="#">Cart</a>
   <a href="#">Wishlist</a>
@@ -235,7 +241,6 @@
   </div>
 </div>
 
-
 <!-- Login Modal -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
@@ -251,26 +256,23 @@
   </div>
 </div>
 
-<!-- Other Modals (register, forgot password, logout) -->
-
-
-  <div id="registerModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Register</h2>
-      <form id="registerForm">
-        <input type="text" name="username" placeholder="Username">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Register</button>
-        <button type="button" id="verificationButton">Verify Email</button>
-        <button type="button" id="logoutButton">Logout</button>
-      </div>
-      </form>
-    </div>
+<!-- Register Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" name="username" placeholder="Username">
+      <input type="email" name="email" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <button type="submit">Register</button>
+      <button type="button" id="verificationButton">Verify Email</button>
+    </form>
   </div>
-  
- <div id="forgotPasswordModal" class="modal">
+</div>
+
+<!-- Forgot Password Modal -->
+<div id="forgotPasswordModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Forgot Password?</h2>
@@ -281,26 +283,21 @@
   </div>
 </div>
 
+<!-- Logout Modal -->
+<!-- Logout Button Placement -->
+<div id="logoutButtonContainer">
+  <button type="button" id="logoutButton">Logout</button>
+</div>
+
+<!-- Logout Modal -->
 <div id="logoutModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Logout</h2>
     <p>Are you sure you want to logout?</p>
-   
-
-   
-    </form>
+    <button id="logoutConfirmButton">Logout</button>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 

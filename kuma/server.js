@@ -180,10 +180,38 @@ app.post('/register', async (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
 app.get('/logout', (req, res) => {
-  req.session.userId = undefined;
-  res.send('Logged out');
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ message: 'Failed to logout' });
+    }
+    res.status(200).json({ message: 'Logged out successfully' });
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get('/verify/:token', async (req, res) => {
   try {
