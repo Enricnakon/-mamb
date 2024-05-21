@@ -1365,30 +1365,24 @@ p {
 
 
 
-
-
-
-
-
-
-
+/* General Styles */
 .navbar0 {
   display: flex;
-  overflow-x:  hidden; /* Allow horizontal scrolling */
+  overflow-x: hidden; /* Allow horizontal scrolling */
   scroll-snap-type: x mandatory; /* Snap cards to the viewport */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 280px; /* Add left margin */
+  margin-left: 17.5em; /* Add left margin */
 }
 
 .card0 {
-  flex: 0 0 92px; /* Adjust card width */
-  height: 80px; /* Adjust card height */
-  margin: 10px; /* Adjust spacing between cards */
+  flex: 0 0 5.75em; /* Adjust card width */
+  height: 5em; /* Adjust card height */
+  margin: 0.625em; /* Adjust spacing between cards */
   background-color: #8135355e;
-  border-radius: 10px;
+  border-radius: 0.625em;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1404,30 +1398,8 @@ p {
 .card0 a {
   text-decoration: none;
   color: #333;
-  font-size: 25px; /* Adjust font size */
+  font-size: 1.5625em; /* Adjust font size */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .navbar10 {
   display: flex;
@@ -1436,14 +1408,14 @@ p {
   scroll-snap-type: x mandatory; /* Snap cards to the viewport */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 280px; /* Add left margin */
+  margin-left: 17.5em; /* Add left margin */
   scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 .navbar10 a {
-  flex: 0 0 140px; /* Adjust link width */
-  height: 40px; /* Adjust link height */
-  margin: 10px; /* Adjust spacing between links */
+  flex: 0 0 8.75em; /* Adjust link width */
+  height: 2.5em; /* Adjust link height */
+  margin: 0.625em; /* Adjust spacing between links */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1453,16 +1425,97 @@ p {
   background-color: #853e3e11;
   text-decoration: none;
   color: #333;
-  font-size: 15px; /* Adjust font size */
+  font-size: 0.9375em; /* Adjust font size */
   position: relative; /* Required for positioning the pseudo-element */
 }
 
 .navbar10 a:after {
   content: '';
   position: absolute;
-  bottom: -1px; /* Position the line closer to the text */
+  bottom: -0.0625em; /* Position the line closer to the text */
   left: 50%;
   transform: translateX(-50%);
   width: 50%; /* Adjust to set the width of the line */
-  border-bottom: 1px solid #333; /* Add bottom border */
+  border-bottom: 0.0625em solid #333; /* Add bottom border */
+}
+
+/* Media Queries */
+@media (max-width: 75em) {
+  .navbar0 {
+    margin-left: 15em; /* Adjust left margin */
+  }
+  .card0 {
+    flex: 0 0 5em; /* Adjust card width */
+    height: 4.375em; /* Adjust card height */
+  }
+  .card0 a {
+    font-size: 1.375em; /* Adjust font size */
+  }
+  .navbar10 {
+    margin-left: 15em; /* Adjust left margin */
+  }
+  .navbar10 a {
+    flex: 0 0 7.5em; /* Adjust link width */
+    font-size: 0.875em; /* Adjust font size */
+  }
+}
+
+@media (max-width: 62em) {
+  .navbar0 {
+    margin-left: 12.5em; /* Adjust left margin */
+  }
+  .card0 {
+    flex: 0 0 4.375em; /* Adjust card width */
+    height: 3.75em; /* Adjust card height */
+  }
+  .card0 a {
+    font-size: 1.25em; /* Adjust font size */
+  }
+  .navbar10 {
+    margin-left: 12.5em; /* Adjust left margin */
+  }
+  .navbar10 a {
+    flex: 0 0 6.25em; /* Adjust link width */
+    font-size: 0.8125em; /* Adjust font size */
+  }
+}
+
+@media (max-width: 48em) {
+  .navbar0 {
+    margin-left: 10em; /* Adjust left margin */
+  }
+  .card0 {
+    flex: 0 0 3.75em; /* Adjust card width */
+    height: 3.125em; /* Adjust card height */
+  }
+  .card0 a {
+    font-size: 1.125em; /* Adjust font size */
+  }
+  .navbar10 {
+    margin-left: 10em; /* Adjust left margin */
+  }
+  .navbar10 a {
+    flex: 0 0 5em; /* Adjust link width */
+    font-size: 0.75em; /* Adjust font size */
+  }
+}
+
+@media (max-width: 36em) {
+  .navbar0 {
+    margin-left: 7.5em; /* Adjust left margin */
+  }
+  .card0 {
+    flex: 0 0 3.125em; /* Adjust card width */
+    height: 2.5em; /* Adjust card height */
+  }
+  .card0 a {
+    font-size: 1em; /* Adjust font size */
+  }
+  .navbar10 {
+    margin-left: 7.5em; /* Adjust left margin */
+  }
+  .navbar10 a {
+    flex: 0 0 3.75em; /* Adjust link width */
+    font-size: 0.6875em; /* Adjust font size */
+  }
 }

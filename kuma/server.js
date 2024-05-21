@@ -16,10 +16,10 @@ const FormData = require('./models/FormData');
 
 const multer = require('multer');
 const router = express.Router(); // Define router here
+ 
+
 const app = express();
-
-
-
+const PORT = 3000;
 
 app.use('/form', formDataRouter);
 
@@ -141,7 +141,19 @@ module.exports = app;
 // Route to render user.ejs with user-specific products
  
 
+// Define the function to generate the verification token
+function generateVerificationToken() {
+  const tokenLength = 32;
+  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let verificationToken = '';
+  for (let i = 0; i < tokenLength; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    verificationToken += characters[randomIndex];
+  }
+  return verificationToken;
+}
 
+// Register route
 app.post('/register', async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -151,6 +163,7 @@ app.post('/register', async (req, res) => {
       return res.status(400).send('User already exists');
     }
 
+    // Generate the verification token using the function
     const verificationToken = generateVerificationToken();
 
     const newUser = new User({ username, email, password, verificationToken });
@@ -158,8 +171,9 @@ app.post('/register', async (req, res) => {
 
     req.session.userId = newUser._id;
 
+    // Include the verification token in the email sent to the user
     const mailOptions = {
-      from: email,
+      from: email, 
       to: email,
       subject: 'Email Verification',
       html: `Click <a href="http://localhost:3000/verify/${verificationToken}">here</a> to verify your email.`
@@ -171,7 +185,8 @@ app.post('/register', async (req, res) => {
         return res.status(500).send('Failed to send verification email');
       }
       console.log('Email sent:', info.response);
-      res.status(201).send('User registered successfully. Please check your email for verification.');
+      // Send verification token to the client along with the registration success message
+      res.status(201).json({ message: 'User registered successfully. Please check your email for verification.', verificationToken });
     });
 
   } catch (err) {
@@ -180,6 +195,26 @@ app.post('/register', async (req, res) => {
   }
 });
 
+// Email verification route
+app.get('/verify/:token', async (req, res) => {
+  try {
+    const { token } = req.params;
+    const user = await User.findOne({ verificationToken: token });
+
+    if (!user) {
+      return res.status(400).send('Invalid verification token');
+    }
+
+    user.verified = true;  // Mark user as verified
+    user.verificationToken = null;  // Remove the verification token
+    await user.save();
+
+    res.send('Email verified successfully!');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server error');
+  }
+});
 
 
 

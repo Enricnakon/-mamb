@@ -37,42 +37,7 @@ window.addEventListener('click', (event) => {
 
 
 
-
-
-
-
-
-// Event listener for the logout button in the new location
-document.getElementById('logoutButton').addEventListener('click', () => {
-  document.getElementById('logoutModal').style.display = 'block';
-});
-
-// Event listener for confirming logout in the logout modal
-document.getElementById('logoutConfirmButton').addEventListener('click', async () => {
-  try {
-    const response = await fetch('/logout', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-
-    if (!response.ok) throw new Error('Failed to logout');
-
-    const result = await response.json();
-    if (result.message === 'Logged out successfully') {
-      // Perform any UI updates needed after logout
-      alert('Logged out successfully');
-      document.getElementById('logoutModal').style.display = 'none';
-      // Redirect to the login page or home page
-      window.location.href = '/login'; // Adjust the URL as needed
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Failed to logout');
-  }
-});
-
+ 
 
 
 
@@ -356,18 +321,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  const registerForm = document.getElementById('registerForm');
 
-
-
-
-registerForm.addEventListener('submit', function(event) {
+  registerForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
+  
     const formData = new FormData(registerForm);
     const username = formData.get('username');
     const email = formData.get('email');
     const password = formData.get('password');
-
-    // Now you can send a POST request to your server with the form data
+  
+    // Send a POST request to your server with the form data
     fetch('/register', {
       method: 'POST',
       headers: {
@@ -375,25 +339,30 @@ registerForm.addEventListener('submit', function(event) {
       },
       body: JSON.stringify({ username, email, password })
     })
-    .then(response => response.text()) // Parse the response as text
+    .then(response => response.json()) // Parse the response as JSON
     .then(data => {
-      // Display the response as an alert
-      alert(data);
-
-      // If registration is successful and email verification is required,
-      // you can inform the user to check their email for verification.
-      if (data.includes('Please check your email for verification')) {
+      // Display the response message
+      alert(data.message);
+  
+      // If a verification token is provided, inform the user to check their email for verification
+      if (data.verificationToken) {
         alert('Please check your email for verification.');
       }
-
+  
       // Reset the form after submission
       registerForm.reset();
     })
     .catch(error => {
       console.error('Error:', error);
+      // Handle any errors, e.g., display an error message to the user
+      alert('An error occurred. Please try again.');
     });
   });
- 
+  
+
+
+
+  
   forgotPasswordForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
     const formData = new FormData(forgotPasswordForm);
@@ -441,33 +410,7 @@ registerForm.addEventListener('submit', function(event) {
 
 
 
-
-
-
-
-  document.getElementById('verificationButton').addEventListener('click', verifyEmail);
-
-function verifyEmail() {
-  // Get the token from the URL or from wherever it's stored
-  const token = '9e71143b4473108de056e2152f296ecb4246dc95'; // Replace with the actual token
-
-  fetch(`/verify/${token}`)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      // Handle successful verification
-      alert('Email verified successfully!');
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      // Display error message to the user
-      alert('Failed to verify email due to a network issue. Please try again or click the link in the verification email.');
-    });
-}
-
-
-
+ 
 
 
 
