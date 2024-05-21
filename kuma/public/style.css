@@ -1170,19 +1170,19 @@ select::-ms-expand {
 
 
 
-
-
-
-.advertisement2-card2 {
-  position: absolute;
-  width: 250px;
-  border: 3px solid #ccc;
-  overflow: hidden;
-  margin: 20px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  top: 900px;
+/* Styles for big screens */
+@media only screen and (min-width: 768px) {
+  .advertisement2-card2 {
+    position: absolute;
+    width: 250px;
+    border: 3px solid #ccc;
+    overflow: hidden;
+    margin: 20px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    top: 900px;
+  }
 }
 
 .image-container9 {
@@ -1247,9 +1247,6 @@ p {
   margin-right: 5px;
   color: #333; /* Adjust color as needed */
 }
-
-
-
 
 
 
