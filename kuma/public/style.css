@@ -94,8 +94,7 @@
 
 /* Right Section Styles */
 .right-section {
-  display: flex;
-  align-items: center;
+  display: none; /* Hide by default */
 }
 
 /* Social Icons Styles */
@@ -136,11 +135,15 @@ select::-ms-expand {
   display: none;
 }
 
-
-
- 
-
-
+/* Media Query for Small Screens */
+@media only screen and (max-width: 767px) {
+  /* Show only the right section for small screens */
+  .right-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add some margin for spacing */
+  }
+}
 
 
 
