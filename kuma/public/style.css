@@ -79,8 +79,6 @@
 
 
 
-
-/* Header Styles */
 /* Header Styles */
 .header1 {
   background-color: rgba(247, 247, 247, 0.959);
@@ -165,9 +163,6 @@ select::-ms-expand {
 
 
 
-
-
-
 /* Original CSS styles for the dropdown menu */
 
 .menu-button {
@@ -182,7 +177,7 @@ select::-ms-expand {
 
 /* Dropdown Content Styling */
 .dropdown-content {
-  display: none;
+  display:over;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -609,15 +604,16 @@ select::-ms-expand {
 
 .card {
    position: relative;
-  width: 20%; /* Adjust width for four cards per row */
-  margin: 0em; /* Adjust margin for spacing */
-  height: 25em; /* Set a fixed height */
-  background-color: #fff;
+  width: 22%; /* Adjust width for four cards per row */
+  margin: 0.8em; /* Adjust margin for spacing */
+  height: 28em; /* Set a fixed height */
+  background-color: #b99b9b15;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
-  margin-right: 1.15em; /* Adjust right margin for spacing */
+  margin-right: 1.15em; 
+  left: 1.00em; /* Adjust right margin for spacing */
 }
 
 .card:hover {
@@ -653,20 +649,21 @@ select::-ms-expand {
 
 .card img {
   width: 100%; /* Set image width to fill container */
-  height: 100%; /* Maintain aspect ratio */
-  border-radius: 5px;
+  height: 330px; /* Maintain aspect ratio */
+  border-radius: 0px;
 }
 
 .card .card-header {
-  font-size: 1.125em; /* 18px converted to em */
+  font-size: 1.425em; /* 18px converted to em */
   font-weight: bold;
-  margin: 0.625em; /* 10px converted to em */
+ 
 }
 
 .card p {
-  font-size: 0.875em; /* 14px converted to em */
+  font-size: 0.985em; /* 14px converted to em */
   line-height: 1.4;
   margin-bottom: 0.625em; /* 10px converted to em */
+  margin: 2px;
 }
 
 /* Button Styles */
@@ -675,12 +672,12 @@ select::-ms-expand {
     margin-left: 20%; /* Adjust margin for smaller screens */
   }
 }
+ 
 
 .btn-primary,
 .prev-btn,
-.next-btn,
-.add-to-cart-btn,
-.view-btn {
+.next-btn
+  {
   background-color: transparent;
   border: 0.125em solid #db6934; /* Thin border */
   color: #db4d34;
@@ -696,9 +693,8 @@ select::-ms-expand {
 
 .btn-primary:hover,
 .prev-btn:hover,
-.next-btn:hover,
-.add-to-cart-btn:hover,
-.view-btn:hover {
+.next-btn:hover
+ {
   background-color: #ffffff;
   color: #0e0909; /* Change text color on hover */
   border-color: #ffffff; /* Change border color on hover */
@@ -707,9 +703,9 @@ select::-ms-expand {
 /* Adjust button appearance when pressed */
 .btn-primary:active,
 .prev-btn:active,
-.next-btn:active,
-.add-to-cart-btn:active,
-.view-btn:active {
+.next-btn:active
+ 
+ {
   transform: translateY(0.0625em); /* 1px converted to em */
   box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.3); /* 1px converted to em */
 }
@@ -723,7 +719,7 @@ select::-ms-expand {
 .next-btn {
   font-weight: bold;
   color: #fff;
-  background-color: #3498db;
+  background-color: #42db34;
   border: none;
   border-radius: 0.625em; /* 10px converted to em */
   padding: 0.75em 1.5em; /* Adjust padding */
@@ -735,11 +731,11 @@ select::-ms-expand {
 }
 
 .prev-btn {
-  left: 300px; /* Adjust as needed */
+  left: 150px; /* Adjust as needed */
 }
 
 .next-btn {
-  right: 36px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
 }
 
 .prev-btn:hover,
@@ -753,7 +749,7 @@ select::-ms-expand {
 .animated-element {
   /* Example animation */
   
-  margin-left: 21%; /* Adjust margin for smaller screens */
+  margin-left: 23%; /* Adjust margin for smaller screens */
   animation: moveRight 1s ease-in-out infinite alternate;
 }
 
@@ -765,6 +761,25 @@ select::-ms-expand {
     transform: translateX(0px);
   }
 }
+
+
+.price-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents items from wrapping onto a new line */
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.strike-through {
+  color: rgb(26, 17, 17);
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
 
 
 
@@ -866,13 +881,13 @@ select::-ms-expand {
   
   
   
+ 
 
+ 
 
-
-
-
-
-
+.view-btn {
+  margin-top: 100px; /* Push buttons to the bottom */
+}
 
 
 /* Button Styles */
@@ -888,7 +903,10 @@ select::-ms-expand {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  
   margin-right: 10px;
+  align-self: flex-end; /* Align buttons to the bottom */
+  margin-top: 100px; /* Push buttons to the bottom */
 }
 
 .add-to-cart-btn:hover,
@@ -903,6 +921,11 @@ select::-ms-expand {
   transform: translateY(1px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+
 
 /* Cart Container */
 .cart-container {
@@ -1171,32 +1194,92 @@ select::-ms-expand {
 
 
 
+.advertisement2-card2 {
+  width: 250px;
+  border: 3px solid #ccc;
+  overflow: hidden;
+  margin: 20px;
+  height: auto; /* Remove fixed height */
+  display: flex;
+  flex-direction: column;
+}
 
+.image-container9 {
+  height: 150px;
+}
 
+.image-container9 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.content {
+  padding: 5px;
+}
 
+h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
 
+p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
 
+.cta-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
 
+.brand-logo img {
+  width: 60px;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
 
+.contact-info {
+  margin-bottom: 5px;
+}
 
+.contact-info p {
+  margin: 2px 0;
+  font-size: 12px;
+}
 
+.social-links {
+  margin-top: auto;
+  font-size: 14px;
+}
 
+.social-links a {
+  display: inline-block;
+  margin-right: 5px;
+  color: #333; /* Adjust color as needed */
+}
 
-/* Styles for big screens */
-@media only screen and (min-width: 768px) {
+@media (min-width: 940px) {
   .advertisement2-card2 {
-    position: absolute;
-    width: 250px;
-    border: 3px solid #ccc;
-    overflow: hidden;
-    margin: 20px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    top: 900px;
+      position: relative;
+      top: 0; /* Reset the top position */
+      left: 0; /* Reset the left position */
+      margin: 0; /* Reset the margin */
+  }
+
+  .advertisement2-card2:not(:first-child) {
+      margin-top: -180px; /* Adjust the top margin to overlap the cards */
   }
 }
+
 
 .image-container9 {
   height: 150px;
@@ -1355,24 +1438,19 @@ p {
 
 
 
-
-
-
-
-
 .navbar0 {
   display: flex;
   overflow-x:  hidden; /* Allow horizontal scrolling */
   scroll-snap-type: x mandatory; /* Snap cards to the viewport */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 280px; /* Add left margin */
+  margin-left: 23%; /* Adjust margin for smaller screens */
 }
 
 .card0 {
   flex: 0 0 92px; /* Adjust card width */
   height: 80px; /* Adjust card height */
-  margin: 10px; /* Adjust spacing between cards */
+  margin: 8px; /* Adjust spacing between cards */
   background-color: #8135355e;
   border-radius: 10px;
   text-align: center;
@@ -1424,7 +1502,9 @@ p {
   scroll-snap-type: x mandatory; /* Snap cards to the viewport */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 280px; /* Add left margin */
+  margin-left: 23%; /* Adjust margin for smaller screens */
+  margin-right: 1%; /* Adjust margin for smaller screens */
+
   scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
@@ -1453,4 +1533,37 @@ p {
   transform: translateX(-50%);
   width: 50%; /* Adjust to set the width of the line */
   border-bottom: 1px solid #333; /* Add bottom border */
+}
+
+
+
+
+
+
+
+
+.title-container {
+  text-align: left;
+  width: 100%;
+  margin: 15px;
+  max-width: 500px;
+  position: relative;
+  padding-left: 310px; /* Adjust as needed */
+  padding-right: 20px; /* Adjust as needed */
+}
+
+.title {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+}
+
+.underline {
+  margin-top: 5px;
+  height: 2px;
+  width: 1100px;
+  background-color: #333;
+  position: absolute;
+ 
+  left: 300px; /* Adjust as needed */
 }
