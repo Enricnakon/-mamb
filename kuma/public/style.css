@@ -615,21 +615,7 @@ select::-ms-expand {
   transition: transform 0.3s ease;
   overflow: hidden;
   margin-right: 1.15em; 
-  left: 1.00em; /* Adjust left position for spacing */
-}
-
-/* Adjust card width for phone screens */
-@media screen and (max-width: 480px) {
-  .card {
-    width: 90%; /* Increase width for phone screens */
-  }
-}
-
-/* Adjust margin-left for smaller screens */
-@media screen and (max-width: 768px) {
-  .card {
-    margin-left: 21%; /* Adjust margin for smaller screens */
-  }
+  left: 1.00em; /* Adjust right margin for spacing */
 }
 
 /* Adjust card width for medium screens */
@@ -645,6 +631,16 @@ select::-ms-expand {
   .card {
     width: 45%; /* Adjust width for two cards per row */
     margin: 0.8em; /* Adjust margin for spacing */
+  }
+}
+
+/* Adjust card width for extra small screens */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 90%; /* Adjust width for one card per row */
+    margin: 0.5em auto; /* Center the card and adjust margin for spacing */
+    left: 0; /* Reset left position */
+    margin-right: 0; /* Reset right margin */
   }
 }
 
