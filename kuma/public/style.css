@@ -623,23 +623,21 @@ select::-ms-expand {
   .card {
     width: 30%; /* Adjust width for three cards per row */
     margin: 0.8em; /* Adjust margin for spacing */
-    left: 1.00em; /* Adjust left position for spacing */
   }
 }
 
 /* Adjust card width for small screens */
 @media screen and (max-width: 768px) {
   .card {
-    width: 50%; /* Adjust width for two cards per row */
-    margin: 0.8em; /* Adjust margin for spacing */
-    right: 10px; /* Adjusted position for small screens */
+    width: 45%; /* Adjust width for two cards per row */
+    margin: 1.8em; /* Adjust margin for spacing */
   }
 }
 
 /* Adjust card width for extra small screens */
 @media screen and (max-width: 480px) {
   .card {
-    width: 60%; /* Adjust width for two cards per row */
+    width: 45%; /* Adjust width for two cards per row */
     margin: 0.5em; /* Adjust margin for spacing */
     left: 0; /* Reset left position */
     margin-right: 0; /* Reset right margin */
@@ -649,7 +647,21 @@ select::-ms-expand {
 
 
 
- 
+
+
+
+
+
+/* Adjust card width for extra small screens */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 45%; /* Adjust width for two cards per row */
+     
+    margin: 0.5em; /* Adjust margin for spacing */
+    left: 0; /* Reset left position */ 
+    margin-right: 0; /* Reset right margin */
+  }
+}
 
 .card:hover {
   transform: translateY(-5px);
