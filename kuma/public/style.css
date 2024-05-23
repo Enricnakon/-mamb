@@ -175,8 +175,6 @@ select::-ms-expand {
 
 
 
-
-
 .menu-button {
   cursor: pointer;
 }
@@ -334,17 +332,12 @@ select::-ms-expand {
   }
 }
 
-@media screen and (max-width: 1024px) {
+/* Hide elements on smaller screens */
+@media only screen and (max-width: 1024px) {
   .large-screen-only {
-    display: none;
+    display: none !important;
   }
 }
-
-
-
-
-
-
 
 
 
