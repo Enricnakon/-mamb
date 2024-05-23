@@ -1102,12 +1102,10 @@ select::-ms-expand {
 
 
 
-
-
-
-
-
-.advertisement2-card2 {position:absolute;
+/* Default styles: hide the advertisement2-card2 by default */
+.advertisement2-card2 {
+  display: none;
+  position: absolute;
   width: 250px;
   border: 3px solid #ccc;
   overflow: hidden;
@@ -1116,6 +1114,13 @@ select::-ms-expand {
   display: flex;
   flex-direction: column;
   top: 850px;
+}
+
+/* Show the advertisement2-card2 only on screens 1024px and wider */
+@media screen and (min-width: 1024px) {
+  .advertisement2-card2 {
+    display: flex; /* Make it visible on larger screens */
+  }
 }
 
 .image-container9 {
@@ -1180,21 +1185,6 @@ p {
   margin-right: 5px;
   color: #333; /* Adjust color as needed */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
