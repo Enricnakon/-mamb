@@ -623,6 +623,7 @@ select::-ms-expand {
   .card {
     width: 30%; /* Adjust width for three cards per row */
     margin: 0.8em; /* Adjust margin for spacing */
+    left: 1.00em; /* Adjust left position for spacing */
   }
 }
 
