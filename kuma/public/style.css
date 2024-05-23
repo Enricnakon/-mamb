@@ -604,20 +604,43 @@ select::-ms-expand {
   justify-content: flex-start;
     position: relative; 
     margin-left: 21%; /* Adjust margin for smaller screens */
-}
-
-.card {
-   position: relative;
-  width: 22%; /* Adjust width for four cards per row */
+}.card {
+  position: relative;
+  width: 22%; /* Default width for larger screens */
   margin: 0.8em; /* Adjust margin for spacing */
   height: 28em; /* Set a fixed height */
   background-color: #b99b9b15;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  position: relative;
   overflow: hidden;
   margin-right: 1.15em; 
   left: 1.00em; /* Adjust right margin for spacing */
+}
+
+/* Adjust card width for medium screens */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 30%; /* Adjust width for three cards per row */
+    margin: 0.8em; /* Adjust margin for spacing */
+  }
+}
+
+/* Adjust card width for small screens */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 45%; /* Adjust width for two cards per row */
+    margin: 0.8em; /* Adjust margin for spacing */
+  }
+}
+
+/* Adjust card width for extra small screens */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 90%; /* Adjust width for one card per row */
+    margin: 0.5em auto; /* Center the card and adjust margin for spacing */
+    left: 0; /* Reset left position */
+    margin-right: 0; /* Reset right margin */
+  }
 }
 
 .card:hover {
