@@ -1476,7 +1476,8 @@ p {
 
 @media screen and (min-width: 600px) {
   .title-container {
-    padding-left: 60px; /* Increase padding for medium screens */
+    padding-left: 80px; /* Increase padding for medium screens */
+    font-size: 18px;
   }
 
   .underline {
