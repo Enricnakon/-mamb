@@ -628,7 +628,7 @@ select::-ms-expand {
 /* Adjust card width for small screens */
 @media screen and (max-width: 768px) {
   .card {
- 
+    width: 45%; /* Adjust width for two cards per row */
   
     margin: 0.8em; /* Adjust margin for spacing */
   }
@@ -637,8 +637,8 @@ select::-ms-expand {
 /* Adjust card width for extra small screens */
 @media screen and (max-width: 480px) {
   .card {
-    width: 35%; /* Adjust width for two cards per row */
-    height:50% ;
+    width: 45%; /* Adjust width for two cards per row */
+     
     margin: 0.5em; /* Adjust margin for spacing */
     left: 0; /* Reset left position */ 
     margin-right: 0; /* Reset right margin */
@@ -1488,24 +1488,25 @@ p {
 }
 
 .title {
-  font-size: 22px;
+  font-size: 12px;
   color: #0a080863;
   margin: 0;
 }
 
 .underline {
   margin-top: 5px;
-  height: 2px;
+  height: 1px;
   width: 100%; /* Full width by default */
   background-color: #333;
   position: absolute;
-  left: 20px; /* Initial left offset for small screens */
+  left: 10px; /* Initial left offset for small screens */
 }
 
 @media screen and (min-width: 600px) {
   .title-container {
     padding-left: 80px; /* Increase padding for medium screens */
     font-size: 18px;
+    font-size: 22px;
   }
 
   .underline {
