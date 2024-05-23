@@ -596,10 +596,13 @@ function updateCartDisplay() {
       const productDetails = document.getElementById('productDetails');
       productDetails.innerHTML = `
         <h2>${product.productName}</h2>
-        <p>Product ID: ${product.productId}</p>
+ 
         <p>Description: ${product.description}</p>
         <p>Price: ${product.price}</p>
+     
        
+        
+   
       `;
       // Populate images in the image container
       const imageContainer = document.getElementById('imageContainer');
@@ -816,3 +819,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Assume cutpriceValue is obtained from your data source
+  var cutpriceValue = 100; // Replace with actual data source value
+
+  var cutpriceGroup = document.getElementById('cutprice-group');
+  var cutpriceInput = document.getElementById('cutprice');
+
+  if (cutpriceValue) {
+      cutpriceInput.value = cutpriceValue;
+      cutpriceGroup.style.display = 'block';
+  }
+});

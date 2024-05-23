@@ -560,7 +560,9 @@
   <div class="col-md-4">
     <div id="phones" class="category text-right mt-3">
       <div class="title-container">
-        <h1 class="title">Phones and Accessories</h1>
+        <h1 class="title">Phones and Accessories   </h1>
+
+    
         <div class="underline"></div>
     </div>
         <div class="navbar-container">
@@ -1082,17 +1084,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 document.querySelectorAll('.subcategory-link').forEach(link => {
   link.addEventListener('click', async (event) => {
     event.preventDefault();
@@ -1134,9 +1125,9 @@ function displayLatestProducts(category, products) {
           
             <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
             <div class="price-container">
-        <p class="price">Price: Tsh${product.price}</p>
-        <p class="strike-through">   Tsh${product.price}</p>
-    </div>
+              <p class="price">Price: Tsh${product.price}</p>
+              ${product.cutprice ? `<p class="strike-through">Tsh${product.cutprice}</p>` : ''}
+            </div>
             <div class="overlay"></div>
           </div>
         </div>
@@ -1189,12 +1180,6 @@ function displayLatestProducts(category, products) {
     }
   });
 }
-
-
-
-
-
-
 
 
 

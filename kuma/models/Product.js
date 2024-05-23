@@ -7,6 +7,9 @@ const productSchema = new mongoose.Schema({
   productName: { type: String, required: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
+  cutprice: { type: Number },
+
+
   category: { type: String, required: true },
   subCategory: { type: String, required: true }, // Ensure this is set to required if necessary
   productImages: [{ type: String, required: true }],

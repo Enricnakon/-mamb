@@ -437,6 +437,7 @@ const storage = multer.diskStorage({
             productName: product.productName,
             description: product.description,
             price: product.price,
+            cutprice:product. cutprice,
             productImages: product.productImages
         }));
         res.json(formattedProducts);
@@ -454,6 +455,7 @@ app.get('/latest', async (req, res) => {
             productName: product.productName,
             description: product.description,
             price: product.price,
+            cutprice:product. cutprice,
             productImages: product.productImages
         }));
         res.json(formattedProducts);
@@ -766,12 +768,13 @@ app.get('/editProduct/:id', async (req, res) => {
 // Update Product Route
 app.post('/editProduct/:id', upload.array('productImages', 3), async (req, res) => {
   try {
-    const { productName, description, price, category } = req.body;
+    const { productName, description, price,cutprice,category } = req.body;
     let product = await Product.findById(req.params.id); // Find the product by ID
 
     product.productName = productName;
     product.description = description;
     product.price = price;
+    product. cutprice = cutprice;
     product.category = category;
 
     // Handle image updates
@@ -892,7 +895,7 @@ app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
       return res.status(401).send('Unauthorized');
     }
 
-    const { productName, description, price, subCategory, category } = req.body;
+    const { productName, description, price,cutprice, subCategory, category } = req.body;
     console.log('Request body:', req.body);
     console.log('Received subCategory:', subCategory);
 
@@ -909,6 +912,7 @@ app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
       productName,
       description,
       price,
+      cutprice,
       category,
       subCategory,
       productImages,
