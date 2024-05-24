@@ -1538,7 +1538,7 @@ p {
 }
 
 .underline {
-  margin-top: 5px;
+  margin-top: 8px;
   height: 1px;
   width: 100%; /* Full width by default */
   background-color: #333;
