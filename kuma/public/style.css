@@ -1367,6 +1367,7 @@ p {
 
 /* Base styles for all devices (including phone screens) */
 .navbar10 {
+  padding: 3px;
   display: flex;
   overflow-x: auto; /* Allow horizontal scrolling */
   overflow-y: hidden; /* Hide vertical scroll bar */
