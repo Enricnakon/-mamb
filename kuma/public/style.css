@@ -623,7 +623,7 @@ select::-ms-expand {
   .card {
     width: 50%; /* Adjust width for three cards per row */
     margin: 2.8em; /* Adjust margin for spacing */
-    left: 10px; /* Adjusted position for small screens */
+    left: 100px; /* Adjusted position for small screens */
   }
 }
 
@@ -632,17 +632,18 @@ select::-ms-expand {
   .card {
     width: 50%; /* Adjust width for two cards per row */
     margin: 2.8em; /* Adjust margin for spacing */
-    left: 10px; /* Adjusted position for small screens */
+    left: 100px; /* Adjusted position for small screens */
   }
 }
 
 /* Adjust card width for extra small screens */
 @media screen and (max-width: 480px) {
   .card {
-    width: 45%; /* Adjust width for two cards per row */
-    margin: 0.5em; /* Adjust margin for spacing */
+    width: 55%; /* Adjust width for two cards per row */
+    margin: 1.5em; /* Adjust margin for spacing */
     left: 0; /* Reset left position */
     margin-right: 0; /* Reset right margin */
+    left: 100px; /* Adjusted position for small screens */
   }
 }
 
@@ -654,16 +655,7 @@ select::-ms-expand {
 
 
 
-/* Adjust card width for extra small screens */
-@media screen and (max-width: 480px) {
-  .card {
-    width: 45%; /* Adjust width for two cards per row */
-     
-    margin: 0.5em; /* Adjust margin for spacing */
-    left: 0; /* Reset left position */ 
-    margin-right: 0; /* Reset right margin */
-  }
-}
+ 
 
 .card:hover {
   transform: translateY(-5px);
@@ -1516,7 +1508,7 @@ p {
   width: 100%; /* Full width by default */
   background-color: #333;
   position: absolute;
-  left: 10px; /* Initial left offset for small screens */
+  left: 1px; /* Initial left offset for small screens */
 }
 
 @media screen and (min-width: 600px) {
@@ -1533,7 +1525,8 @@ p {
 
 @media screen and (min-width: 768px) {
   .title-container {
-    padding-left: 110px; /* Increase padding for larger screens */
+    left: 300px; /* Adjust as needed for larger screens */
+    width: 1100px;
   }
 
   .underline {
