@@ -1509,7 +1509,7 @@ p {
   margin: 15px;
   max-width: 500px;
   position: relative;
-  padding-left: 15px; /* Initial padding */
+  padding-left: 0; /* Initial padding */
   padding-right: 20px;
 }
 
@@ -1525,7 +1525,7 @@ p {
   width: 100%; /* Full width by default */
   background-color: #333;
   position: absolute;
-  padding-left: 1px; /* Initial padding */
+  left: 50px; /* Adjust left offset for big screens */
 }
 /* Styles for big screens (minimum width of 576px) */
 @media screen and (min-width: 576px) {
