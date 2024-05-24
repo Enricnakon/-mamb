@@ -1318,14 +1318,14 @@ p {
   scroll-snap-type: x mandatory; /* Snap cards to the viewport */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 5%; /* Adjust margin for smaller screens */
-  margin-right: 5%; /* Adjust margin for smaller screens */
+  margin-left: 0; /* Adjust margin for smaller screens */
+  margin-right: 0; /* Adjust margin for smaller screens */
 }
 
 .card0 {
-  flex: 0 0 92px; /* Adjust card width */
-  height: 80px; /* Adjust card height */
-  margin: 8px; /* Adjust spacing between cards */
+  flex: 0 0 72px; /* Adjust card width */
+  height: 70px; /* Adjust card height */
+  margin: 4px; /* Adjust spacing between cards */
   background-color: #8135355e;
   border-radius: 10px;
   text-align: center;
