@@ -1525,7 +1525,7 @@ p {
   width: 100%; /* Full width by default */
   background-color: #333;
   position: absolute;
-  left: 5px; /* Adjust left offset for big screens */
+  left: 0px; /* Adjust left offset for big screens */
 }
 /* Styles for big screens (minimum width of 576px) */
 @media screen and (min-width: 576px) {
@@ -1540,6 +1540,6 @@ p {
   }
 
   .underline {
-    left: 5px; /* Adjust left offset for big screens */
+    left: 0px; /* Adjust left offset for big screens */
   }
 }
