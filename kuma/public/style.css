@@ -1540,6 +1540,6 @@ p {
   }
 
   .underline {
-    left: 50px; /* Adjust left offset for big screens */
+    left: 10px; /* Adjust left offset for big screens */
   }
 }
