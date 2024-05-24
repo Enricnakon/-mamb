@@ -1380,8 +1380,8 @@ p {
 
 .navbar10 a {
   flex: 0 0 100px; /* Adjust link width */
-  height: 30px; /* Adjust link height */
-  margin: 5px; /* Adjust spacing between links */
+  height: 20px; /* Adjust link height */
+  margin: 3px; /* Adjust spacing between links */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1391,7 +1391,7 @@ p {
   background-color: #853e3e11;
   text-decoration: none;
   color: #333;
-  font-size: 15px; /* Adjust font size */
+  font-size: 10px; /* Adjust font size */
   position: relative; /* Required for positioning the pseudo-element */
 }
 
@@ -1401,7 +1401,7 @@ p {
   bottom: -1px; /* Position the line closer to the text */
   left: 50%;
   transform: translateX(-50%);
-  width: 50%; /* Adjust to set the width of the line */
+  width: 30%; /* Adjust to set the width of the line */
   border-bottom: 1px solid #333; /* Add bottom border */
 }
 
