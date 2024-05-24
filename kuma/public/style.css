@@ -1449,13 +1449,67 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base styles for all devices */
 .title-container {
   text-align: left;
   width: 100%;
   margin: 15px;
   max-width: 500px;
   position: relative;
-  padding-left: 20px; /* Initial padding for small screens */
+  padding-left: 20px; /* Initial padding */
   padding-right: 20px;
 }
 
@@ -1471,19 +1525,21 @@ p {
   width: 100%; /* Full width by default */
   background-color: #333;
   position: absolute;
-  left: 10px; /* Initial left offset for small screens */
+  left: 10px; /* Initial left offset */
 }
-
+/* Styles for big screens (minimum width of 576px) */
 @media screen and (min-width: 576px) {
   .title-container {
-    padding-left: 80px; /* Increase padding for medium screens */
-    font-size: 18px;
-    font-size: 22px;
+    padding-left: 80px; /* Increase padding for big screens */
+    padding-right: 80px; /* Increase padding for big screens */
+    font-size: 23px; /* Increase font-size for big screens */
+  }
+
+  .title {
+    font-size: 18px; /* Increase font-size for big screens */
   }
 
   .underline {
-    left: 10px; /* Adjust left offset for medium screens */
+    left: 50px; /* Adjust left offset for big screens */
   }
 }
-
- 
