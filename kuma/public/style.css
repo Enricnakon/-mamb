@@ -1373,15 +1373,15 @@ p {
   scroll-snap-type: x mandatory; /* Snap cards to the viewport */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 5%; /* Adjust margin for smaller screens */
-  margin-right: 5%; /* Adjust margin for smaller screens */
+  margin-left: 0; /* Adjust margin for smaller screens */
+  margin-right: 0; /* Adjust margin for smaller screens */
   scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 .navbar10 a {
   flex: 0 0 140px; /* Adjust link width */
   height: 30px; /* Adjust link height */
-  margin: 4px; /* Adjust spacing between links */
+  margin: 10px; /* Adjust spacing between links */
   text-align: center;
   display: flex;
   flex-direction: column;
