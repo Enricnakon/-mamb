@@ -637,19 +637,7 @@ select::-ms-expand {
 }
 
 /* Adjust card width for extra small screens */
-@media screen and (max-width: 480px) {
-  .card {
-    width: 55%; /* Adjust width for two cards per row */
-    margin: 1.5em; /* Adjust margin for spacing */
-    left: 0; /* Reset left position */
-    margin-right: 0; /* Reset right margin */
-    left: 100px; /* Adjusted position for small screens */
-  }
-}
-
-
-
-
+ 
 
 
 
@@ -1525,8 +1513,8 @@ p {
 
 @media screen and (min-width: 768px) {
   .title-container {
-    left: 300px; /* Adjust as needed for larger screens */
-    width: 1100px;
+    left: 10px; /* Adjust as needed for larger screens */
+    width: 110px;
   }
 
   .underline {
