@@ -185,7 +185,7 @@ select::-ms-expand {
 .menu-icon {
   font-size: 2em;
   color: #333;
- left: 0;
+  margin-left: 0;
   /* Add margin to separate from other elements */
 }
 

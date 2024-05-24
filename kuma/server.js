@@ -613,6 +613,22 @@ app.get('/products/:subcategory', async (req, res) => {
           <p>Thank you for shopping with us!</p>
         `
       });
+
+      await transporter.sendMail({
+        from: email,
+        to: 'enricnakon@gmail.com', // Use the provided email address for the recipient
+        subject: 'Order Confirmation',
+        html: `
+          <p>name ${name},</p>
+          <p>has been placed successfully. Below are the details:</p>
+          <p>Cart Items: ${JSON.stringify(cartItems)}</p>
+          <p>Total Price: ${totalPrice}</p>
+          <p>Phone: ${phone}</p>
+          <p>Thank you for shopping with us!</p>
+        `
+      });
+
+
        
       // Respond with success message
       res.status(200).json({ message: 'Order placed successfully' });
