@@ -1173,24 +1173,21 @@ select::-ms-expand {
 
 
 
-/* Default styles: hide the advertisement2-card2 by default */
-.advertisement2-card2 {
-  display: none;
-  position: absolute;
-  width: 250px;
-  border: 3px solid #ccc;
-  overflow: hidden;
-  margin: 20px;
-  height: auto; /* Remove fixed height */
-  display: flex;
-  flex-direction: column;
-  top: 850px;
-}
-
+ 
 /* Show the advertisement2-card2 only on screens 1024px and wider */
 @media screen and (min-width: 1024px) {
   .advertisement2-card2 {
-    display: flex; /* Make it visible on larger screens */
+    display: flex;
+    display: none;
+    position: absolute;
+    width: 250px;
+    border: 3px solid #ccc;
+    overflow: hidden;
+    margin: 20px;
+    height: auto; /* Remove fixed height */
+    display: flex;
+    flex-direction: column;
+    top: 850px; /* Make it visible on larger screens */
   }
 }
 
