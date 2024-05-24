@@ -1380,7 +1380,7 @@ p {
 
 .navbar10 a {
   flex: 0 0 100px; /* Adjust link width */
-  height: 20px; /* Adjust link height */
+  height: 25px; /* Adjust link height */
   margin: 3px; /* Adjust spacing between links */
   text-align: center;
   display: flex;
