@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: calc(50vh - 30px); /* Full height minus header space */
+  height: calc(70vh - 40px); /* Full height minus header space */
   margin-left: 0; /* Adjust margin for smaller screens */
   margin-right: 0; /* Adjust margin for smaller screens */
 }
@@ -39,7 +39,7 @@
 /* Media query for phone screens (maximum width of 576px) */
 @media screen and (max-width: 576px) {
   .container {
-    height: calc(50vh - 30px); /* Adjust height for smaller screens */
+    height: calc(100vh - 60px); /* Adjust height for smaller screens */
   }
 
   .image-container img {
@@ -215,7 +215,7 @@
 
 .call-to-action {
   position: absolute;
-  bottom: -300px;
+  bottom: -80px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
