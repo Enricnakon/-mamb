@@ -1530,13 +1530,13 @@ p {
 /* Styles for big screens (minimum width of 576px) */
 @media screen and (min-width: 576px) {
   .title-container {
-    padding-left: 80px; /* Increase padding for big screens */
+    padding-left: 50px; /* Increase padding for big screens */
     padding-right: 80px; /* Increase padding for big screens */
-    font-size: 23px; /* Increase font-size for big screens */
+    font-size: 22px; /* Increase font-size for big screens */
   }
 
   .title {
-    font-size: 18px; /* Increase font-size for big screens */
+    font-size: 22px; /* Increase font-size for big screens */
   }
 
   .underline {
