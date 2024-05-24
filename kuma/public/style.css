@@ -1506,7 +1506,7 @@ p {
 .title-container {
   text-align: left;
   width: 100%;
-  margin: 15px;
+ 
   max-width: 500px;
   position: relative;
   padding-left: 0; /* Initial padding */
@@ -1525,7 +1525,7 @@ p {
   width: 100%; /* Full width by default */
   background-color: #333;
   position: absolute;
-  left: 50px; /* Adjust left offset for big screens */
+  left: 10px; /* Adjust left offset for big screens */
 }
 /* Styles for big screens (minimum width of 576px) */
 @media screen and (min-width: 576px) {
