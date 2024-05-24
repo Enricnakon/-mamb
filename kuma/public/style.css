@@ -753,7 +753,7 @@ select::-ms-expand {
 .next-btn {
   font-weight: bold;
   color: #fff;
-  background-color: #42db34;
+ 
   border: none;
   border-radius: 0.625em; /* 10px converted to em */
   padding: 0.75em 1.5em; /* Adjust padding */
@@ -780,7 +780,7 @@ select::-ms-expand {
 
 .prev-btn:hover,
 .next-btn:hover {
-  background-color: #2980b9;
+  background-color: rgba(41, 128, 185, 0.1); /* Make background transparent with blue tint */
   transform: scale(1.05);
 }
 
