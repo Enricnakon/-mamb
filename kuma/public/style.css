@@ -615,8 +615,8 @@ select::-ms-expand {
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   overflow: hidden;
-  margin-right: 1.00em; 
-  left: 0.00em; /* Adjust left position for spacing */
+  margin-right: 1.20em; 
+  left: 0.60em; /* Adjust left position for spacing */
 }
 
 /* Adjust card width for medium screens */
