@@ -1367,6 +1367,7 @@ p {
 
 /* Base styles for all devices (including phone screens) */
 .navbar10 {
+  margin: 10px; /* Adjust spacing between links */
   display: flex;
   overflow-x: auto; /* Allow horizontal scrolling */
   overflow-y: hidden; /* Hide vertical scroll bar */
@@ -1417,6 +1418,7 @@ p {
   .navbar10 a {
     flex: 0 0 160px; /* Adjust link width for big screens */
     font-size: 16px; /* Increase font size for big screens */
+    margin: 10px;
   }
 
   .navbar10 a:after {
