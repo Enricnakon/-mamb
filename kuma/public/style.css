@@ -628,7 +628,7 @@ select::-ms-expand {
 }
 
 /* Adjust card width for small screens */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 576px){
   .card {
     width: 50%; /* Adjust width for two cards per row */
     margin: 2.8em; /* Adjust margin for spacing */
