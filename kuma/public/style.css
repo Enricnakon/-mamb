@@ -1365,11 +1365,7 @@ p {
  
 
 
-
-
-
-
-
+/* Base styles for all devices (including phone screens) */
 .navbar10 {
   display: flex;
   overflow-x: auto; /* Allow horizontal scrolling */
@@ -1384,8 +1380,8 @@ p {
 
 .navbar10 a {
   flex: 0 0 140px; /* Adjust link width */
-  height: 40px; /* Adjust link height */
-  margin: 10px; /* Adjust spacing between links */
+  height: 30px; /* Adjust link height */
+  margin: 4px; /* Adjust spacing between links */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1395,55 +1391,78 @@ p {
   background-color: #853e3e11;
   text-decoration: none;
   color: #333;
-  font-size: 15px; /* Adjust font size */
+  font-size: 12px; /* Adjust font size */
   position: relative; /* Required for positioning the pseudo-element */
+  margin-left: 0; /* Adjust margin for big screens */
+  margin-right: 0; /* Adjust margin for big screens */
 }
 
 .navbar10 a:after {
   content: '';
   position: absolute;
   bottom: -1px; /* Position the line closer to the text */
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
   width: 50%; /* Adjust to set the width of the line */
   border-bottom: 1px solid #333; /* Add bottom border */
 }
 
-@media screen and (min-width: 600px) {
+/* Styles for big screens (minimum width of 600px) */
+@media screen and (min-width: 576px) {
   .navbar10 {
-    margin-left: 10%; /* Adjust margin for medium screens */
-    margin-right: 5%; /* Adjust margin for medium screens */
+    margin-left: 10%; /* Adjust margin for big screens */
+    margin-right: 10%; /* Adjust margin for big screens */
   }
 
   .navbar10 a {
-    flex: 0 0 160px; /* Adjust link width for medium screens */
-    font-size: 16px; /* Increase font size for medium screens */
+    flex: 0 0 160px; /* Adjust link width for big screens */
+    font-size: 16px; /* Increase font size for big screens */
+  }
+
+  .navbar10 a:after {
+    width: 70%; /* Adjust underline width for big screens */
   }
 }
 
-@media screen and (min-width: 768px) {
-  .navbar10 {
-    margin-left: 15%; /* Adjust margin for larger screens */
-    margin-right: 5%; /* Adjust margin for larger screens */
-  }
 
-  .navbar10 a {
-    flex: 0 0 180px; /* Adjust link width for larger screens */
-    font-size: 17px; /* Increase font size for larger screens */
-  }
-}
 
-@media screen and (min-width: 1024px) {
-  .navbar10 {
-    margin-left: 20%; /* Adjust margin for larger screens */
-    margin-right: 5%; /* Adjust margin for larger screens */
-  }
 
-  .navbar10 a {
-    flex: 0 0 200px; /* Adjust link width for larger screens */
-    font-size: 18px; /* Increase font size for larger screens */
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
