@@ -1367,7 +1367,7 @@ p {
 
 /* Base styles for all devices (including phone screens) */
 .navbar10 {
-  margin: 10px; /* Adjust spacing between links */
+ 
   display: flex;
   overflow-x: auto; /* Allow horizontal scrolling */
   overflow-y: hidden; /* Hide vertical scroll bar */
@@ -1389,9 +1389,9 @@ p {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: #853e3e11;
+  background-color: #853e3ea2;
   text-decoration: none;
-  color: #333;
+  color: #c9c9c9;
   font-size: 12px; /* Adjust font size */
   position: relative; /* Required for positioning the pseudo-element */
   margin-left: 0; /* Adjust margin for big screens */
@@ -1400,11 +1400,12 @@ p {
 
 .navbar10 a:after {
   content: '';
+  margin: 10px; /* Adjust spacing between links */
   position: absolute;
   bottom: -1px; /* Position the line closer to the text */
   left: 0;
   transform: translateX(-50%);
-  width: 50%; /* Adjust to set the width of the line */
+  width: 30%; /* Adjust to set the width of the line */
   border-bottom: 1px solid #333; /* Add bottom border */
 }
 
