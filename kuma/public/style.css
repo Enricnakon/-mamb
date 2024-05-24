@@ -109,7 +109,7 @@
 
 /* Right Section Styles */
 .right-section {
-  display: none; /* Hide by default */
+ display:flex;
 }
 
 /* Social Icons Styles */
@@ -151,7 +151,7 @@ select::-ms-expand {
 }
 
 /* Media Query for Small Screens */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: px) {
   /* Show only the specified part for small screens */
   .right-section {
     display: flex;
