@@ -619,35 +619,19 @@ select::-ms-expand {
 }
 
 /* Adjust card width for medium screens */
-@media screen and (max-width: 1024px) {
-  .card {
-    width: 50%; /* Adjust width for three cards per row */
-    margin: 2.8em; /* Adjust margin for spacing */
-    left: 100px; /* Adjusted position for small screens */
-  }
-}
+ 
 
 /* Adjust card width for small screens */
 @media only screen and (max-width: 576px){
   .card {
     width: 50%; /* Adjust width for two cards per row */
     margin: 2.8em; /* Adjust margin for spacing */
-    left: 10px; /* Adjusted position for small screens */
+    left: 150px; /* Adjust as needed */
   }
 }
 
 /* Adjust card width for extra small screens */
-@media screen and (max-width: 480px) {
-  .card {
-    width: 45%; /* Adjust width for two cards per row */
-    margin: 0.5em; /* Adjust margin for spacing */
-    left: 0; /* Reset left position */
-    margin-right: 0; /* Reset right margin */
-  }
-}
-
-
-
+ 
 
 
 
@@ -1519,7 +1503,7 @@ p {
   left: 10px; /* Initial left offset for small screens */
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 576px) {
   .title-container {
     padding-left: 80px; /* Increase padding for medium screens */
     font-size: 18px;
@@ -1527,7 +1511,7 @@ p {
   }
 
   .underline {
-    left: 40px; /* Adjust left offset for medium screens */
+    left: 20px; /* Adjust left offset for medium screens */
   }
 }
 
