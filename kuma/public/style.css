@@ -1318,8 +1318,8 @@ p {
   scroll-snap-type: x mandatory; /* Snap cards to the viewport */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   justify-content: flex-start; /* Align items to the left */
-  margin-left: 0%; /* Adjust margin for smaller screens */
-  margin-right: 0%; /* Adjust margin for smaller screens */
+  margin-left: 5%; /* Adjust margin for smaller screens */
+  margin-right: 5%; /* Adjust margin for smaller screens */
 }
 
 .card0 {
@@ -1367,7 +1367,6 @@ p {
 
 /* Base styles for all devices (including phone screens) */
 .navbar10 {
- 
   display: flex;
   overflow-x: auto; /* Allow horizontal scrolling */
   overflow-y: hidden; /* Hide vertical scroll bar */
@@ -1381,7 +1380,7 @@ p {
 
 .navbar10 a {
   flex: 0 0 140px; /* Adjust link width */
-  height: 30px; /* Adjust link height */
+  height: 40px; /* Adjust link height */
   margin: 10px; /* Adjust spacing between links */
   text-align: center;
   display: flex;
@@ -1389,29 +1388,25 @@ p {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
+  background-color: #853e3e11;
   text-decoration: none;
-  color: #c9c9c9;
-  font-size: 12px; /* Adjust font size */
+  color: #333;
+  font-size: 15px; /* Adjust font size */
   position: relative; /* Required for positioning the pseudo-element */
-  margin-left: 0; /* Adjust margin for big screens */
-  margin-right: 0; /* Adjust margin for big screens */
 }
 
 .navbar10 a:after {
   content: '';
-  background-color: #853e3ea2;
-  margin: 10px; /* Adjust spacing between links */
   position: absolute;
   bottom: -1px; /* Position the line closer to the text */
-  left: 4;
+  left: 50%;
   transform: translateX(-50%);
-  width: 30%; /* Adjust to set the width of the line */
+  width: 50%; /* Adjust to set the width of the line */
   border-bottom: 1px solid #333; /* Add bottom border */
 }
 
 /* Styles for big screens (minimum width of 600px) */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 570px) {
   .navbar10 {
     margin-left: 10%; /* Adjust margin for big screens */
     margin-right: 10%; /* Adjust margin for big screens */
@@ -1420,12 +1415,10 @@ p {
   .navbar10 a {
     flex: 0 0 160px; /* Adjust link width for big screens */
     font-size: 16px; /* Increase font size for big screens */
-    margin: 10px;
   }
 
   .navbar10 a:after {
     width: 70%; /* Adjust underline width for big screens */
-    background-color: #853e3ea2;
   }
 }
 
