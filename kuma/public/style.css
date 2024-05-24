@@ -1379,9 +1379,9 @@ p {
 }
 
 .navbar10 a {
-  flex: 0 0 140px; /* Adjust link width */
-  height: 40px; /* Adjust link height */
-  margin: 10px; /* Adjust spacing between links */
+  flex: 0 0 100px; /* Adjust link width */
+  height: 30px; /* Adjust link height */
+  margin: 5px; /* Adjust spacing between links */
   text-align: center;
   display: flex;
   flex-direction: column;
