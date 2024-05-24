@@ -1348,50 +1348,21 @@ p {
   font-size: 15px; /* Adjust font size */
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 576px) {
   .navbar0 {
-    margin-left: 10%; /* Adjust margin for medium screens */
-    margin-right: 5%; /* Adjust margin for medium screens */
+    margin-left: 20%; /* Adjust margin for medium screens */
+    margin-right: 10%; /* Adjust margin for medium screens */
   }
 
   .card0 {
     flex: 0 0 120px; /* Adjust card width for medium screens */
     height: 100px; /* Adjust card height for medium screens */
-    font-size: 18px; /* Adjust font size for medium screens */
+    font-size: 14px; /* Adjust font size for medium screens */
+    margin: 4px; /* Adjust spacing between cards */
   }
 }
-
-@media screen and (min-width: 768px) {
-  .navbar0 {
-    margin-left: 15%; /* Adjust margin for larger screens */
-    margin-right: 5%; /* Adjust margin for larger screens */
-  }
-
-  .card0 {
-    flex: 0 0 140px; /* Adjust card width for larger screens */
-    height: 120px; /* Adjust card height for larger screens */
-    font-size: 20px; /* Adjust font size for larger screens */
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .navbar0 {
-    margin-left: 20%; /* Adjust margin for larger screens */
-    margin-right: 5%; /* Adjust margin for larger screens */
-  }
-
-  .card0 {
-    flex: 0 0 160px; /* Adjust card width for larger screens */
-    height: 140px; /* Adjust card height for larger screens */
-    font-size: 22px; /* Adjust font size for larger screens */
-  }
-}
-
-
-
-
-
-
+ 
+ 
 
 
 
@@ -1511,27 +1482,8 @@ p {
   }
 
   .underline {
-    left: 20px; /* Adjust left offset for medium screens */
+    left: 10px; /* Adjust left offset for medium screens */
   }
 }
 
-@media screen and (min-width: 768px) {
-  .title-container {
-    padding-left: 110px; /* Increase padding for larger screens */
-  }
-
-  .underline {
-    left: 100px; /* Adjust left offset for larger screens */
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .title-container {
-    padding-left: 310px; /* Adjust as needed for larger screens */
-  }
-
-  .underline {
-    left: 300px; /* Adjust as needed for larger screens */
-    width: 1100px; /* Set specific width for larger screens */
-  }
-}
+ 
