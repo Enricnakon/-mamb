@@ -637,13 +637,33 @@ select::-ms-expand {
 }
 
 /* Adjust card width for extra small screens */
- 
+@media screen and (max-width: 480px) {
+  .card {
+    width: 45%; /* Adjust width for two cards per row */
+    margin: 0.5em; /* Adjust margin for spacing */
+    left: 0; /* Reset left position */
+    margin-right: 0; /* Reset right margin */
+  }
+}
 
 
 
 
 
- 
+
+
+
+
+/* Adjust card width for extra small screens */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 45%; /* Adjust width for two cards per row */
+     
+    margin: 0.5em; /* Adjust margin for spacing */
+    left: 0; /* Reset left position */ 
+    margin-right: 0; /* Reset right margin */
+  }
+}
 
 .card:hover {
   transform: translateY(-5px);
@@ -1496,7 +1516,7 @@ p {
   width: 100%; /* Full width by default */
   background-color: #333;
   position: absolute;
-  left: 1px; /* Initial left offset for small screens */
+  left: 10px; /* Initial left offset for small screens */
 }
 
 @media screen and (min-width: 600px) {
@@ -1513,8 +1533,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .title-container {
-    left: 10px; /* Adjust as needed for larger screens */
-    width: 110px;
+    padding-left: 110px; /* Increase padding for larger screens */
   }
 
   .underline {
