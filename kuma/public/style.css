@@ -1425,6 +1425,7 @@ p {
 
   .navbar10 a:after {
     width: 70%; /* Adjust underline width for big screens */
+    background-color: #853e3ea2;
   }
 }
 
