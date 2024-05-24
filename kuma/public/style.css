@@ -1389,7 +1389,7 @@ p {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: #853e3ea2;
+
   text-decoration: none;
   color: #c9c9c9;
   font-size: 12px; /* Adjust font size */
@@ -1400,10 +1400,11 @@ p {
 
 .navbar10 a:after {
   content: '';
+  background-color: #853e3ea2;
   margin: 10px; /* Adjust spacing between links */
   position: absolute;
   bottom: -1px; /* Position the line closer to the text */
-  left: 0;
+  left: 4;
   transform: translateX(-50%);
   width: 30%; /* Adjust to set the width of the line */
   border-bottom: 1px solid #333; /* Add bottom border */
