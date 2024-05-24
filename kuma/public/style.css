@@ -585,7 +585,7 @@ select::-ms-expand {
 
 
 /* Category Styles */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .category h6,
   .category-products {
     margin-left: 25%; /* Adjust margin for smaller screens */
@@ -603,7 +603,8 @@ select::-ms-expand {
   flex-wrap: wrap;
   justify-content: flex-start;
     position: relative; 
-    margin-left: 21%; /* Adjust margin for smaller screens */
+    margin-left: 0; /* Adjust margin for smaller screens */
+    margin-right: 0; /* Adjust margin for smaller screens */
 }
 .card {
   position: relative;
@@ -1538,7 +1539,7 @@ p {
 }
 
 .underline {
-  margin-top: 8px;
+  margin-top: 5px;
   height: 1px;
   width: 100%; /* Full width by default */
   background-color: #333;
