@@ -81,24 +81,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Header Styles */
 .header1 {
   background-color: rgba(247, 247, 247, 0.959);
- top: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +95,7 @@
 
 /* Right Section Styles */
 .right-section {
- display:flex;
+  display: flex;
 }
 
 /* Social Icons Styles */
@@ -150,25 +136,21 @@ select::-ms-expand {
   display: none;
 }
 
-/* Media Query for Small Screens */
-@media only screen and (max-width: px) {
-  /* Show only the specified part for small screens */
-  .right-section {
-    display: flex;
-    flex-direction: column; /* Display in a column */
-    align-items: flex-start; /* Align items to the start */
-    margin-top: 10px; /* Add some margin for spacing */
-  }
-}
 
-/* Media Query for Big Screens */
-@media only screen and (min-width: 768px) {
-  /* Show the entire right section for big screens */
-  .right-section {
-    display: flex;
-    align-items: center;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
