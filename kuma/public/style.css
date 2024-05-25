@@ -15,7 +15,7 @@
   color: rgba(31, 5, 5, 0.5);
   text-decoration: none;
   flex-wrap: wrap; /* Allow wrapping */
-  position: fixed; /* Fix position at the top */
+  position: relative; /* Fix position at the top */
   z-index: 1000; /* Ensure it's above other elements */
   padding: 10px 20px; /* Add some padding */
 }
