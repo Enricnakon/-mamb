@@ -1,4 +1,6 @@
+
 /*Original CSS styles for the custom header 
+/* Base Styles */
 /* Base Styles */
 
 /* Header Styles */
@@ -12,7 +14,7 @@
   color: rgba(31, 5, 5, 0.5);
   text-decoration: none;
   flex-wrap: wrap; /* Allow wrapping */
-  position: relative; /* Fix position at the top */
+  position: fixed; /* Fix position at the top */
   z-index: 1000; /* Ensure it's above other elements */
   padding: 10px 20px; /* Add some padding */
 }
@@ -116,10 +118,6 @@ select {
     padding: 5px; /* Adjust padding */
   }
 }
-
-
-
-
 
 
 
