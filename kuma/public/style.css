@@ -2,9 +2,10 @@
 /*Original CSS styles for the custom header 
 /* Base Styles */
 /* Base Styles */
+/* Base Styles */
 
 /* Header Styles */
-.header1 {
+#header {
   background-color: rgba(247, 247, 247, 0.959);
   top: 0;
   width: 100%; /* Ensure it spans the full width */
@@ -20,14 +21,14 @@
 }
 
 /* Right Section Styles */
-.right-section {
+#call-us-section, #social-icons-section {
   display: flex;
   align-items: center; /* Vertically center the items */
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Social Icons Styles */
-.social-icons {
+#social-icons {
   display: flex;
   align-items: center;
 }
@@ -51,7 +52,7 @@
 }
 
 /* Select Styles */
-select {
+#currency-select, #language-select {
   background-color: transparent;
   border: none;
   outline: none;
@@ -60,29 +61,29 @@ select {
 }
 
 /* Remove the default arrow in select elements */
-select::-ms-expand {
+#currency-select::-ms-expand, #language-select::-ms-expand {
   display: none;
 }
 
 /* Ensure select elements have a proper display */
-select {
+#currency-select, #language-select {
   appearance: none; /* Remove default styles in some browsers */
   padding: 5px 10px; /* Add some padding */
 }
 
 /* Additional CSS for better styling */
-.call-us {
+#call-us {
   display: flex;
   align-items: center;
   margin-right: 20px; /* Adjust as needed */
 }
 
-.call-us i {
+#phone-icon {
   margin-right: 5px; /* Space between icon and text */
 }
 
 /* Ensure icons and selects are aligned */
-.right-section > * {
+#call-us-section > *, #social-icons-section > * {
   margin-right: 15px; /* Space between elements */
 }
 
@@ -90,21 +91,21 @@ select {
 
 /* Media query for phone screens (maximum width of 576px) */
 @media screen and (max-width: 576px) {
-  .header1 {
+  #header {
     flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align items to the start */
   }
 
-  .right-section {
+  #call-us-section, #social-icons-section {
     width: 100%; /* Ensure full width */
     justify-content: space-between; /* Space out items */
   }
 
-  .call-us {
+  #call-us {
     margin-bottom: 10px; /* Add some space between sections */
   }
 
-  .social-icons {
+  #social-icons {
     flex-wrap: wrap; /* Allow wrapping */
     justify-content: space-between; /* Space out icons */
   }
@@ -113,7 +114,7 @@ select {
     font-size: 1rem; /* Adjust icon size */
   }
 
-  select {
+  #currency-select, #language-select {
     font-size: 0.9rem; /* Adjust select font size */
     padding: 5px; /* Adjust padding */
   }
