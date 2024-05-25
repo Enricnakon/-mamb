@@ -1342,7 +1342,7 @@ p {
   margin-top: 5px;
   height: 1px;
   width: 100%; /* Full width by default */
-  background-color: #333;
+  background-color: #eb0f0f;
   position: absolute;
   left: 0px; /* Adjust left offset for big screens */
 }
