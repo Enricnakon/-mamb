@@ -173,20 +173,15 @@ select::-ms-expand {
 
 
 
-
-
-
 .menu-button {
   cursor: pointer;
   margin-left: 0;
 }
 
-
 .menu-icon {
   font-size: 2em;
   color: #333;
-  margin-left: 0;
-  /* Add margin to separate from other elements */
+  margin-left: 0; /* Add margin to separate from other elements */
 }
 
 /* Dropdown Content Styling */
@@ -211,22 +206,6 @@ select::-ms-expand {
 
 .show {
   display: block;
-}
-
-/* Media Queries for responsive design */
-@media screen and (max-width: 768px) {
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-  }
-
-  .dropdown-content a {
-    padding: 10px;
-  }
-
-  .logo1 {
-    display: none;
-  }
 }
 
 .navbar {
@@ -311,94 +290,6 @@ select::-ms-expand {
   color: #fff;
   font-size: 1.2em;
 }
-
-
-
-
-
-/* Media query for phone screens (maximum width of 768px) */
-@media screen and (max-width: 576px) {
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-  }
-
-  .dropdown-content a {
-    padding: 10px;
-  }
-
-  .logo1 {
-    display: none;
-  }
-}
-/* Media query for larger screens (minimum width of 769px) */
-@media screen and (min-width: 576px) {
-  .dropdown-content {
-    position: absolute;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .dropdown-content a {
-    padding: 12px 16px;
-  }
-
-  .logo1 {
-    display: block;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-  .search-bar input[type="text"] {
-    width: 70%;
-    padding: 12px;
-  }
-
-  .search-bar button {
-    padding: 12px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .logo1 {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .sign {
-    display: none;
-  }
-}
-
-/* Hide elements on smaller screens */
-@media only screen and (max-width: 1024px) {
-  .large-screen-only {
-    display: none !important;
-  }
-}
-
-
-
-
 
 
 

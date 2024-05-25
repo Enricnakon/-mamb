@@ -620,11 +620,11 @@ app.get('/products/:subcategory', async (req, res) => {
         subject: 'Order Confirmation',
         html: `
           <p>name ${name},</p>
-          <p>has been placed successfully. Below are the details:</p>
+          <p>order has been placed successfully. Below are the details:</p>
           <p>Cart Items: ${JSON.stringify(cartItems)}</p>
           <p>Total Price: ${totalPrice}</p>
           <p>Phone: ${phone}</p>
-          <p>Thank you for shopping with us!</p>
+         
         `
       });
 
