@@ -31,6 +31,7 @@
   align-items: flex-start;
   margin-left: 10px;
 }
+
 #site-title {
   font-size: 1.5rem; /* Large font size */
   font-weight: bold; /* Bold text */
@@ -128,50 +129,11 @@
   margin-right: 5px; /* Adjust margin between icon and text */
 }
 
-/* Media Queries */
-@media screen and (max-width: 576px) {
-  #combined-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #logo-section, #call-us-section, #social-icons-section, #feature-buttons-section {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  #call-us {
-    margin-bottom: 10px;
-  }
-
-  #social-icons {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .social-icon {
-    font-size: 1rem;
-  }
-
-  #currency-select, #language-select {
-    font-size: 0.9rem;
-    padding: 5px;
-  }
-
-  #site-title, #tagline {
-    font-size: 1.2rem;
-    margin-left: 0;
-  }
-
-  #sellButton {
-    padding: 0.5rem;
-  }
-}
 .user-actions {
   display: flex;
   flex-direction: column; /* Display items in a column */
   align-items: flex-start; /* Align items to the start */
- left: -70px; /* Add margin to separate from other elements */
+  left: -70px; /* Add margin to separate from other elements */
 }
 
 .user-actions .sign {
@@ -180,8 +142,6 @@
   margin-top: 5px; /* Add margin to separate from other elements */
   left: -70px; 
 }
-
-
 
 
 
