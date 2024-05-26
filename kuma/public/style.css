@@ -12,6 +12,7 @@
   position: relative;
   z-index: 1000;
   padding: 3px 10px;
+  height: 90px;
 }
 
 /* Section Styles */
@@ -19,13 +20,6 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
-h3{
- top: -20px;
- position: absolute;
- margin-right:-40px;
- 
-
 }
 
 #logo-section img {
@@ -161,7 +155,7 @@ h3{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #922f11;
+  background: linear-gradient(to right, rgb(94, 19, 19) 40%, rgba(247, 247, 247, 0.959) 70%);
   padding: 15px 30px;
 }
 
@@ -191,7 +185,7 @@ h3{
 .search-input {
   width: 300px;
   padding: 10px;
-  border: none;
+  border: 5px solid #070606; 
   border-radius: 20px;
   background-color: #f4f4f4;
   font-size: 1em;
@@ -201,7 +195,7 @@ h3{
 }
 
 .search-input:focus {
-  background-color: #fff;
+  background-color: #867f7f;
   outline: none;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -264,6 +258,44 @@ h3{
   background-color: #ddd;
 }
 
+/* General styling for the sections */
+#title-section, #call-us-section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styling for larger screens */
+@media (min-width: 768px) {
+  #title-section {
+    display: block;
+  }
+  #call-us-section {
+    display: block;
+  }
+}
+
+/* Styling for phone screens */
+@media (max-width: 767px) {
+  #title-section {
+    display: none; /* Hide title section on small screens */
+  }
+  #call-us-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  #call-us {
+    display: flex;
+    align-items: center;
+  }
+  #phone-icon {
+    margin-right: 10px;
+  }
+  #phone-number {
+    font-size: 16px;
+  }
+}
 
 
 
