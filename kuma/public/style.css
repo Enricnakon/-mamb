@@ -215,7 +215,7 @@
 .menu-links a:hover {
   color: #ddd;
 }
-
+/* Styles for larger screens */
 .search-bar {
   display: flex;
   align-items: center;
@@ -273,6 +273,29 @@
   color: #fff;
   padding: 2px 6px;
   border-radius: 50%;
+}
+
+/* Styles for phone screens */
+@media (max-width: 767px) {
+  .search-input {
+    width: 200px; /* Adjust input width for smaller screens */
+    font-size: 0.9em; /* Adjust font size for smaller screens */
+  }
+
+  .search-button {
+    padding: 8px 20px; /* Adjust button padding for smaller screens */
+    font-size: 0.7em; /* Adjust font size for smaller screens */
+  }
+
+  .cart-icon {
+    font-size: 1em; /* Adjust cart icon size for smaller screens */
+    padding: 6px; /* Adjust cart icon padding for smaller screens */
+  }
+
+  .cart-icon span {
+    font-size: 0.7em; /* Adjust cart icon span font size for smaller screens */
+    padding: 1px 4px; /* Adjust cart icon span padding for smaller screens */
+  }
 }
 
  
