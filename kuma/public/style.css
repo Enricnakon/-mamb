@@ -13,6 +13,7 @@
   z-index: 1000;
   padding: 3px 10px;
   height: 90px;
+
 }
 
 /* Section Styles */
@@ -20,6 +21,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+ margin-top: -30px;
 }
 
 #logo-section img {
@@ -275,7 +277,7 @@
 }
 
 /* Styling for phone screens */
-@media (max-width: 767px) {
+@media (man-width: 768px) {
   #title-section {
     display: none; /* Hide title section on small screens */
   }
