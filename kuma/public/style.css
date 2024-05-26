@@ -6,12 +6,12 @@ body {
 }
 
 .container {
-  width: 90%; /* Set a default width for the content */
+  width: 100%; /* Set a default width for the content */
   margin: 0 auto; /* Center the container horizontally */
 }
 
 .header {
-  background-color: #333;
+ 
   color: #fff;
   padding: 20px;
 }
@@ -32,6 +32,11 @@ body {
 }
 
 /* Media queries for responsive design */
+@media (min-width: 767px) {
+  .container {
+    width: 90%; /* Adjust width for larger screens */
+  }
+}
 
 /* Tablet and larger */
 @media (min-width: 768px) {
