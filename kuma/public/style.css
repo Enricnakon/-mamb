@@ -183,12 +183,7 @@
 }
 
 /* Media query: Hide elements on screens smaller than 768px */
-@media (max-width: 768px) {
-  .large-screen-only {
-    display: none;
-  }
-}
-
+ 
 
 
 /* Cart icon */
@@ -334,8 +329,12 @@
 }
 
 /* Media query: Hide elements on screens smaller than 768px */
- 
-
+@media (max-width: 767px) {
+  .large-screen-only,
+  .user-actions {
+    display: none;
+  }
+}
 
 
 .modal {
