@@ -145,6 +145,43 @@
   margin-top: 5px; /* Add margin to separate from other elements */
   left: -70px; 
 }
+#title-section, #call-us-section {
+  padding: 20px;
+  text-align: center;
+}
+/* Styling for larger screens */
+@media (min-width: 768px) {
+  #title-section {
+    display: block;
+  }
+  #call-us-section {
+    display: block;
+  }
+}
+
+/* Styling for phone screens */
+@media (max-width: 767px) {
+  #title-section {
+    display: none; /* Hide title section on small screens */
+  }
+  #call-us-section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  #call-us {
+    display: flex;
+    align-items: center;
+  }
+  #phone-icon {
+    margin-right: 10px;
+  }
+  #phone-number {
+    font-size: 16px;
+  }
+}
+
 
 
 
@@ -261,48 +298,18 @@
 }
 
 /* General styling for the sections */
-#title-section, #call-us-section {
-  padding: 20px;
-  text-align: center;
+
+
+.large-screen-only {
+  display: block;
 }
 
-/* Styling for larger screens */
-@media (min-width: 768px) {
-  #title-section {
-    display: block;
-  }
-  #call-us-section {
-    display: block;
+/* Media query: Hide elements on screens smaller than 768px */
+@media (max-width: 768px) {
+  .large-screen-only {
+    display: none;
   }
 }
-
-/* Styling for phone screens */
-@media (man-width: 768px) {
-  #title-section {
-    display: none; /* Hide title section on small screens */
-  }
-  #call-us-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  #call-us {
-    display: flex;
-    align-items: center;
-  }
-  #phone-icon {
-    margin-right: 10px;
-  }
-  #phone-number {
-    font-size: 16px;
-  }
-}
-
-
-
-
-
 
 
 
