@@ -20,6 +20,13 @@
   align-items: center;
   flex-wrap: wrap;
 }
+h3{
+ top: -20px;
+ position: absolute;
+ margin-right:-40px;
+ 
+
+}
 
 #logo-section img {
   max-width: 100px;
