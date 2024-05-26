@@ -306,7 +306,7 @@
 
 /* Media query: Hide elements on screens smaller than 768px */
 @media (max-width: 768px) {
-  .large-screen-only {
+  .large-screen-only.currency-select {
     display: none;
   }
 }
