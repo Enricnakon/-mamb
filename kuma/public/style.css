@@ -182,6 +182,12 @@
   }
 }
 
+/* Media query: Hide elements on screens smaller than 768px */
+@media (max-width: 768px) {
+  .large-screen-only {
+    display: none;
+  }
+}
 
 
 
@@ -278,7 +284,7 @@
 /* Styles for phone screens */
 @media (max-width: 767px) {
   .search-input {
-    width: 200px; /* Adjust input width for smaller screens */
+    width: 80px; /* Adjust input width for smaller screens */
     font-size: 0.9em; /* Adjust font size for smaller screens */
   }
 
@@ -328,11 +334,7 @@
 }
 
 /* Media query: Hide elements on screens smaller than 768px */
-@media (max-width: 768px) {
-  .large-screen-only.currency-select {
-    display: none;
-  }
-}
+ 
 
 
 
