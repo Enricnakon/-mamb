@@ -282,11 +282,44 @@ a:hover {
     var options = [];
 
     if (selectedCategory === 'phones') {
-      options = ['Smartphones', 'Feature Phones', 'Accessories'];
+      options = ['Smartphones', 
+      'Feature Phones', 
+      'Rugged Phones', 
+      'Gaming Phones',
+       'Flip Phones', 
+       'Phone Cases', 
+       'Screen Protectors',
+        'Chargers',
+         'Headphones', 
+         'Power Banks', 
+         'Car Mounts',
+          'Phone Holders',
+           'Bluetooth Earbuds',
+            'Wireless Chargers', 
+            'Memory Cards'];
     } else if (selectedCategory === 'computers') {
-      options = ['Laptops', 'Desktops', 'Components'];
+      options = ['Laptops',
+'Desktops',
+'Monitors',
+'Keyboards',
+'Mice',
+'Printers',
+'Scanners',
+'Webcams',
+'Speakers',
+'Headphones',
+'Microphones',
+'External Storage',
+'Networking'];
     } else if (selectedCategory === 'house') {
-      options = ['Apartments', 'Villas', 'Land'];
+      options = [  'Plot',
+    'Single Self',
+    'Double Self',
+    'Self-Contained',
+    'Bungalow',
+    'Apartment',
+    'Condo',+-
+    'Land'];
     } else if (selectedCategory === 'vehicle') {
       options = ['Cars', 'Motorcycles', 'Trucks'];
     } else if (selectedCategory === 'furniture') {
@@ -301,11 +334,33 @@ a:hover {
         'Benches',
         'Wardrobes'];
     } else if (selectedCategory === 'clothes') {
-      options = ['Male', 'Female', 'babe girl', 'babe baby'];
+      options = ['T-shirts',
+'Jeans',
+'Dresses',
+'Suits',
+'Skirts',
+'Blouses',
+'Jackets',
+'Sweaters',
+'Pants',
+'Shorts',
+'Swimwear',
+'Underwear',
+'Socks' ];
     } else if (selectedCategory === 'cosmetics') {
       options = ['Makeup', 'Skincare', 'Fragrances'];
     } else if (selectedCategory === 'services') {
-      options = ['Health', 'Transport', 'Hotel', 'Laundry','foods',];
+      options = ['Health',
+'Transport',
+'Hotel',
+'Laundry',
+'Grocery',
+'Restaurants',
+'Catering',
+'Food Delivery',
+'Meal Prep',
+'Bakery',
+'Food Trucks'];
     }
 
     // Populate subcategory select element

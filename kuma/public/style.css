@@ -252,7 +252,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, rgb(94, 19, 19) 40%, rgba(247, 247, 247, 0.959) 70%);
+  background: linear-gradient(to right, rgba(75, 10, 10, 0.904) 40%, rgba(247, 247, 247, 0.959) 
+  60%);
   padding: 15px 30px;
 }
 
@@ -312,7 +313,39 @@ body {
   background-color: #b14024;
 }
 
-.cart-icon {
+.cart-ico/* CSS for the nice-select dropdown */
+.nice-select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.nice-select:focus {
+  outline: none;
+}
+
+/* Arrow icon */
+.nice-select::after {
+  content: '\25BC';
+  font-size: 12px;
+  color: #666;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+/* Styling for selected option */
+.nice-select option:checked {
+  background-color: #965858;
+}
+n {
   font-size: 1.2em;
   color: #fff;
   cursor: pointer;
@@ -542,7 +575,8 @@ a:hover {
 @media (max-width: 576px) {
   .category h6,
   .category-products {
-    margin-left: 25%; /* Adjust margin for smaller screens */
+    margin-left: 
+  0%; /* Adjust margin for smaller screens */
   }
 }
 
@@ -562,15 +596,15 @@ a:hover {
 }
 .card {
   position: relative;
-  width: 20%; /* Default width for larger screens */
-  margin: 2.00em; /* Adjust margin for spacing */
+  width: 18%; /* Default width for larger screens */
+  margin: 0.80em; /* Adjust margin for spacing */
   height: 25em; /* Set a fixed height */
   background-color: #b99b9b15;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   overflow: hidden;
-  margin-right: 1.20em; 
-  left: 0.60em; /* Adjust left position for spacing */
+   left: 20%; /* Adjust margin for medium screens */
+ right: 0.50%; /* Adjust margin for medium screens */
 }
 
 /* Adjust card width for medium screens */
@@ -1083,11 +1117,16 @@ a:hover {
 
 
 
+@media (max-width: 767px) {
+  .advertisement2-card2 {
+    display: none;
+  }
+}
 
+.advertisement2-card2 {
+  display: none;
+}
 
-
-
- 
 /* Show the advertisement2-card2 only on screens 1024px and wider */
 @media screen and (min-width: 1024px) {
   .advertisement2-card2 {
@@ -1281,7 +1320,7 @@ p {
 @media screen and (min-width: 576px) {
   .navbar0 {
     margin-left: 20%; /* Adjust margin for medium screens */
-    margin-right: 10%; /* Adjust margin for medium screens */
+    margin-right: 0.50%; /* Adjust margin for medium screens */
   }
 
   .card0 {
@@ -1339,8 +1378,8 @@ p {
 /* Styles for big screens (minimum width of 600px) */
 @media screen and (min-width: 570px) {
   .navbar10 {
-    margin-left: 10%; /* Adjust margin for big screens */
-    margin-right: 10%; /* Adjust margin for big screens */
+    margin-left: 20%; /* Adjust margin for medium screens */
+    margin-right: 0.50%; /* Adjust margin for medium screens */
   }
 
   .navbar10 a {
@@ -1454,7 +1493,8 @@ p {
 .title-container {
   text-align: left;
   width: 100%;
- 
+  height: 50px;
+
   max-width: 500px;
   position: relative;
   padding-left: 0; /* Initial padding */
@@ -1471,23 +1511,134 @@ p {
   margin-top: 5px;
   height: 1px;
   width: 100%; /* Full width by default */
-  background-color: #eb0f0f;
+  background-color: #0f0b0b;
   position: absolute;
   left: 0px; /* Adjust left offset for big screens */
 }
 /* Styles for big screens (minimum width of 576px) */
 @media screen and (min-width: 576px) {
   .title-container {
-    padding-left: 50px; /* Increase padding for big screens */
-    padding-right: 80px; /* Increase padding for big screens */
+    padding-left: 60px; /* Increase padding for big screens */
+    padding-right: 100px; /* Increase padding for big screens */
     font-size: 22px; /* Increase font-size for big screens */
   }
 
   .title {
-    font-size: 22px; /* Increase font-size for big screens */
+    font-size: 20px; /* Increase font-size for big screens */
+    right: 50px;
   }
 
   .underline {
-    left: 0px; /* Adjust left offset for big screens */
+    margin-left: 50%; /* Adjust margin for medium screens */
+    margin-right: 7.50%; /* Adjust margin for medium screens */
+    width: 100%; /* Full width by default */
   }
+}
+
+
+
+/* Your CSS styles here */
+ 
+/* Your CSS styles here */
+ 
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  height: 276px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden; /* Ensure no content overflows beyond the height */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width to fit all content */
+  grid-gap: 20px;
+  align-items: start;
+  width: 100%;
+  flex-grow: 1; /* Ensures it takes available space without overflowing */
+}
+
+.footer-section {
+  margin: 0;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #8a7138;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.footer-form h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #8a7138;
+}
+
+.footer-form input[type="email"] {
+  width: 100%;
+  max-width: 250px;
+  padding: 5px 10px; /* Adjust padding to fit within the height */
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.footer-form input[type="email"]::placeholder {
+  color: #ccc;
+}
+
+.footer-form button {
+  background-color: #b14024;
+  color: #fff;
+  border: none;
+  padding: 5px 10px; /* Adjust padding to fit within the height */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-form button:hover {
+  background-color: #8d5e5e;
+}
+
+/* Media queries for responsive design */
+
+/* Phone screens */
+@media (max-width: 767px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-icon {
+  width: 50px; /* Adjust the size as needed */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures proper spacing */
+  margin: 0 auto; /* Centers the image horizontally */
+  padding: 19px;
 }

@@ -1008,6 +1008,68 @@ app.get('/viewFormData', async (req, res) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+app.get('/search', async (req, res) => {
+  const query = req.query.query;
+  const category = req.query.category;
+
+  if (!query || !category) {
+    return res.status(400).json({ error: 'Query and category parameters are required' });
+  }
+
+  try {
+    const products = await Product.find({
+      category: category,
+      $or: [
+        { productName: { $regex: query, $options: 'i' } },
+        { description: { $regex: query, $options: 'i' } },
+        { subCategory: { $regex: query, $options: 'i' } }
+      ]
+    });
+    res.json(products);
+  } catch (error) {
+    console.error('Error fetching search results:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
+  
+
+app.get('/search', async (req, res) => {
+  const query = req.query.query;
+  const category = req.query.category;
+
+  if (!query || !category) {
+    return res.status(400).json({ error: 'Query and category parameters are required' });
+  }
+
+  try {
+    const products = await Product.find({
+      category: category,
+      $or: [
+        { productName: { $regex: query, $options: 'i' } },
+        { description: { $regex: query, $options: 'i' } },
+        { subCategory: { $regex: query, $options: 'i' } }
+      ]
+    });
+    res.json(products);
+  } catch (error) {
+    console.error('Error fetching search results:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 app.listen(3000, () => {
   console.log('Server running on port 3000');
 });

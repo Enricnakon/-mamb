@@ -6,14 +6,13 @@
   <title>Sell Button</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sty.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-fEfAw+4kpOwVFDYILxjsG6eWJ9ODHkAz/Fxrd2oKPgzTt0nE8xLdWwgpNcA15I2Ui6h4/4SX/itg/G9QEqZgCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
 
 
 
-
+/* Additional styles for form elements, buttons, etc. */
 
 
   </style>
@@ -22,123 +21,88 @@
  
 <body>
 
-
-
-  <header class="header1">
-    <div class="right-section">
-        <!-- Call Us Number -->
-        <div class="call-us">
-            <i class="fas fa-phone"></i>
-            <span>+1-123-456-7890</span>
-        </div>
-        <!-- Social Media Icons -->
-    </div>
-    
-  
-    <!-- Right Section: Social Media Icons -->
-    <div class="right-section">
-
-
-
- 
-       
-        
-
-
-
-
-        <div class="social-icons">
-
-
-            <label for="currency">
-                <i class="fas fa-dollar-sign"></i> <!-- Icon for currency -->
-            LIPA/PAY IN:
-            </label>
-            <select name="currency" id="currency">
-                <option value="USD">USD</option>
-                <option value="TZS">TZS</option>
-            </select>
-         
-            <label for="language">
-                <i class="fas fa-flag"></i> 
-           
-            </label>
-            <select name="language" id="language">
-                <option value="en">English     <!-- Icon for language --></option>
-                <i class="fas fa-flag"></i> <!-- Icon for language -->
-                <option value="sw">Swahili</option>
-            </select>
-
-
-
-
-
-
-
-
-
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-</header>
-<header class="custom-header">
-  <!-- Logo -->
-  <div class="lago">
-    <img src="images/productImages-1707095455008.png" alt="Your Logo">
-  </div>
-  
-  <div class="header-content">
-    <!-- Title and Tagline -->
-    <div class="title-section">
-      <h1 class="site-title">enric-nakon</h1>     <h5 class="tagline blink">SHOP EVENTS & SAVE UP TO 65% OFF!</h5>
-
-
-    </div>
- 
-    <!-- Feature Buttons -->
-    <div class="feature-buttons">
-      <!-- Sell Button -->
- 
- 
-        <button id="sellButton">Sell</button>
+  <header id="combined-header">
+    <!-- Logo and Site Title Section -->
+    <div id="logo-section" class="left-section">
      
-    
- 
-      <!-- Admin Dashboard Button -->
- 
+      <div id="title-section" class="title-section">
+        <h1 id="site-title">Enricmarket-place</h1>
+        <h5 id="tagline" class="tagline blink">SHOP EVENTS & SAVE UP TO 65% OFF!</h5>
+      </div>
     </div>
-  </div>
-</header>
 
+    <!-- Call Us Section -->
+    <div id="call-us-section" class="right-section">
+      <div id="call-us">
+        <i class="fas fa-phone" id="phone-icon"></i>
+        <span id="phone-number">+255677231271</span>
+      </div>
+    </div>
 
+    <!-- Social Media Icons and Selects Section -->
+    <div id="social-icons-section" class="right-section">
+      <div id="social-icons" class="social-icons">
+        <label for="currency" id="currency-label">
+          <i class="fas fa-dollar-sign" id="currency-icon"></i>
+        </label>
+        <select name="currency" id="currency-select">
+          <option value="USD">USD</option>
+          <option value="TZS">TZS</option>
+        </select>
+        
+        <label for="language" id="language-label">
+          <i class="fas fa-flag" id="language-icon"></i>
+        </label>
+        <select name="language" id="language-select">
+          <option value="en">English</option>
+          <option value="sw">Swahili</option>
+        </select>
 
+        <a href="#" class="social-icon" id="facebook-link"><i class="fab fa-facebook" id="facebook-icon"></i></a>
+        <a href="#" class="social-icon" id="twitter-link"><i class="fab fa-twitter" id="twitter-icon"></i></a>
+        <a href="#" class="social-icon" id="instagram-link"><i class="fab fa-instagram" id="instagram-icon"></i></a>
+       
+      
+      </div>
+    </div>
 
+    <!-- Feature Buttons Section -->
+    <div id="feature-buttons-section" class="right-section">
+      <button id="sellButton"><i class="fas fa-dollar-sign"></i>Sell</button>
+    </div>
+    <div class="user-actions">
+      <div class="sign">Sign In/Sign Up <i class="fas fa-user"></i></div>
+    </div>
+  </header>
 
 
 <div class="navbar">
+  <a href="#" class="menu-button" onmouseenter="toggleMenu(true)" onmouseleave="toggleMenu(false)">
+    <div class="menu-icon">&#9776;</div>
+  </a>
+
+  <div class="logo large-screen-only">marketplace</div>
+  <div class="menu-links large-screen-only">
  
-    <a href="#" class="menu-button" onmouseenter="toggleMenu(true)" onmouseleave="toggleMenu(false)">
-      <div class="menu-icon">&#9776;</div>
-    </a>
-  
-  <div class="logo">marketplace</div>
-  <div class="menu-links">
-    <a href="#">Home</a>
-    <a href="#">Products</a>
+   
     <a href="#">About</a>
     <a href="#">Contact</a>
+    <a href="#">Blogs</a>
+    <a href="#">Pages</a>
   </div>
   <div class="search-bar">
-    <input type="text" placeholder="Search..." class="search-input">
-    <button type="submit" class="search-button">Search</button>
+    <input type="text" placeholder="Search..." id="searchInput" class="search-input">
+    <button type="submit" id="searchButton" class="search-button">Search</button>
   </div>
-  <div class="user-actions">
-    <div class="sign">Sign In/Sign Up</div>
-  </div>
+  
+  <a href="#" class="cart-link" onclick="showCart(event)">
+    <div id="cartIcon" class="cart-icon">
+      <span id="cartCount">0</span>
+      🛒
+    </div>
+  </a>
+
+  
 </div>
 
 <div id="dropdownMenu" class="dropdown-content">
@@ -150,16 +114,10 @@
 </div>
 
 
-
-
-
+ 
  
 
-
-
-
-
-
+<!-- Login Modal -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -167,30 +125,30 @@
     <form id="loginForm">
       <input type="text" name="identifier" placeholder="Username or Email">
       <input type="password" name="password" placeholder="Password">
-      
       <button type="submit">Login</button>
     </form>
     <p>Don't have an account? <a href="#" id="registerButton">Register</a></p>
     <p><a href="#" id="forgotPasswordLink">Forgot password?</a></p>
   </div>
 </div>
-  <div id="registerModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Register</h2>
-      <form id="registerForm">
-        <input type="text" name="username" placeholder="Username">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Register</button>
-        <button type="button" id="verificationButton">Verify Email</button>
-        <button type="button" id="logoutButton">Logout</button>
-      </div>
-      </form>
-    </div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" name="username" placeholder="Username">
+      <input type="email" name="email" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <button type="submit">Register</button>
+      <button type="button" id="verificationButton">Verify Email</button>
+    </form>
   </div>
-  
- <div id="forgotPasswordModal" class="modal">
+</div>
+
+<!-- Forgot Password Modal -->
+<div id="forgotPasswordModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Forgot Password?</h2>
@@ -200,16 +158,20 @@
     </form>
   </div>
 </div>
+ 
+</div>
+<!-- Logout Button Placement -->
+<div id="logoutButtonContainer">
+  <button type="button" id="logoutButton"> </button>
+</div>
 
+<!-- Logout Modal -->
 <div id="logoutModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Logout</h2>
     <p>Are you sure you want to logout?</p>
-   
-
-   
-    </form>
+    <button id="logoutConfirmButton"> </button>
   </div>
 </div>
 
@@ -441,44 +403,52 @@
 
 
 
+ 
 
+ 
+ 
+ 
+<!-- Right Column: Latest Products -->
+<div class="order-md-2">
+  <div class="row justify-content-end">
+  
+  <div class="col-md-4">
+    <div id="phones" class="category text-right mt-3">
+      <div class="title-container">
+        <h1 class="title">Phones and Accessories   </h1>
 
-
-
-      <!-- Right Column: Latest Products -->
-      <div class="order-md-2">
-        <div class="row justify-content-end">
-            <div class="">
-                <div id="phones" class="category text-right mt-3">
-                    <h6><i class="fas fa-mobile-alt mr-2"></i>Latest Phones</h6>
-                
-                    <div id="latestPhones" class="category-products card-container"></div>
-                    <div class="text-right mt-3">
-                      
-                    </div>
-                </div>
+    
+        <div class="underline"></div>
+    </div>
+        <div class="navbar-container">
+           
+            
+          <div class="navbar10">
+            <!-- Navigation links -->
+            <a href="#" class="subcategory-link" data-subcategory="Smartphones">Smartphones</a>
+            <a href="#" class="subcategory-link" data-subcategory="Feature Phones">Feature Phones</a>
+            <a href="#" class="subcategory-link" data-subcategory="Rugged Phones">Rugged Phones</a>
+            <a href="#" class="subcategory-link" data-subcategory="Gaming Phones">Gaming Phones</a>
+            <a href="#" class="subcategory-link" data-subcategory="Flip Phones">Flip Phones</a>
+            <a href="#" class="subcategory-link" data-subcategory="Phone Cases">Phone Cases</a>
+            <a href="#" class="subcategory-link" data-subcategory="Screen Protectors">Screen Protectors</a>
+            <a href="#" class="subcategory-link" data-subcategory="Chargers">Chargers</a>
+            <a href="#" class="subcategory-link" data-subcategory="Headphones">Headphones</a>
+            <a href="#" class="subcategory-link" data-subcategory="Power Banks">Power Banks</a>
+            <a href="#" class="subcategory-link" data-subcategory="Car Mounts">Car Mounts</a>
+            <a href="#" class="subcategory-link" data-subcategory="Phone Holders">Phone Holders</a>
+            <a href="#" class="subcategory-link" data-subcategory="Bluetooth Earbuds">Bluetooth Earbuds</a>
+            <a href="#" class="subcategory-link" data-subcategory="Wireless Chargers">Wireless Chargers</a>
+            <a href="#" class="subcategory-link" data-subcategory="Memory Cards">Memory Cards</a>
+        
+        
             </div>
-          
         </div>
     </div>
-    
+</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="latestPhones" class="category-products card-container"></div>
 
 
 
@@ -608,94 +578,114 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-  <script>
-
-
- 
-
-function displayLatestProducts(category, products) {
-  const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
-  container.empty(); // Clear previous content
-
-  let activeIndex = 0; // Index of the first active card
-  const cardsPerPage =  100000; // Number of cards to display per page
-
-  function updateCards() {
-    container.empty(); // Clear previous content
-
-    for (let i = activeIndex; i < activeIndex + cardsPerPage && i < products.length; i++) {
-      const product = products[i];
-      const card = $(`
-        <div class="card mt-3 ${i === activeIndex ? 'active' : 'd-none'}">
-         
-          <div class="card-header">${product.productName}</div>
-          <div class="card-body">
-            <p>  ${product.description}</p>
-            
-            <p>Price: $${product.price}</p>
-            <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
-            <div class="overlay">
-               
-            </div>
-          </div>
-        </div>
-      `);
-      
-      // Create button container and buttons
-      const buttonContainer = document.createElement('div');
-      buttonContainer.classList.add('button-container');
-
-      const viewBtn = document.createElement('button');
-      viewBtn.classList.add('view-btn');
-      viewBtn.textContent = 'View';
-      viewBtn.addEventListener('click', () => {
-        viewProduct({
-          productId: product._id,
-          productName: product.productName,
-          description: product.description,
-          price: product.price,
-          category: product.category,
-          productImages: product.productImages
-        });
-      });
-
-      const addToCartBtn = document.createElement('button');
-      addToCartBtn.classList.add('add-to-cart-btn');
-      addToCartBtn.textContent = 'Add to Cart';
-      addToCartBtn.setAttribute('id', `add-to-cart-${product._id}`); // Add id attribute
-      addToCartBtn.addEventListener('click', () => {
-        addToCart(product._id, product.productName, product.price);
-      });
-
-      buttonContainer.appendChild(viewBtn);
-      buttonContainer.appendChild(addToCartBtn); // Add the Add to Cart button
-      card.find('.overlay').append(buttonContainer); // Append button container to card overlay
-      container.append(card);
+<script>
+document.getElementById('searchButton').addEventListener('click', async (event) => {
+  event.preventDefault();
+  const query = document.getElementById('searchInput').value.trim();
+  if (query) {
+    try {
+      const response = await fetch(`/search?category=phones&query=${encodeURIComponent(query)}`);
+      if (!response.ok) throw new Error('Network response was not ok');
+      const products = await response.json();
+      displayLatestProducts('phones', products);
+    } catch (error) {
+      console.error('Error fetching search results:', error);
     }
   }
+});
 
-  updateCards();
-
-  // Navigation buttons
-  container.parent().find('.next-btn').click(function() {
-    if (activeIndex + cardsPerPage < products.length) {
-      activeIndex += cardsPerPage;
-      updateCards();
-    }
+  
+  document.querySelectorAll('.subcategory-link').forEach(link => {
+    link.addEventListener('click', async (event) => {
+      event.preventDefault();
+      const subCategory = event.target.getAttribute('data-subcategory');
+      
+      try {
+        const response = await fetch(`/products/subcategory/${subCategory}`);
+        if (!response.ok) throw new Error('Network response was not ok');
+  
+        const products = await response.json();
+        displayLatestProducts('phones', products);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    });
   });
-
-  container.parent().find('.prev-btn').click(function() {
-    if (activeIndex - cardsPerPage >= 0) {
-      activeIndex -= cardsPerPage;
-      updateCards();
+  
+  function displayLatestProducts(category, products) {
+    const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
+    container.empty(); // Clear previous content
+  
+    let activeIndex = 0; // Index of the first active card
+    const cardsPerPage = 100000; // Number of cards to display per page
+  
+    function updateCards() {
+      container.empty(); // Clear previous content
+  
+      for (let i = activeIndex; i < activeIndex + cardsPerPage && i < products.length; i++) {
+        const product = products[i];
+        const card = $(`
+          <div class="card mt-3 ${i === activeIndex ? 'active' : 'd-none'}">
+            <div class="card-header">${product.productName}</div>
+            <div class="card-body">
+              <p>${product.description}</p>
+              <p>Price: $${product.price}</p>
+              <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
+              <div class="overlay"></div>
+            </div>
+          </div>
+        `);
+        
+        const buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-container');
+  
+        const viewBtn = document.createElement('button');
+        viewBtn.classList.add('view-btn');
+        viewBtn.textContent = 'View';
+        viewBtn.addEventListener('click', () => {
+          viewProduct({
+            productId: product._id,
+            productName: product.productName,
+            description: product.description,
+            price: product.price,
+            category: product.category,
+            productImages: product.productImages
+          });
+        });
+  
+        const addToCartBtn = document.createElement('button');
+        addToCartBtn.classList.add('add-to-cart-btn');
+        addToCartBtn.textContent = 'Add to Cart';
+        addToCartBtn.setAttribute('id', `add-to-cart-${product._id}`);
+        addToCartBtn.addEventListener('click', () => {
+          addToCart(product._id, product.productName, product.price);
+        });
+  
+        buttonContainer.appendChild(viewBtn);
+        buttonContainer.appendChild(addToCartBtn);
+        card.find('.overlay').append(buttonContainer);
+        container.append(card);
+      }
     }
-  });
-}
-
- 
-
-
+  
+    updateCards();
+  
+    container.parent().find('.next-btn').click(function() {
+      if (activeIndex + cardsPerPage < products.length) {
+        activeIndex += cardsPerPage;
+        updateCards();
+      }
+    });
+  
+    container.parent().find('.prev-btn').click(function() {
+      if (activeIndex - cardsPerPage >= 0) {
+        activeIndex -= cardsPerPage;
+        updateCards();
+      }
+    });
+  }
   </script>
+  
   
 </body>
 </html>

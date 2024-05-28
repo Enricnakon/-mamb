@@ -196,40 +196,38 @@
     <div id="furniture" class="category text-right mt-3"> <!-- Changed id to "furniture" -->
       
       <div class="title-container">
-        <h1 class="title">compurter</h1>
+        <h1 class="title">furniture</h1>
         <div class="underline"></div>
     </div>
 <!-- Subcategory Links -->
 <div class="col-md-4">
 <div id="furniture" class="category text-right mt-3">
 
+    <div class="navbar10">
+        <a href="#" class="subcategory-link" data-subcategory="Sofas">Sofas</a>
+        <a href="#" class="subcategory-link" data-subcategory="Chairs">Chairs</a>
+        <a href="#" class="subcategory-link" data-subcategory="Beds">Beds</a>
+        <a href="#" class="subcategory-link" data-subcategory="Cabinets">Cabinets</a>
+        <a href="#" class="subcategory-link" data-subcategory="Desks">Desks</a>
+        <a href="#" class="subcategory-link" data-subcategory="Bookcases">Bookcases</a>
+        <a href="#" class="subcategory-link" data-subcategory="Dressers">Dressers</a>
+        <a href="#" class="subcategory-link" data-subcategory="Benches">Benches</a>
+        <a href="#" class="subcategory-link" data-subcategory="Wardrobes">Wardrobes</a>
         
-<div class="navbar10">
-  <!-- Navigation links -->
-  <a href="#" id="card101" class="subcategory-link" data-subcategory="Laptops">Laptops</a>
-  <a href="#" id="card201" class="subcategory-link" data-subcategory="Desktops">Desktops</a>
-  <a href="#" id="card301" class="subcategory-link" data-subcategory="Monitors">Monitors</a>
-  <a href="#" id="card401" class="subcategory-link" data-subcategory="Keyboards">Keyboards</a>
-  <a href="#" id="card501" class="subcategory-link" data-subcategory="Mice">Mice</a>
-  <a href="#" id="card601" class="subcategory-link" data-subcategory="Printers">Printers</a>
-  <a href="#" id="card701" class="subcategory-link" data-subcategory="Scanners">Scanners</a>
-  <a href="#" id="card801" class="subcategory-link" data-subcategory="Webcams">Webcams</a>
-  <a href="#" id="card901" class="subcategory-link" data-subcategory="Speakers">Speakers</a>
-  <a href="#" id="card1001" class="subcategory-link" data-subcategory="Headphones">Headphones</a>
-  <a href="#" id="card1101" class="subcategory-link" data-subcategory="Microphones">Microphones</a>
-  <a href="#" id="card1201" class="subcategory-link" data-subcategory="External Storage">External Storage</a>
-  <a href="#" id="card1301" class="subcategory-link" data-subcategory="Networking">Networking</a>
-</div>
-
-
-
+        
+        
+        
+        
+        
+        
+      </div>
 </div>
 </div>
 </div>
   
   
 
-<div id="latestComputers" class="category-products card-container"></div> <!-- Updated id to "latestFurniture" -->
+        <div id="latestFurniture" class="category-products card-container"></div> <!-- Updated id to "latestFurniture" -->
 
   
         <div id="productList"></div>
@@ -307,7 +305,7 @@ document.querySelectorAll('.subcategory-link').forEach(link => {
       if (!response.ok) throw new Error('Network response was not ok');
 
       const products = await response.json();
-      displayLatestProducts('computers', products); // Assuming 'Furniture' is the category
+      displayLatestProducts('Furniture', products); // Assuming 'Furniture' is the category
     } catch (error) {
       console.error('Error fetching products:', error);
     }

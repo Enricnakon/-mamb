@@ -842,3 +842,32 @@ document.addEventListener('DOMContentLoaded', function() {
       cutpriceGroup.style.display = 'block';
   }
 });
+       
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.subcategory-link').forEach(link => {
+  link.addEventListener('click', async (event) => {
+    event.preventDefault();
+    const subCategory = event.target.getAttribute('data-subcategory');
+    
+    try {
+      const response = await fetch(`/products/subcategory/${subCategory}`);
+      if (!response.ok) throw new Error('Network response was not ok');
+
+      const products = await response.json();
+      displayLatestProducts('Furniture', products); // Assuming 'Furniture' is the category
+    } catch (error) {
+      console.error('Error fetching products:', error);
+    }
+  });
+});

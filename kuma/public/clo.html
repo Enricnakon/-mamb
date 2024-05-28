@@ -192,65 +192,51 @@
 
 
 
+
+
+
+
   <div class="col-md-4">
-    <div id="furniture" class="category text-right mt-3"> <!-- Changed id to "furniture" -->
-      
+    <div id="clothes" class="category text-right mt-3"> <!-- Changed id to "clothes" -->
       <div class="title-container">
-        <h1 class="title">compurter</h1>
+        <h1 class="title">clothes</h1>
         <div class="underline"></div>
     </div>
-<!-- Subcategory Links -->
-<div class="col-md-4">
-<div id="furniture" class="category text-right mt-3">
-
-        
-<div class="navbar10">
-  <!-- Navigation links -->
-  <a href="#" id="card101" class="subcategory-link" data-subcategory="Laptops">Laptops</a>
-  <a href="#" id="card201" class="subcategory-link" data-subcategory="Desktops">Desktops</a>
-  <a href="#" id="card301" class="subcategory-link" data-subcategory="Monitors">Monitors</a>
-  <a href="#" id="card401" class="subcategory-link" data-subcategory="Keyboards">Keyboards</a>
-  <a href="#" id="card501" class="subcategory-link" data-subcategory="Mice">Mice</a>
-  <a href="#" id="card601" class="subcategory-link" data-subcategory="Printers">Printers</a>
-  <a href="#" id="card701" class="subcategory-link" data-subcategory="Scanners">Scanners</a>
-  <a href="#" id="card801" class="subcategory-link" data-subcategory="Webcams">Webcams</a>
-  <a href="#" id="card901" class="subcategory-link" data-subcategory="Speakers">Speakers</a>
-  <a href="#" id="card1001" class="subcategory-link" data-subcategory="Headphones">Headphones</a>
-  <a href="#" id="card1101" class="subcategory-link" data-subcategory="Microphones">Microphones</a>
-  <a href="#" id="card1201" class="subcategory-link" data-subcategory="External Storage">External Storage</a>
-  <a href="#" id="card1301" class="subcategory-link" data-subcategory="Networking">Networking</a>
-</div>
-
-
-
-</div>
-</div>
-</div>
+   
+    <div class="navbar10">
+      <!-- Navigation links -->
+      <a href="#" class="subcategory-link" data-subcategory="T-shirts">T-shirts</a>
+      <a href="#" class="subcategory-link" data-subcategory="Jeans">Jeans</a>
+      <a href="#" class="subcategory-link" data-subcategory="Dresses">Dresses</a>
+      <a href="#" class="subcategory-link" data-subcategory="Suits">Suits</a>
+      <a href="#" class="subcategory-link" data-subcategory="Skirts">Skirts</a>
+      <a href="#" class="subcategory-link" data-subcategory="Blouses">Blouses</a>
+      <a href="#" class="subcategory-link" data-subcategory="Jackets">Jackets</a>
+      <a href="#" class="subcategory-link" data-subcategory="Sweaters">Sweaters</a>
+      <a href="#" class="subcategory-link" data-subcategory="Pants">Pants</a>
+      <a href="#" class="subcategory-link" data-subcategory="Shorts">Shorts</a>
+      <a href="#" class="subcategory-link" data-subcategory="Swimwear">Swimwear</a>
+      <a href="#" class="subcategory-link" data-subcategory="Underwear">Underwear</a>
+      <a href="#" class="subcategory-link" data-subcategory="Socks">Socks</a>
+  </div>
   
   
-
-<div id="latestComputers" class="category-products card-container"></div> <!-- Updated id to "latestFurniture" -->
-
-  
-        <div id="productList"></div>
-        <div id="productModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="image-container" id="imageContainer"></div> <!-- Container for images -->
-            <div class="product-details" id="productDetails"></div> <!-- Placeholder for product details -->
-          </div>
+        <div id="latestClothes" class="category-products card-container"></div> <!-- Updated id to "latestClothes" -->
+        <div class="button-container">
+            <button class="btn btn-primary prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn btn-primary next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
-       
-      <!-- Your HTML content with the updated styles -->
-      <div id="productList"></div>
-      <div id="productModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="image-container" id="imageContainer"></div> <!-- Container for images -->
-          <div class="product-details" id="productDetails"></div> <!-- Placeholder for product details -->
-        </div>
-      </div>
-
+        <div class="animated-element"> <a href="clothes.html">
+            <!-- Call to action button -->
+            <button>Explore Now</button>
+        </a> </div>
+    </div>
+  </div>
+  
+  
+  
+  
+   
 
       <div id="cart" class="cart-container" style="display: none;">
         <h2>Shopping Cart</h2>
@@ -307,7 +293,7 @@ document.querySelectorAll('.subcategory-link').forEach(link => {
       if (!response.ok) throw new Error('Network response was not ok');
 
       const products = await response.json();
-      displayLatestProducts('computers', products); // Assuming 'Furniture' is the category
+      displayLatestProducts('clothes', products); // Assuming 'Furniture' is the category
     } catch (error) {
       console.error('Error fetching products:', error);
     }
