@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const express = require('express');
 const router = express.Router(); // Define router here
 const mongoose = require('mongoose');
@@ -686,19 +702,7 @@ app.get('/products/subcategory/:subCategory', async (req, res) => {
     res.status(500).json({ message: 'Server Error' });
   }
 });
-
-router.get('/subcategory/:subCategory', async (req, res) => {
-  try {
-    const { subCategory } = req.params;
-    const products = await Product.find({ subCategory });
-    res.json(products); // Return products as JSON
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: 'Server Error' });
-  }
-});
-
-
+ 
 
 
 
@@ -834,7 +838,7 @@ app.get('/views/admin_dashboard', async (req, res) => {
       res.render('admin_dashboard', { 
         products, 
         orders, 
-        condition,
+ 
         categories,
         selectedCategory: category,
         searchQuery
@@ -872,11 +876,11 @@ app.get('/editProduct/:id', async (req, res) => {
 // Update Product Route
 app.post('/editProduct/:id', upload.array('productImages', 3), async (req, res) => {
   try {
-    const { productName, description, price,cutprice,category } = req.body;
+    const { productName,  price,cutprice,category } = req.body;
     let product = await Product.findById(req.params.id); // Find the product by ID
 
     product.productName = productName;
-    product.description = description;
+ 
     product.price = price;
     product. cutprice = cutprice;
     product.category = category;

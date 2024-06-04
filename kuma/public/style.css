@@ -312,14 +312,13 @@ body {
 .search-button:hover {
   background-color: #b14024;
 }
-
-.cart-ico/* CSS for the nice-select dropdown */
+/* CSS for the nice-select dropdown */
 .nice-select {
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 0.8em 1.2em; /* 8px top/bottom, 12px left/right */
+  border-radius: 0.5em; /* 5px */
+  border: 0.1em solid #ccc; /* 1px */
   background-color: #fff;
-  font-size: 16px;
+  font-size: 1em; /* 100% relative to the parent */
   color: #333;
   appearance: none;
   -webkit-appearance: none;
@@ -333,11 +332,11 @@ body {
 /* Arrow icon */
 .nice-select::after {
   content: '\25BC';
-  font-size: 12px;
+  font-size: 0.2em; /* 12px */
   color: #666;
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 1.2em; /* 12px */
   transform: translateY(-50%);
 }
 
@@ -345,17 +344,19 @@ body {
 .nice-select option:checked {
   background-color: #965858;
 }
-n {
-  font-size: 1.2em;
-  color: #fff;
-  cursor: pointer;
-  background-color: #8d5e5e;
-  padding: 8px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .nice-select {
+    font-size: 1.1em; /* 110% relative to the parent */
+    padding: 0.6em 0.9em; /* 6px top/bottom, 9px left/right */
+  }
+  
+  .nice-select::after {
+    right: 0.9em; /* 9px */
+  }
 }
+
 
 .cart-icon span {
   margin-left: 5px;
@@ -583,63 +584,53 @@ a:hover {
 .category h4 {
   font-size: 1.05em; /* 20px converted to em */
   margin-left: 46%; /* Adjust margin for smaller screens */
-  background-image: linear-gradient(to right,#8135355e 200px, rgb(235, 235, 235) 50px);
-
-  width: 1130px;
-  color: #00000083;
- 
+  background-image: linear-gradient(to right, #8135355e 200px, rgb(235, 235, 235) 50px);
+  width: 70%; /* Adjusted width for responsiveness */
+  max-width: 1130px; /* Maximum width */
+  color: rgba(0, 0, 0, 0.51); /* Adjusted color for transparency */
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .category h4 {
+    font-size: 1em; /* Reset font size */
+    margin-left: 0; /* Reset margin for smaller screens */
+    width: auto; /* Auto width for responsiveness */
+    background-image: linear-gradient(to right, #8135355e 100px, rgb(235, 235, 235) 30px);
+  }
+}
 /* Card Styles */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-    position: relative; 
-    margin-left: 0; /* Adjust margin for smaller screens */
-    margin-right: 0; /* Adjust margin for smaller screens */
+  justify-content: center; /* Center cards horizontally */
+  position: relative;
+  margin-left: 0; /* Reset margin for smaller screens */
+  margin-right: 0; /* Reset margin for smaller screens */
 }
+
 .card {
   position: relative;
-  width: 18%; /* Default width for larger screens */
-  margin: 0.80em; /* Adjust margin for spacing */
-  height: 26em; /* Set a fixed height */
+  width: 45%; /* Adjusted width for smaller screens */
+  margin: 1em; /* Adjusted margin for spacing */
+  height: auto; /* Adjusted height */
   background-color: #b99b9b15;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  overflow: hidden;
-   left: 20%; /* Adjust margin for medium screens */
- right: 0.50%; /* Adjust margin for medium screens */
 }
 
 /* Adjust card width for medium screens */
- 
-
-/* Adjust card width for small screens */
-@media only screen and (max-width: 576px){
+@media only screen and (min-width: 576px) {
   .card {
-    width: 50%; /* Adjust width for two cards per row */
-    margin: 2.8em; /* Adjust margin for spacing */
-    left: 150px; /* Adjust as needed */
+    width: 30%; /* Adjusted width for medium screens */
   }
 }
 
 /* Adjust card width for extra small screens */
- 
-
-
-
-
-
-
-/* Adjust card width for extra small screens */
 @media screen and (max-width: 480px) {
   .card {
-    width: 45%; /* Adjust width for two cards per row */
-     
-    margin: 0.5em; /* Adjust margin for spacing */
-    left: 0; /* Reset left position */ 
-    margin-right: 0; /* Reset right margin */
+    width: 90%; /* Adjusted width for extra small screens */
+    margin: 0.5em auto; /* Center cards horizontally */
   }
 }
 
@@ -675,16 +666,16 @@ a:hover {
 }
 
 .card img {
-  width: 100%; /* Set image width to fill container */
-  height: 330px; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto; /* Allow images to adjust their height */
   border-radius: 0px;
 }
 
 .card .card-header {
   font-size: 1.425em; /* 18px converted to em */
   font-weight: bold;
- 
 }
+
 
 .card p {
   font-size: 0.985em; /* 14px converted to em */

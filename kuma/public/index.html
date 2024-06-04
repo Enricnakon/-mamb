@@ -40,7 +40,7 @@
     <div id="call-us-section" class="right-section">
       <div id="call-us">
         <i class="fas fa-phone" id="phone-icon"></i>
-        <span id="phone-number">+255677231271</span>
+        <span id="phone-number">  <a>+255677231271 </a></span>
       </div>
     </div>
 
@@ -99,16 +99,19 @@
   </div>
 <!-- Add a search input and category select element -->
 <div class="search-bar">
-  <input type="text" placeholder="Select  category to search for..." id="searchInput" class="search-input">
-  <select id="categorySelect" class="nice-select">
-    <option value="phones">Phones</option>
-    <option value="computers">Computers</option>
-    <option value="house">House</option>
-    <!-- Add other categories as needed -->
-  </select>
-  
+  <input type="text" placeholder="Select category to search for..." id="searchInput" class="search-input">
+  <div class="select-wrapper">
+    <select id="categorySelect" class="nice-select">
+        <option value="phones">Phones</option>
+        <option value="computers">Computers</option>
+        <option value="house">House</option>
+        <!-- Add other categories as needed -->
+    </select>
+ 
+  </div>
   <button type="submit" id="searchButton" class="search-button">Search</button>
 </div>
+
 
   <a href="#" class="cart-link" onclick="showCart(event)">
     <div id="cartIcon" class="cart-icon">
@@ -567,7 +570,7 @@
       <div class="col-md-4">
           <div id="computers" class="category text-right mt-3">
             <div class="title-container">
-              <h1 class="title">computers and accessories</h1>
+              <h4 class="title">computers and accessories</h4>
               <div class="underline"></div>
           </div>
            
@@ -672,19 +675,16 @@
   <div id="furniture" class="category text-right mt-3">
  
     <div class="navbar10">
-      <!-- Navigation links -->
-      <a href="#" class="subcategory-link" data-subcategory="Health">Health</a>
-      <a href="#" class="subcategory-link" data-subcategory="Transport">Transport</a>
-      <a href="#" class="subcategory-link" data-subcategory="Hotel">Hotel</a>
-      <a href="#" class="subcategory-link" data-subcategory="Laundry">Laundry</a>
-      <a href="#" class="subcategory-link" data-subcategory="Grocery">Grocery</a>
-      <a href="#" class="subcategory-link" data-subcategory="Restaurants">Restaurants</a>
-      <a href="#" class="subcategory-link" data-subcategory="Catering">Catering</a>
-      <a href="#" class="subcategory-link" data-subcategory="Food Delivery">Food Delivery</a>
-      <a href="#" class="subcategory-link" data-subcategory="Meal Prep">Meal Prep</a>
-      <a href="#" class="subcategory-link" data-subcategory="Bakery">Bakery</a>
-      <a href="#" class="subcategory-link" data-subcategory="Food Trucks">Food Trucks</a>
-  </div>
+      <a href="#" class="subcategory-link" data-subcategory="Sofas">Sofas</a>
+      <a href="#" class="subcategory-link" data-subcategory="Chairs">Chairs</a>
+      <a href="#" class="subcategory-link" data-subcategory="Beds">Beds</a>
+      <a href="#" class="subcategory-link" data-subcategory="Cabinets">Cabinets</a>
+      <a href="#" class="subcategory-link" data-subcategory="Desks">Desks</a>
+      <a href="#" class="subcategory-link" data-subcategory="Bookcases">Bookcases</a>
+      <a href="#" class="subcategory-link" data-subcategory="Dressers">Dressers</a>
+      <a href="#" class="subcategory-link" data-subcategory="Benches">Benches</a>
+      <a href="#" class="subcategory-link" data-subcategory="Wardrobes">Wardrobes</a>
+      
   </div>
   
   </div>
@@ -712,7 +712,7 @@
     <div class="col-md-4">
       <div id="services" class="category text-right mt-3"> <!-- Changed id to "services" -->
         <div class="title-container">
-          <h1 class="title">services</h1>
+          <h4 class="title">services</h4>
           <div class="underline"></div>
       </div>
       </div>
@@ -805,7 +805,7 @@
 <div class="col-md-4">
   <div id="cosmetics" class="category text-right mt-3"> <!-- Changed id to "clothes" -->
     <div class="title-container">
-      <h1 class="title">cosmetics</h1>
+      <h4 class="title">cosmetics</h4>
       <div class="underline"></div>
   </div>
      
@@ -842,7 +842,7 @@
 <div class="col-md-4">
   <div id="vehicle" class="category text-right mt-3"> <!-- Changed id to "vehicle" -->
     <div class="title-container">
-      <h1 class="title">Phones and Accessories</h1>
+      <h4 class="title">Phones and Accessories</h4>
       <div class="underline"></div>
   </div>
        
@@ -1272,7 +1272,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
 // Add an event listener to the search button
 document.getElementById('searchButton').addEventListener('click', async () => {
     const query = document.getElementById('searchInput').value;
@@ -1292,6 +1291,15 @@ document.getElementById('searchButton').addEventListener('click', async () => {
         console.error('Error fetching search results:', error);
     }
 });
+
+
+
+
+
+
+
+
+
 
 
 
