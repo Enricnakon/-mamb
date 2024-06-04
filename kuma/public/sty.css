@@ -1,5 +1,5 @@
 /* Container styles */
-.container {
+.container100 {
   top: 0;
   max-width: 1500px;
   margin: 0 auto; /* Center the container */
@@ -24,8 +24,8 @@
 }
 
 .image-container.active {
-  opacity: 1; /* Show active image */
-  z-index: 0; /* Bring active image to the front */
+  opacity: 20; /* Show active image */
+  z-index:0; /* Bring active image to the front */
 }
 
 .image-container img {
@@ -133,7 +133,7 @@
 
 
 /* Default styles for advertisement container */
-.advertisement-container {
+.advertisement-container1 {
   position: absolute;
   top: 0; /* Top position by default */
   left: 20;
@@ -180,7 +180,7 @@
   transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;
-  font-size: 100px; /* Increase font size */
+  font-size: 200px; /* Increase font size */
   font-weight: bold; /* Make text bold */
   color: white; /* Set text color to white */
   opacity: 0;
@@ -231,7 +231,7 @@
 
 /* Media query for phone screens */
 @media screen and (max-width: 576px) {
-  .advertisement-container {
+  .advertisement-container1 {
     left: 50%; /* Center the container horizontally */
     transform: translateX(-50%);
     top: 10px; /* Adjust top position for smaller screens */
@@ -257,7 +257,7 @@
   }
 
   .image-description {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 100px; /* Adjust font size for smaller screens */
   }
 
   .call-to-action {

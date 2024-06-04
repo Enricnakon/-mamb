@@ -12,7 +12,9 @@ const productSchema = new mongoose.Schema({
 
   category: { type: String, required: true },
   subCategory: { type: String, required: true }, // Ensure this is set to required if necessary
+ 
   productImages: [{ type: String, required: true }],
+  condition: { type: String, required: true }, // Add condition field
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   orders: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Order' }]
 }, { timestamps: true });

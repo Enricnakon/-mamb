@@ -238,23 +238,7 @@ closeButtons.forEach(function(button) {
 
 
 
-
-
-
-
-
-
-const images = document.querySelectorAll('.image-container');
-  let currentIndex = 0;
-
-  setInterval(() => {
-    images[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add('active');
-  }, 5000); // Change image every 5 seconds
-
-
-
+ 
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -598,10 +582,17 @@ function updateCartDisplay() {
         <h2>${product.productName}</h2>
  
         <p>Description: ${product.description}</p>
-        <p>Price: ${product.price}</p>
-     
-       
         
+        <p>category: ${product.category}</p>
+
+        <p>condition: ${product.condition}</p>
+
+        <p>Price: ${product.price}</p>
+      
+ 
+       
+     ,
+      
    
       `;
       // Populate images in the image container

@@ -6,6 +6,11 @@
   <title>Sell Button</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="sty.css">
+  <link rel="stylesheet" href="cos.css">
+
+
+
+
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -70,9 +75,11 @@
     <div id="feature-buttons-section" class="right-section">
       <button id="sellButton"><i class="fas fa-dollar-sign"></i>Sell</button>
     </div>
+    
     <div class="user-actions">
-      <div class="sign">Sign In/Sign Up <i class="fas fa-user"></i></div>
+      <a href="#" id="toggleModal" class="sign">Sign In/Sign Up <i class="fas fa-user"></i></a>
     </div>
+ 
   </header>
 
 
@@ -86,8 +93,8 @@
  
    
     <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Blogs</a>
+    <a href="contact.html">Contact</a>
+    <a href="">Blogs</a>
     <a href="#">Pages</a>
   </div>
 <!-- Add a search input and category select element -->
@@ -123,8 +130,8 @@
 
 
  
-<div class="container" id="dataContainer">
-  <div class="advertisement-container">
+<div class="container100" id="dataContainer">
+  <div class="advertisement-container1">
       <div class="advertisement-card">
           <h2>Coming Soon!</h2>
           <p>Discover our latest collection of cosmetics arriving this month.</p>
@@ -214,11 +221,11 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Login</h2>
-    <form id="loginForm">
-      <input type="text" name="identifier" placeholder="Username or Email">
-      <input type="password" name="password" placeholder="Password">
+    <form id="uniqueLoginForm" action="/auth/login" method="POST">
+      <input type="text" name="identifier" placeholder="Username or Email" required>
+      <input type="password" name="password" placeholder="Password" required>
       <button type="submit">Login</button>
-    </form>
+  </form>
     <p>Don't have an account? <a href="#" id="registerButton">Register</a></p>
     <p><a href="#" id="forgotPasswordLink">Forgot password?</a></p>
   </div>
@@ -238,6 +245,7 @@
     </form>
   </div>
 </div>
+
 
 <!-- Forgot Password Modal -->
 <div id="forgotPasswordModal" class="modal">
@@ -280,57 +288,65 @@
 
 
 
+<!-- Login Modal -->
+<div id="uniqueLoginModal" class="unique-modal">
+  <div class="unique-modal-content">
+    <span class="unique-close">&times;</span>
+    <h2>Login</h2>
+    <form id="uniqueLoginForm" action="/auth/login" method="POST">
+      <input type="text" name="identifier" placeholder="Username or Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <button type="button" id="uniqueLogoutButton">Logout</button>
+    </form>
+    
+    <p>Don't have an account? <a href="#" id="uniqueRegisterButton">Register</a></p>
+    <p><a href="#" id="uniqueForgotPasswordLink">Forgot password?</a></p>
+  </div>
+</div>
 
+<!-- Register Modal -->
+<div id="uniqueRegisterModal" class="unique-modal">
+  <div class="unique-modal-content">
+    <span class="unique-close">&times;</span>
+    <h2>Register</h2>
+    <form id="uniqueRegisterForm" action="/auth/register" method="POST">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+    
+  </div>
+</div>
 
+<!-- Forgot Password Modal -->
+<div id="uniqueForgotPasswordModal" class="unique-modal">
+  <div class="unique-modal-content">
+    <span class="unique-close">&times;</span>
+    <h2>Forgot Password?</h2>
+    <form id="uniqueForgotPasswordForm" action="/auth/forgot-password" method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+  </div>
+</div>
 
+<!-- Logout Button Placement -->
+<div id="uniqueLogoutButtonContainer">
+  <button type="button" id="uniqueLogoutButton">Logout</button>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Logout Modal -->
+<div id="uniqueLogoutModal" class="unique-modal">
+  <div class="unique-modal-content">
+    <span class="unique-close">&times;</span>
+    <h2>Logout</h2>
+    <p>Are you sure you want to logout?</p>
+    <button id="uniqueLogoutConfirmButton">Logout</button>
+  </div>
+</div>
 
 
 
@@ -495,11 +511,10 @@
   <div class="col-md-4">
     <div id="phones" class="category text-right mt-3">
       <div class="title-container">
-        <h1 class="title">phones and accessories   </h1>
-
-    
+        <h4 class="title">Phones</h4>
         <div class="underline"></div>
     </div>
+
         <div class="navbar-container">
            
           <div class="navbar10">
@@ -599,7 +614,7 @@
           <div id="house" class="category text-right mt-3">
 
             <div class="title-container">
-              <h1 class="title">house</h1>
+              <h4 class="title">house</h4>
               <div class="underline"></div>
           </div>
        
@@ -649,7 +664,7 @@
         <div id="furniture" class="category text-right mt-3"> <!-- Changed id to "furniture" -->
           
           <div class="title-container">
-            <h1 class="title">furniture</h1>
+            <h4 class="title">furniture</h4>
             <div class="underline"></div>
         </div>
 <!-- Subcategory Links -->
@@ -747,7 +762,7 @@
 <div class="col-md-4">
   <div id="clothes" class="category text-right mt-3"> <!-- Changed id to "clothes" -->
     <div class="title-container">
-      <h1 class="title">clothes</h1>
+      <h4 class="title">clothes</h4>
       <div class="underline"></div>
   </div>
  
@@ -933,16 +948,7 @@
           </div>
         </div>
        
-      <!-- Your HTML content with the updated styles -->
-      <div id="productList"></div>
-      <div id="productModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div class="image-container" id="imageContainer"></div> <!-- Container for images -->
-          <div class="product-details" id="productDetails"></div> <!-- Placeholder for product details -->
-        </div>
-      </div>
-
+    
 
 
 
@@ -1040,9 +1046,10 @@
       
 
 
-
+ 
 
     <script src="scriptb.js"></script>
+    <script src="user-auth.js"></script>
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -1082,172 +1089,189 @@ document.querySelectorAll('.subcategory-link').forEach(link => {
         }
     });
 });
-
-function displayLatestProducts(category, products) {
-  const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
-  container.empty(); // Clear previous content
-
-  let activeIndex = 0; // Index of the first active card
-  let cardsPerPage = 4; // Number of cards to display per page by default
-
-  if ($(window).width() <= 576) {
-    cardsPerPage = 2; // Set the number of cards to display per page for phone screens
+function truncateText(text, maxLength, maxWords) {
+  let words = text.split(' ');
+  if (words.length > maxWords) {
+    words = words.slice(0, maxWords);
   }
-
-  function updateCards() {
-    container.empty(); // Clear previous content
-
-    for (let i = activeIndex; i < activeIndex + cardsPerPage && i < products.length; i++) {
-      const product = products[i];
-      const card = $(`
-        <div class="card mt-3">
-          <div class="card-header">${product.productName}</div>
-          <div class="card-body">
-            <p>${product.description}</p>
-          
-            <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
-            <div class="price-container">
-              <p class="price">Price: Tsh${product.price}</p>
-              ${product.cutprice ? `<p class="strike-through">Tsh${product.cutprice}</p>` : ''}
-            </div>
-            <div class="overlay"></div>
-          </div>
-        </div>
-      `);
-
-      // Create button container and buttons using jQuery
-      const buttonContainer = $('<div class="button-container"></div>');
-
-      const viewBtn = $('<button class="view-btn">View</button>');
-      viewBtn.on('click', () => {
-        viewProduct({
-          productId: product._id,
-          productName: product.productName,
-          description: product.description,
-          price: product.price,
-          category: product.category,
-          productImages: product.productImages
-        });
-      });
-
-      const addToCartBtn = $('<button class="add-to-cart-btn">Add to Cart</button>');
-      addToCartBtn.attr('id', `add-to-cart-${product._id}`);
-      addToCartBtn.on('click', () => {
-        addToCart(product._id, product.productName, product.price);
-      });
-
-      buttonContainer.append(viewBtn);
-      buttonContainer.append(addToCartBtn);
-      card.find('.overlay').append(buttonContainer);
-      container.append(card);
-    }
+  let truncated = words.join(' ');
+  if (truncated.length > maxLength) {
+    truncated = truncated.slice(0, maxLength) + '...';
   }
-
-  // Call updateCards initially and on window resize
-  $(window).on('resize', updateCards);
-  updateCards();
-
-  // Navigation buttons
-  container.parent().find('.next-btn').click(function() {
-    if (activeIndex + cardsPerPage < products.length) {
-      activeIndex += cardsPerPage;
-      updateCards();
-    }
-  });
-
-  container.parent().find('.prev-btn').click(function() {
-    if (activeIndex - cardsPerPage >= 0) {
-      activeIndex -= cardsPerPage;
-      updateCards();
-    }
-  });
+  return truncated;
 }
 
+function truncateProductName(name) {
+  let words = name.split(' ');
+  if (words.length > 3) {
+    words = words.slice(0, 3);
+  }
+  let truncated = words.join(' ');
+  if (truncated.length > 10) {
+    truncated = truncated.slice(0, 10) + '...';
+  }
+  return truncated;
+}
+function displayLatestProducts(category, products) {
+    const container = $(`#latest${category.charAt(0).toUpperCase() + category.slice(1)}`);
+    container.empty(); // Clear previous content
 
+    let activeIndex = 0; // Index of the first active card
+    let cardsPerPage = 4; // Number of cards to display per page by default
 
+    if ($(window).width() <= 576) {
+        cardsPerPage = 2; // Set the number of cards to display per page for phone screens
+    }
 
+    function updateCards() {
+        container.empty(); // Clear previous content
 
+        for (let i = activeIndex; i < activeIndex + cardsPerPage && i < products.length; i++) {
+            const product = products[i];
+            const truncatedDescription = truncateText(product.description, 24, 4);
+            const truncatedProductName = truncateProductName(product.productName);
+            const card = $(`
+                <div class="card mt-3">
+                    <div class="card-header">${truncatedProductName}</div>
+                    <div class="card-body">
+                        <p>${truncatedDescription}</p>
+                        <img src="/images/${product.productImages[0]}" alt="Product Image" class="img-fluid card-img-top" width="200" height="150">
+                        <div class="price-container">
+                            ${product.cutprice ? `<p class="strike-through">Tsh${product.cutprice}</p>` : ''}
+                            <p class="price"> Tsh${product.price}</p>
+                      
+                        
+                        </div>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            `);
 
+            // Create button container and buttons using jQuery
+            const buttonContainer = $('<div class="button-container"></div>');
 
+            const viewBtn = $('<button class="view-btn">View</button>');
+            viewBtn.on('click', () => {
+                viewProduct({
+                    productId: product._id,
+                    productName: product.productName,
+                    description: product.description,
+                    price: product.price,
+      
+                    category: product.category,
+                    condition: product.condition,
+                  
+                      
+                    productImages: product.productImages
+                });
+            });
 
+            const addToCartBtn = $('<button class="add-to-cart-btn">Add to Cart</button>');
+            addToCartBtn.attr('id', `add-to-cart-${product._id}`);
+            addToCartBtn.on('click', () => {
+                addToCart(product._id, product.productName, product.price);
+            });
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const allNavbars = document.querySelectorAll('.navbar10');
-
-  allNavbars.forEach(navbar => {
-    const links = navbar.querySelectorAll('a');
-    let currentIndex = 0;
-    const intervalTime = 3000; // Time in milliseconds for auto-rotation
-    let autoScroll;
-    let userInteracting = false;
-
-    const scrollToLink = (index) => {
-      const link = links[index];
-      const offsetLeft = link.offsetLeft;
-      const linkWidth = link.offsetWidth;
-      const navbarWidth = navbar.clientWidth;
-
-      // Calculate the position to scroll
-      const scrollPosition = offsetLeft - (navbarWidth / 2) + (linkWidth / 2);
-
-      navbar.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
-      });
-      currentIndex = index;
-    };
-
-    const startAutoScroll = () => {
-      autoScroll = setInterval(() => {
-        if (!userInteracting) {
-          currentIndex = (currentIndex + 1) % links.length;
-          scrollToLink(currentIndex);
+            buttonContainer.append(viewBtn);
+            buttonContainer.append(addToCartBtn);
+            card.find('.overlay').append(buttonContainer);
+            container.append(card);
         }
-      }, intervalTime);
-    };
+    }
 
-    const stopAutoScroll = () => {
-      clearInterval(autoScroll);
-    };
+    updateCards();
 
-    // Start auto-rotation
-    startAutoScroll();
+    // Call updateCards initially and on window resize
+    $(window).on('resize', updateCards);
 
-    // Add event listeners to stop auto-rotation on mouse enter and resume on mouse leave
-    navbar.addEventListener('mouseenter', () => {
-      userInteracting = true;
-      stopAutoScroll();
+    // Navigation buttons
+    container.parent().find('.next-btn').click(function () {
+        if (activeIndex + cardsPerPage < products.length) {
+            activeIndex += cardsPerPage;
+            updateCards();
+        }
     });
 
-    navbar.addEventListener('mouseleave', () => {
-      userInteracting = false;
-      startAutoScroll();
+    container.parent().find('.prev-btn').click(function () {
+        if (activeIndex - cardsPerPage >= 0) {
+            activeIndex -= cardsPerPage;
+            updateCards();
+        }
     });
+}
 
-    // Add event listeners to navigate to links on click and touch
-    links.forEach((link, index) => {
-      link.addEventListener('click', () => {
-        scrollToLink(index);
-        stopAutoScroll(); // Optional: stop auto-rotation on click
-      });
+document.addEventListener('DOMContentLoaded', function () {
+    const allNavbars = document.querySelectorAll('.navbar10');
 
-      link.addEventListener('touchstart', () => {
-        userInteracting = true;
-        stopAutoScroll();
-      });
+    allNavbars.forEach(navbar => {
+        const links = navbar.querySelectorAll('a');
+        let currentIndex = 0;
+        const intervalTime = 3000; // Time in milliseconds for auto-rotation
+        let autoScroll;
+        let userInteracting = false;
 
-      link.addEventListener('touchend', () => {
-        userInteracting = false;
+        const scrollToLink = (index) => {
+            const link = links[index];
+            const offsetLeft = link.offsetLeft;
+            const linkWidth = link.offsetWidth;
+            const navbarWidth = navbar.clientWidth;
+
+            // Calculate the position to scroll
+            const scrollPosition = offsetLeft - (navbarWidth / 2) + (linkWidth / 2);
+
+            navbar.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+            currentIndex = index;
+        };
+
+        const startAutoScroll = () => {
+            autoScroll = setInterval(() => {
+                if (!userInteracting) {
+                    currentIndex = (currentIndex + 1) % links.length;
+                    scrollToLink(currentIndex);
+                }
+            }, intervalTime);
+        };
+
+        const stopAutoScroll = () => {
+            clearInterval(autoScroll);
+        };
+
+        // Start auto-rotation
         startAutoScroll();
-      });
-    });
-  });
-});
 
+        // Add event listeners to stop auto-rotation on mouse enter and resume on mouse leave
+        navbar.addEventListener('mouseenter', () => {
+            userInteracting = true;
+            stopAutoScroll();
+        });
+
+        navbar.addEventListener('mouseleave', () => {
+            userInteracting = false;
+            startAutoScroll();
+        });
+
+        // Add event listeners to navigate to links on click and touch
+        links.forEach((link, index) => {
+            link.addEventListener('click', () => {
+                scrollToLink(index);
+                stopAutoScroll(); // Optional: stop auto-rotation on click
+            });
+
+            link.addEventListener('touchstart', () => {
+                userInteracting = true;
+                stopAutoScroll();
+            });
+
+            link.addEventListener('touchend', () => {
+                userInteracting = false;
+                startAutoScroll();
+            });
+        });
+    });
+});
 
 // Add an event listener to the search button
 document.getElementById('searchButton').addEventListener('click', async () => {
@@ -1268,21 +1292,6 @@ document.getElementById('searchButton').addEventListener('click', async () => {
         console.error('Error fetching search results:', error);
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

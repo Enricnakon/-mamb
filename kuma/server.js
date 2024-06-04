@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router(); // Define router here
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -12,10 +13,13 @@ const Item = require('./models/item');
 const Order = require('./models/order'); // Assuming Order is defined in a file named order.js
 const formDataRouter = require('./routes/form'); // Import form router
 const FormData = require('./models/FormData');
-
-
+ 
+const Customer = require('./models/Customer');
+const authRoutes = require('./routes/auth'); 
 const multer = require('multer');
-const router = express.Router(); // Define router here
+
+const MongoStore = require('connect-mongo');
+
  
 
 const app = express();
@@ -33,7 +37,7 @@ app.get('/formB', (req, res) => {
 
 
 
-
+ 
 // Generate a random secret key for session
 const secretKey = crypto.randomBytes(32).toString('hex');
 console.log('Generated secret key:', secretKey);
@@ -56,10 +60,10 @@ mongoose.connect('mongodb+srv://juma:juma@cluster0.tvrxlqa.mongodb.net/', {
 // Middleware for parsing JSON and URL-encoded request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use('/auth', authRoutes);
 // Set up static files directory
 app.use(express.static('public'));
-
+ 
 // Set up view engine and views directory
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -133,6 +137,12 @@ app.post('/login', async (req, res) => {
 });
 
 module.exports = app;
+
+
+
+
+
+
 
 // Route to render user.ejs with user-specific products
 // Route to render user.ejs with all products
@@ -355,15 +365,7 @@ app.get('/reset-password/:token', async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -437,6 +439,7 @@ const storage = multer.diskStorage({
             productName: product.productName,
             description: product.description,
             price: product.price,
+            condition:product. condition,
             cutprice:product. cutprice,
             productImages: product.productImages
         }));
@@ -455,6 +458,7 @@ app.get('/latest', async (req, res) => {
             productName: product.productName,
             description: product.description,
             price: product.price,
+            condition:product. condition,
             cutprice:product. cutprice,
             productImages: product.productImages
         }));
@@ -700,6 +704,90 @@ router.get('/subcategory/:subCategory', async (req, res) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   app.get('/admin', async (req, res) => {
     try {
       // Define an async function inside the route handler
@@ -746,7 +834,7 @@ app.get('/views/admin_dashboard', async (req, res) => {
       res.render('admin_dashboard', { 
         products, 
         orders, 
-         
+        condition,
         categories,
         selectedCategory: category,
         searchQuery
@@ -911,7 +999,7 @@ app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
       return res.status(401).send('Unauthorized');
     }
 
-    const { productName, description, price,cutprice, subCategory, category } = req.body;
+    const { productName, description, price,cutprice, subCategory,condition, category } = req.body;
     console.log('Request body:', req.body);
     console.log('Received subCategory:', subCategory);
 
@@ -932,7 +1020,9 @@ app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
       category,
       subCategory,
       productImages,
+      condition,
       createdBy: userId
+    
     });
 
     await newProduct.save(); // Save the new product to the database
@@ -948,7 +1038,22 @@ app.post('/addProduct', upload.array('productImages', 3), async (req, res) => {
 
 
 
+// Fetching product details
+app.get('/api/products/:productId', async (req, res) => {
+  try {
+      const productId = req.params.productId;
 
+      const product = await Product.findById(productId).populate('createdBy'); // Populate createdBy field with user details
+
+      if (!product) {
+          return res.status(404).json({ error: 'Product not found' });
+      }
+
+      res.json(product);
+  } catch (error) {
+      res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 
 

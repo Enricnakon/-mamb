@@ -39,10 +39,10 @@ $(document).ready(function () {
                 images.eq(currentIndex).addClass('active').find('.image-description p').addClass('fade-in');
                 
                 // If currentIndex is back to 0 (first image), immediately show it
-                if (currentIndex === 0) {
+                if (currentIndex === 1) {
                     images.eq(0).addClass('active').find('.image-description p').addClass('fade-in');
                 }
-            }, 5000);
+            }, 10000);
         },
         error: function (xhr, status, error) {
             // Error handling

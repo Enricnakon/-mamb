@@ -252,8 +252,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, rgba(75, 10, 10, 0.904) 40%, rgba(247, 247, 247, 0.959) 
-  60%);
+  background: linear-gradient(to right, rgba(75, 10, 10, 0.904) 40%, rgba(75, 10, 10, 0.904) 100%);
+
   padding: 15px 30px;
 }
 
@@ -580,9 +580,14 @@ a:hover {
   }
 }
 
-.category h6 {
-  font-size: 1.25em; /* 20px converted to em */
-  margin-left: 21%; /* Adjust margin for smaller screens */
+.category h4 {
+  font-size: 1.05em; /* 20px converted to em */
+  margin-left: 46%; /* Adjust margin for smaller screens */
+  background-image: linear-gradient(to right,#8135355e 200px, rgb(235, 235, 235) 50px);
+
+  width: 1130px;
+  color: #00000083;
+ 
 }
 
 /* Card Styles */
@@ -598,7 +603,7 @@ a:hover {
   position: relative;
   width: 18%; /* Default width for larger screens */
   margin: 0.80em; /* Adjust margin for spacing */
-  height: 25em; /* Set a fixed height */
+  height: 26em; /* Set a fixed height */
   background-color: #b99b9b15;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -741,7 +746,7 @@ a:hover {
 .next-btn {
   font-weight: bold;
   color: #fff;
- 
+ background-color: #333;
   border: none;
   border-radius: 0.625em; /* 10px converted to em */
   padding: 0.75em 1.5em; /* Adjust padding */
@@ -753,12 +758,56 @@ a:hover {
 }
 
 .prev-btn {
-  left: 150px; /* Adjust as needed */
+  left: -28px; /* Adjust as needed */
 }
 
 .next-btn {
   right: 20px; /* Adjust as needed */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1507,14 +1556,7 @@ p {
   margin: 0;
 }
 
-.underline {
-  margin-top: 5px;
-  height: 1px;
-  width: 100%; /* Full width by default */
-  background-color: #0f0b0b;
-  position: absolute;
-  left: 0px; /* Adjust left offset for big screens */
-}
+ 
 /* Styles for big screens (minimum width of 576px) */
 @media screen and (min-width: 576px) {
   .title-container {
