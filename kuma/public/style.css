@@ -599,38 +599,57 @@ a:hover {
     background-image: linear-gradient(to right, #8135355e 100px, rgb(235, 235, 235) 30px);
   }
 }
+
 /* Card Styles */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center cards horizontally */
-  position: relative;
-  margin-left: 0; /* Reset margin for smaller screens */
-  margin-right: 0; /* Reset margin for smaller screens */
+  justify-content: flex-start;
+    position: relative; 
+    margin-left: 0; /* Adjust margin for smaller screens */
+    margin-right: 0; /* Adjust margin for smaller screens */
 }
-
 .card {
   position: relative;
-  width: 45%; /* Adjusted width for smaller screens */
-  margin: 1em; /* Adjusted margin for spacing */
-  height: auto; /* Adjusted height */
+  width: 18%; /* Default width for larger screens */
+  margin: 0.80em; /* Adjust margin for spacing */
+  height: 26em; /* Set a fixed height */
   background-color: #b99b9b15;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  overflow: hidden;
+   left: 20%; /* Adjust margin for medium screens */
+ right: 0.50%; /* Adjust margin for medium screens */
 }
 
 /* Adjust card width for medium screens */
-@media only screen and (min-width: 576px) {
+ 
+
+/* Adjust card width for small screens */
+@media only screen and (max-width: 576px){
   .card {
-    width: 30%; /* Adjusted width for medium screens */
+    width: 50%; /* Adjust width for two cards per row */
+    margin: 2.8em; /* Adjust margin for spacing */
+    left: 150px; /* Adjust as needed */
   }
 }
 
 /* Adjust card width for extra small screens */
+ 
+
+
+
+
+
+
+/* Adjust card width for extra small screens */
 @media screen and (max-width: 480px) {
   .card {
-    width: 90%; /* Adjusted width for extra small screens */
-    margin: 0.5em auto; /* Center cards horizontally */
+    width: 45%; /* Adjust width for two cards per row */
+     
+    margin: 0.5em; /* Adjust margin for spacing */
+    left: 0; /* Reset left position */ 
+    margin-right: 0; /* Reset right margin */
   }
 }
 
@@ -666,16 +685,16 @@ a:hover {
 }
 
 .card img {
-  width: 100%;
-  height: auto; /* Allow images to adjust their height */
+  width: 100%; /* Set image width to fill container */
+  height: 330px; /* Maintain aspect ratio */
   border-radius: 0px;
 }
 
 .card .card-header {
   font-size: 1.425em; /* 18px converted to em */
   font-weight: bold;
+ 
 }
-
 
 .card p {
   font-size: 0.985em; /* 14px converted to em */
