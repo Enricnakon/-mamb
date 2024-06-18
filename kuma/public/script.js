@@ -419,7 +419,7 @@ $(document).ready(function() {
   // Fetch latest products for houses on document load
   fetchLatestProducts('house');
   // Fetch latest products for vehicles on document load
-  fetchLatestProducts('vehicle');
+
   // Fetch latest products for furniture on document load
   fetchLatestProducts('furniture');
   // Fetch latest products for clothes on document load
@@ -428,6 +428,7 @@ $(document).ready(function() {
   fetchLatestProducts('cosmetics');
   // Fetch latest products for services on document load
   fetchLatestProducts('services');
+  fetchLatestProducts('vehicle');
 });
 
 function fetchLatestProducts(category) {

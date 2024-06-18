@@ -79,68 +79,70 @@ router.post('/register', async (req, res) => {
     }
   });
 
-  // Login route
 
- // In auth.js or wherever your authentication routes are defined
-router.get('/login', (req, res) => {
-    // Render the login form or serve a static login page
-    res.render('login');
-  });
-  
- 
+
+
+
+
+
+
+
+
 // Generate a random secret key for session
 const secretKey = crypto.randomBytes(32).toString('hex');
 console.log('Generated secret key:', secretKey);
 
 // Set up session middleware
 router.use(session({
-  secret: secretKey, // Use the generated secret key
+  secret: secretKey,
   resave: false,
   saveUninitialized: true
 }));
 
+// Middleware to add customer information to response locals
+router.use((req, res, next) => {
+  res.locals.customer = req.session.customer || null;
+  next();
+});
+
 // Login route
 router.get('/login', (req, res) => {
-  // Render the login form or serve a static login page
   res.render('login');
 });
 
 router.post('/login', async (req, res) => {
   const { identifier, password } = req.body;
   try {
-    // Find the customer in the database by username or email and password
     const customer = await Customer.findOne({ $or: [{ username: identifier }, { email: identifier }], password });
-
-    // If a customer is found and the password matches, login is successful
     if (customer) {
-      // Store customer's data in the session
       req.session.customer = customer;
-
-      // Redirect to index.html after successful login
       res.redirect('/index.html');
     } else {
-      // If no customer is found or password doesn't match, send invalid credentials error
       res.status(400).send('Invalid credentials');
     }
   } catch (err) {
-    // If an error occurs during the login process, send internal server error
     console.error(err);
     res.status(500).send('Error logging in');
   }
 });
 
+// Public routes (pages accessible to everyone)
+router.get('/index.html', (req, res) => {
+  res.render('index', { customer: res.locals.customer });
+});
 
+// Private route (page accessible only to authenticated users)
+const isAuthenticated = (req, res, next) => {
+  if (req.session.customer) {
+    next();
+  } else {
+    res.redirect('/login');
+  }
+};
 
-
-
-
-
-
-
-
-
-
-
+router.get('/private-page.html', isAuthenticated, (req, res) => {
+  res.render('private-page', { customer: res.locals.customer });
+});
 
 
 

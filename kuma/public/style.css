@@ -273,11 +273,14 @@ body {
 
 .menu-links a:hover {
   color: #ddd;
-}
-/* Styles for larger screens */
+}/* Styles for larger screens */
 .search-bar {
   display: flex;
   align-items: center;
+}
+
+.search-input-wrapper {
+  position: relative;
 }
 
 .search-input {
@@ -290,6 +293,7 @@ body {
   color: #333;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-right: 100px; /* Adjusted to make space for the select */
 }
 
 .search-input:focus {
@@ -298,31 +302,24 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-button {
-  border: none;
-  background-color: #b14024d2;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 20px;
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.select-wrapper {
+  position: absolute;
+  right: 10px; /* Adjust position as needed */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.search-button:hover {
-  background-color: #b14024;
-}
-/* CSS for the nice-select dropdown */
 .nice-select {
-  padding: 0.8em 1.2em; /* 8px top/bottom, 12px left/right */
-  border-radius: 0.5em; /* 5px */
-  border: 0.1em solid #ccc; /* 1px */
+  padding: 0.8em 1.2em;
+  border-radius: 0.5em;
+  border: 0.1em solid #ccc;
   background-color: #fff;
-  font-size: 1em; /* 100% relative to the parent */
+  font-size: 1em;
   color: #333;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  width: 100px; /* Set a fixed width */
 }
 
 .nice-select:focus {
@@ -332,11 +329,11 @@ body {
 /* Arrow icon */
 .nice-select::after {
   content: '\25BC';
-  font-size: 0.2em; /* 12px */
+  font-size: 0.2em;
   color: #666;
   position: absolute;
   top: 50%;
-  right: 1.2em; /* 12px */
+  right: 1.2em;
   transform: translateY(-50%);
 }
 
@@ -348,12 +345,25 @@ body {
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .nice-select {
-    font-size: 1.1em; /* 110% relative to the parent */
-    padding: 0.6em 0.9em; /* 6px top/bottom, 9px left/right */
+    font-size: 1.1em;
+    padding: 0.6em 0.9em;
   }
   
   .nice-select::after {
-    right: 0.9em; /* 9px */
+    right: 0.9em;
+  }
+}
+
+/* Styles for phone screens */
+@media (max-width: 767px) {
+  .search-input {
+    width: 80px;
+    font-size: 0.9em;
+  }
+
+  .search-button {
+    padding: 8px 20px;
+    font-size: 0.7em;
   }
 }
 

@@ -876,12 +876,13 @@ app.get('/editProduct/:id', async (req, res) => {
 // Update Product Route
 app.post('/editProduct/:id', upload.array('productImages', 3), async (req, res) => {
   try {
-    const { productName,  price,cutprice,category } = req.body;
+    const { productName,  price,condition,cutprice,category } = req.body;
     let product = await Product.findById(req.params.id); // Find the product by ID
 
     product.productName = productName;
  
     product.price = price;
+    product.condition =  condition;
     product. cutprice = cutprice;
     product.category = category;
 
@@ -1072,11 +1073,6 @@ app.get('/api/products/:productId', async (req, res) => {
 
 
 
-
-  app.get('/', (req, res) => {
-    res.render('index');
-  });
-  
  
 app.get('/formB', (req, res) => {
   res.render('formB');
